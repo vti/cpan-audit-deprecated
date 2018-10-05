@@ -42,6 +42,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Module::CPANfile" : "0",
             "perl" : "5.008001"
          }
       },
@@ -52,6 +53,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/vti/cpan-audit/issues"
+      },
+      "homepage" : "https://github.com/vti/cpan-audit",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/vti/cpan-audit.git",
+         "web" : "https://github.com/vti/cpan-audit"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:VTI",
    "x_serialization_backend" : "JSON::PP version 2.27400_02"
