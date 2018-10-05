@@ -1,0 +1,71 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use FindBin;
+use Pod::Usage;
+use Getopt::Long;
+use CPAN::Audit;
+
+my $opt_no_color;
+my $opt_ascii;
+my $opt_verbose;
+my $opt_help;
+GetOptions(
+    'no-color'  => \$opt_no_color,
+    'ascii'     => \$opt_ascii,
+    'verbose|v' => \$opt_verbose,
+    'help|h'    => \$opt_help,
+) or die("Error in command line arguments\n");
+
+pod2usage( -input => $FindBin::Bin . "/" . $FindBin::Script ) if $opt_help;
+
+my ($command) = shift @ARGV;
+
+if ( !$command ) {
+    pod2usage( -input => $FindBin::Bin . "/" . $FindBin::Script );
+}
+
+my $audit = CPAN::Audit->new(
+    no_color    => $opt_no_color,
+    ascii       => $opt_ascii,
+    verbose     => $opt_verbose,
+    interactive => ( -t STDIN && -t STDOUT ),
+);
+
+$audit->command( $command, @ARGV );
+
+__END__
+
+=head1 NAME
+
+cpan-audit - Audit CPAN modules
+
+=head1 SYNOPSIS
+
+cpan-audit [command] [options...]
+
+Commands:
+
+    module  [version range]    audit module with optional version range (all by default)
+    release [version range]    audit release with optional version range (all by default)
+    deps    [directory]        audit dependencies from the directory (. by default)
+    show    [advisory id]      show information about specific advisory
+
+Options:
+
+    --no-color     switch off colors
+    --ascii        use ascii output
+    --help|h       help message
+
+Examples:
+
+    cpan-audit release Catalyst-Runtime
+    cpan-audit release Catalyst-Runtime 7.0
+    cpan-audit release Catalyst-Runtime >5.48
+
+    cpan-audit module Catalyst 7.0
+
+    cpan-audit deps .
+    cpan-audit deps /path/to/distribution
+
+    cpan-audit show CPANSA-Mojolicious-2018-03

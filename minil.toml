@@ -1,0 +1,5 @@
+name = "CPAN-Audit"
+# badges = ["travis"]
+authority="cpan:VTI"
+
+module_maker="ModuleBuildTiny"

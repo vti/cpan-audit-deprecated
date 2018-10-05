@@ -1,0 +1,116 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use JSON ();
+use File::Basename qw(basename);
+use YAML::Tiny;
+use HTTP::Tiny;
+use Data::Dumper;
+use CPAN::DistnameInfo;
+
+my @files = @ARGV;
+
+my %db;
+foreach my $file (@files) {
+    my $yaml = YAML::Tiny->read($file)->[0];
+
+    my $dist = basename $file;
+    $dist =~ s{^CPANSA-}{};
+    $dist =~ s{\.yml$}{};
+
+    $db{dists}->{$dist}->{advisories} = $yaml;
+}
+
+provides( \%db );
+
+foreach my $dist ( keys %{ $db{dists} } ) {
+    $db{dists}->{$dist}->{versions} = [ all_releases($dist) ];
+}
+
+my $dump = Dumper( \%db );
+$dump =~ s{^\$VAR1\s*=\s*}{};
+$dump =~ s{}{};
+
+print <<"EOF";
+package # hide from PAUSE
+    CPAN::Audit::DB;
+
+use strict;
+use warnings;
+
+sub db {
+    $dump
+}
+
+1;
+EOF
+
+sub provides {
+    my ($db) = @_;
+
+    my $ua = HTTP::Tiny->new;
+
+    my $details_file = '/tmp/02packages.details.txt.gz';
+    $ua->mirror( 'http://www.cpan.org//modules/02packages.details.txt.gz',
+        $details_file );
+
+    open my $fh, '<:gzip', $details_file
+      or die "Can't open '$details_file': $!";
+
+    while ( defined( my $line = <$fh> ) ) {
+        chomp $line;
+
+        last if $line eq '';
+    }
+
+    while ( defined( my $line = <$fh> ) ) {
+        my ( $module, $version, $pathname ) = split /\s+/, $line;
+        next unless $module && $pathname;
+
+        my $dist_info = CPAN::DistnameInfo->new($pathname);
+        next unless $dist_info;
+
+        my $author = $dist_info->cpanid;
+        my $dist   = $dist_info->dist;
+        my $name   = $dist_info->distvname;
+
+        next unless $dist;
+
+        next unless $db->{dists}->{$dist};
+
+        $db->{module2dist}->{$module} = $dist;
+    }
+
+    close $fh;
+}
+
+sub all_releases {
+    my ($distribution) = @_;
+
+    my $response = HTTP::Tiny->new->post(
+        'http://fastapi.metacpan.org/v1/release/_search',
+        {
+            headers => { 'Content-Type' => 'application/json' },
+            content => JSON::encode_json(
+                {
+                    size   => 5000,
+                    fields => [ 'date', 'version' ],
+                    filter => {
+                        term => { distribution => $distribution }
+                    }
+                }
+            )
+        }
+    );
+
+    my $content_json = JSON::decode_json( $response->{content} );
+
+    my @results =
+      sort { $a->{date} cmp $b->{date} }
+      map  { $_->{fields} } @{ $content_json->{hits}->{hits} };
+    return unless @results;
+
+    return @results;
+}
