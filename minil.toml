@@ -3,3 +3,5 @@ name = "CPAN-Audit"
 authority="cpan:VTI"
 
 module_maker="ModuleBuildTiny"
+
+readme_from="script/cpan-audit"

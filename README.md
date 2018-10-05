@@ -1,23 +1,33 @@
 # NAME
 
-CPAN::Audit - Audit CPAN distributions for known vulnerabilities
+cpan-audit - Audit CPAN modules
 
 # SYNOPSIS
 
-    use CPAN::Audit;
+cpan-audit \[command\] \[options...\]
 
-# DESCRIPTION
+Commands:
 
-CPAN::Audit is a module and a database at the same time. It is used by [cpan-audit](https://metacpan.org/pod/cpan-audit) command line application to query
-for vulnerabilities.
+    module  [version range]    audit module with optional version range (all by default)
+    release [version range]    audit release with optional version range (all by default)
+    deps    [directory]        audit dependencies from the directory (. by default)
+    show    [advisory id]      show information about specific advisory
 
-# LICENSE
+Options:
 
-Copyright (C) Viacheslav Tykhanovskyi.
+    --no-color     switch off colors
+    --ascii        use ascii output
+    --help|h       help message
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+Examples:
 
-# AUTHOR
+    cpan-audit release Catalyst-Runtime
+    cpan-audit release Catalyst-Runtime 7.0
+    cpan-audit release Catalyst-Runtime >5.48
 
-Viacheslav Tykhanovskyi <viacheslav.t@gmail.com>
+    cpan-audit module Catalyst 7.0
+
+    cpan-audit deps .
+    cpan-audit deps /path/to/distribution
+
+    cpan-audit show CPANSA-Mojolicious-2018-03
