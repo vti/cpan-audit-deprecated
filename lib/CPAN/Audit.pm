@@ -6,7 +6,7 @@ use Module::CPANfile;
 use CPAN::Audit::Version;
 use CPAN::Audit::DB;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 sub new {
     my $class = shift;

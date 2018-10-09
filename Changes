@@ -2,6 +2,10 @@ Revision history for Perl extension CPAN-Audit
 
 {{$NEXT}}
 
+0.02 2018-10-09T08:24:36Z
+
+    - support perl 5.8
+
 0.01 2018-10-08T06:39:07Z
 
     - original version

@@ -64,7 +64,7 @@
          "web" : "https://github.com/vti/cpan-audit"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_authority" : "cpan:VTI",
    "x_serialization_backend" : "JSON::PP version 2.27400_02"
 }
