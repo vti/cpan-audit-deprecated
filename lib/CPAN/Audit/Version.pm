@@ -27,7 +27,7 @@ sub in_range {
           unless
           defined( $range_version = eval { version->parse($range_version) } );
 
-        $op //= '>=';
+        $op = '>=' unless defined $op;
 
         if ( $op eq '<' ) {
             return unless $version < $range_version;
