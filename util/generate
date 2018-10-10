@@ -10,6 +10,8 @@ use HTTP::Tiny;
 use Data::Dumper;
 use CPAN::DistnameInfo;
 
+local $Data::Dumper::Sortkeys = 1;
+
 my @files = @ARGV;
 
 my %db;
