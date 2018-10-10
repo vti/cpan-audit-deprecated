@@ -279,4 +279,8 @@ it under the same terms as Perl itself.
 
 Viacheslav Tykhanovskyi E<lt>viacheslav.t@gmail.comE<gt>
 
+=head1 CREDITS
+
+Takumi Akiyama (github.com/akiym)
+
 =cut
