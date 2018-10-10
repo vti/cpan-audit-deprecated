@@ -5906,7 +5906,7 @@ sub db {
                                                                               'https://security-tracker.debian.org/tracker/CVE-2013-4407',
                                                                               'https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=721634'
                                                                             ],
-                                                            'affected_versions' => '>=1.08 <1.19',
+                                                            'affected_versions' => '>=1.08, <1.19',
                                                             'id' => 'CPANSA-HTTP-Body-2013-01',
                                                             'severity' => 'moderate',
                                                             'description' => 'HTTP::Body::Multipart in the HTTP-Body 1.08, 1.17, and earlier module for Perl uses the part of the uploaded file\'s name after the first "." character as the suffix of a temporary file, which makes it easier for remote attackers to conduct attacks by leveraging subsequent behavior that may assume the suffix is well-formed.
@@ -6997,10 +6997,10 @@ sub db {
                                                             'references' => [
                                                                               'https://github.com/perl5-dbi/DBD-mysql/commit/793b72b1a0baa5070adacaac0e12fd995a6fbabe'
                                                                             ],
-                                                            'fixed_versions' => '<2.9003 >=4.039',
+                                                            'fixed_versions' => '<2.9003, >=4.039',
                                                             'description' => 'Out-of-bounds read.
 ',
-                                                            'affected_versions' => '>=2.9003 <4.039',
+                                                            'affected_versions' => '>=2.9003, <4.039',
                                                             'id' => 'CPANSA-DBD-mysql-2016-03',
                                                             'reported' => '2016-11-16',
                                                             'distribution' => 'DBD-mysql'
