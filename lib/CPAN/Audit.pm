@@ -2,6 +2,8 @@ package CPAN::Audit;
 use 5.008001;
 use strict;
 use warnings;
+use Carton::Snapshot;
+use CPAN::DistnameInfo;
 use Module::CPANfile;
 use CPAN::Audit::Version;
 use CPAN::Audit::DB;
@@ -84,7 +86,29 @@ sub command {
 
         $self->error("Usage: deps <path>") unless -d $path;
 
-        if (-f "$path/cpanfile") {
+        if (-f "$path/cpanfile.snapshot") {
+            my $snapshot = Carton::Snapshot->new(path => "$path/cpanfile.snapshot");
+            $snapshot->load;
+
+            my @deps;
+            foreach my $dist ($snapshot->distributions) {
+                my $d = CPAN::DistnameInfo->new($dist->pathname);
+                push @deps,
+                  {
+                    dist    => $d->dist,
+                    version => $d->version,
+                  };
+            }
+
+            $self->output('Analyzed %d deps', scalar(@deps));
+
+            foreach my $dep (@deps) {
+                my $dist = CPAN::Audit::DB->db->{dists}->{$dep->{dist}};
+                next unless $dist;
+
+                $self->query( $dist, $dep->{version} );
+            }
+        } elsif (-f "$path/cpanfile") {
             my $cpanfile = Module::CPANfile->load("$path/cpanfile");
 
             my $prereqs = $cpanfile->prereqs->as_string_hash;
