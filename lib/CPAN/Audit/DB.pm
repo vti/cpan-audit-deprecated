@@ -6922,22 +6922,22 @@ sub db {
                                       'advisories' => [
                                                         {
                                                           'distribution' => 'GBrowse',
-                                                          'fixed_verson' => '>=2.56',
+                                                          'fixed_versions' => '>=2.56',
                                                           'references' => [
                                                                             'https://metacpan.org/changes/distribution/GBrowse'
                                                                           ],
                                                           'reported' => '2017-01-15',
-                                                          'affected_verson' => '<2.56',
+                                                          'affected_versions' => '<2.56',
                                                           'id' => 'CPANSA-GBrowser-2017-01',
                                                           'description' => 'An attacker is able to delete other users\' accounts.  No httponly cookie flag.  Cross-site scripting vulnerability in generation of citation text.
 '
                                                         },
                                                         {
                                                           'id' => 'CPANSA-GBrowser-2004-01',
-                                                          'affected_verson' => '<1.62',
+                                                          'affected_versions' => '<1.62',
                                                           'description' => 'Cross-site scripting.
 ',
-                                                          'fixed_verson' => '>=1.62',
+                                                          'fixed_versions' => '>=1.62',
                                                           'distribution' => 'GBrowse',
                                                           'reported' => '2004-04-05',
                                                           'references' => [
@@ -6949,12 +6949,12 @@ sub db {
                                                           'references' => [
                                                                             'https://metacpan.org/changes/distribution/GBrowse'
                                                                           ],
-                                                          'fixed_verson' => '>=1.54',
+                                                          'fixed_versions' => '>=1.54',
                                                           'distribution' => 'GBrowse',
                                                           'description' => 'Path traversal.
 ',
                                                           'id' => 'CPANSA-GBrowser-2003-01',
-                                                          'affected_verson' => '<1.54'
+                                                          'affected_versions' => '<1.54'
                                                         }
                                                       ]
                                     },
@@ -6997,10 +6997,10 @@ sub db {
                                                             'references' => [
                                                                               'https://github.com/perl5-dbi/DBD-mysql/commit/793b72b1a0baa5070adacaac0e12fd995a6fbabe'
                                                                             ],
-                                                            'fixed_verson' => '<2.9003 >=4.039',
+                                                            'fixed_versions' => '<2.9003 >=4.039',
                                                             'description' => 'Out-of-bounds read.
 ',
-                                                            'affected_verson' => '>=2.9003 <4.039',
+                                                            'affected_versions' => '>=2.9003 <4.039',
                                                             'id' => 'CPANSA-DBD-mysql-2016-03',
                                                             'reported' => '2016-11-16',
                                                             'distribution' => 'DBD-mysql'
@@ -7013,16 +7013,16 @@ sub db {
                                                                               'https://github.com/perl5-dbi/DBD-mysql/commit/7c164a0c86cec6ee95df1d141e67b0e85dfdefd2',
                                                                               'http://blogs.perl.org/users/mike_b/2016/10/security-release---buffer-overflow-in-dbdmysql-perl-library.html'
                                                                             ],
-                                                            'fixed_verson' => '>=4.037',
+                                                            'fixed_versions' => '>=4.037',
                                                             'description' => 'Buffer overflow in the DBD::mysql module before 4.037 for Perl allows context-dependent attackers to cause a denial of service (crash) via vectors related to an error message.
 ',
-                                                            'affected_verson' => '<4.037',
+                                                            'affected_versions' => '<4.037',
                                                             'id' => 'CPANSA-DBD-mysql-2016-02',
                                                             'reported' => '2016-10-02',
                                                             'distribution' => 'DBD-mysql'
                                                           },
                                                           {
-                                                            'fixed_verson' => '>=4.034',
+                                                            'fixed_versions' => '>=4.034',
                                                             'references' => [
                                                                               'https://github.com/perl5-dbi/DBD-mysql/commit/cf0aa7751f6ef8445e9310a64b14dc81460ca156'
                                                                             ],
@@ -7031,7 +7031,7 @@ sub db {
                                                                       ],
                                                             'distribution' => 'DBD-mysql',
                                                             'reported' => '2016-08-19',
-                                                            'affected_verson' => '<4.034',
+                                                            'affected_versions' => '<4.034',
                                                             'id' => 'CPANSA-DBD-mysql-2016-01',
                                                             'description' => 'Use-after-free vulnerability in the my_login function in DBD::mysql before 4.033_01 allows attackers to have unspecified impact by leveraging a call to mysql_errno after a failure of my_login.
 '
@@ -7041,12 +7041,12 @@ sub db {
                                                             'distribution' => 'DBD-mysql',
                                                             'description' => 'There is a vulnerability of type use-after-free affecting DBD::mysql (aka DBD-mysql or the Database Interface (DBI) MySQL driver for Perl) 3.x and 4.x before 4.041 when used with mysql_server_prepare=1.
 ',
-                                                            'affected_verson' => '<4.041',
+                                                            'affected_versions' => '<4.041',
                                                             'id' => 'CPANSA-DBD-mysql-2015-01',
                                                             'references' => [
                                                                               'https://github.com/perl5-dbi/DBD-mysql/commit/3619c170461a3107a258d1fd2d00ed4832adb1b1'
                                                                             ],
-                                                            'fixed_verson' => '>=4.041',
+                                                            'fixed_versions' => '>=4.041',
                                                             'cves' => [
                                                                         'CVE-2016-1251'
                                                                       ]
@@ -7056,7 +7056,7 @@ sub db {
                                                                               'https://github.com/perl5-dbi/DBD-mysql/commit/a56ae87a4c1c1fead7d09c3653905841ccccf1cc',
                                                                               'https://rt.cpan.org/Public/Bug/Display.html?id=97625'
                                                                             ],
-                                                            'fixed_verson' => '>=4.028',
+                                                            'fixed_versions' => '>=4.028',
                                                             'cves' => [
                                                                         'CVE-2014-9906'
                                                                       ],
@@ -7064,7 +7064,7 @@ sub db {
                                                             'distribution' => 'DBD-mysql',
                                                             'description' => 'Use-after-free vulnerability in DBD::mysql before 4.029 allows attackers to cause a denial of service (program crash) or possibly execute arbitrary code via vectors related to a lost server connection.
 ',
-                                                            'affected_verson' => '<4.028',
+                                                            'affected_versions' => '<4.028',
                                                             'id' => 'CPANSA-DBD-mysql-2014-01'
                                                           }
                                                         ],
