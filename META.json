@@ -42,8 +42,11 @@
       },
       "runtime" : {
          "requires" : {
+            "CPAN::DistnameInfo" : "0",
+            "Carton" : "0",
             "Module::CPANfile" : "0",
-            "perl" : "5.008001"
+            "perl" : "5.008001",
+            "version" : "0"
          }
       },
       "test" : {
@@ -66,5 +69,8 @@
    },
    "version" : "0.02",
    "x_authority" : "cpan:VTI",
+   "x_contributors" : [
+      "Takumi Akiyama <t.akiym@gmail.com>"
+   ],
    "x_serialization_backend" : "JSON::PP version 2.27400_02"
 }
