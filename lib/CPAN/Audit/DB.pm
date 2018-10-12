@@ -491,22 +491,6 @@ sub db {
                                                                               ],
                                                               'reported' => '2018-06-28',
                                                               'severity' => 'medium'
-                                                            },
-                                                            {
-                                                              'affected_versions' => '<2.0131',
-                                                              'cves' => [
-                                                                          'CVE-2018-10860'
-                                                                        ],
-                                                              'description' => 'perl-archive-zip is vulnerable to a directory traversal in Archive::Zip. It was found that the Archive::Zip module did not properly sanitize paths while extracting zip files. An attacker able to provide a specially crafted archive for processing could use this flaw to write or overwrite arbitrary files in the context of the perl interpreter.
-',
-                                                              'distribution' => 'Archive-Zip',
-                                                              'id' => 'CPANSA-Archive-Zip-2017-01',
-                                                              'references' => [
-                                                                                'https://security-tracker.debian.org/tracker/CVE-2017-10672',
-                                                                                'https://github.com/shlomif/perl-XML-LibXML/pull/8'
-                                                                              ],
-                                                              'reported' => '2017-06-30',
-                                                              'severity' => 'high'
                                                             }
                                                           ],
                                           'versions' => [
@@ -11048,6 +11032,7 @@ sub db {
                                                               'affected_versions' => '>7.83, <7.92',
                                                               'description' => 'This release reverts the addition of stream classes (added in 7.83), which have unfortunately resulted in many Mojolicious applications becoming unstable. While there are no known exploits yet, we\'ve chosen to err on the side of cautiousness and will classify this as a security issue.
 ',
+                                                              'distribution' => 'Mojolicious',
                                                               'id' => 'CPANSA-Mojolicious-2018-04',
                                                               'references' => [
                                                                                 'https://github.com/mojolicious/mojo/commit/61f6cbf22c7bf8eb4787bd1014d91ee2416c73e7'

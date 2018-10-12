@@ -13,6 +13,7 @@ use CPAN::DistnameInfo;
 local $Data::Dumper::Sortkeys = 1;
 
 my @files = @ARGV;
+die "Usage: <files>\n" unless @files;
 
 my %db;
 foreach my $file (@files) {
