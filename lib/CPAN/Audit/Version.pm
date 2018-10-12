@@ -21,7 +21,7 @@ sub in_range {
     return unless defined( $version = eval { version->parse($version) } );
 
     foreach my $and (@ands) {
-        my ( $op, $range_version ) = $and =~ m/^(<|<=|>|>=|==|!=)?\s*([^\s]+)$/;
+        my ( $op, $range_version ) = $and =~ m/^(<=|<|>=|>|==|!=)?\s*([^\s]+)$/;
 
         return
           unless

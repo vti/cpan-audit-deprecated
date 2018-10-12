@@ -5,7 +5,9 @@ use warnings;
 use Carton::Snapshot;
 use CPAN::DistnameInfo;
 use Module::CPANfile;
+use File::Find ();
 use CPAN::Audit::Version;
+use CPAN::Audit::Query;
 use CPAN::Audit::DB;
 
 our $VERSION = "0.02";
@@ -34,7 +36,7 @@ sub command {
     my $self = shift;
     my ( $command, @args ) = @_;
 
-    my @dists;
+    my %dists;
 
     if ( $command eq 'module' ) {
         my ( $module, $version_range ) = @args;
@@ -44,11 +46,11 @@ sub command {
         my $dist = $release ? CPAN::Audit::DB->db->{dists}->{$release} : undef;
 
         if ( !$dist ) {
-            $self->output("__GREEN__$module is not in database");
+            $self->output("__GREEN__Module '$module' is not in database");
             return;
         }
 
-        $self->query( $dist, $version_range );
+        $dists{$dist} = $version_range;
     }
     elsif ( $command eq 'release' ) {
         my ( $release, $version_range ) = @args;
@@ -57,11 +59,12 @@ sub command {
         my $dist = CPAN::Audit::DB->db->{dists}->{$release};
 
         if ( !$dist ) {
-            $self->output("$release is not in database");
+            $self->output(
+                "__GREEN__Distribution '$release' is not in database");
             return;
         }
 
-        $self->query( $dist, $version_range );
+        $dists{$dist} = $version_range;
     }
     elsif ( $command eq 'show' ) {
         my ($advisory_id) = @args;
@@ -79,6 +82,8 @@ sub command {
 
         local $self->{verbose} = 1;
         $self->print_advisory($advisory);
+
+        return;
     }
     elsif ( $command eq 'dependencies' || $command eq 'deps' ) {
         my ($path) = @args;
@@ -86,13 +91,16 @@ sub command {
 
         $self->error("Usage: deps <path>") unless -d $path;
 
-        if (-f "$path/cpanfile.snapshot") {
-            my $snapshot = Carton::Snapshot->new(path => "$path/cpanfile.snapshot");
+        if ( -f "$path/cpanfile.snapshot" ) {
+            $self->output('Detecting dependencies from cpanfile snapshot...');
+
+            my $snapshot =
+              Carton::Snapshot->new( path => "$path/cpanfile.snapshot" );
             $snapshot->load;
 
             my @deps;
-            foreach my $dist ($snapshot->distributions) {
-                my $d = CPAN::DistnameInfo->new($dist->pathname);
+            foreach my $dist ( $snapshot->distributions ) {
+                next unless my $d = CPAN::DistnameInfo->new( $dist->pathname );
                 push @deps,
                   {
                     dist    => $d->dist,
@@ -100,23 +108,24 @@ sub command {
                   };
             }
 
-            $self->output('Analyzed %d deps', scalar(@deps));
+            $self->output( 'Detected %d deps', scalar(@deps) );
 
             foreach my $dep (@deps) {
-                my $dist = CPAN::Audit::DB->db->{dists}->{$dep->{dist}};
-                next unless $dist;
-
-                $self->query( $dist, $dep->{version} );
+                $dists{ $dep->{dist} } = $dep->{version};
             }
-        } elsif (-f "$path/cpanfile") {
+        }
+        elsif ( -f "$path/cpanfile" ) {
+            $self->output('Detecting dependencies from cpanfile...');
+
             my $cpanfile = Module::CPANfile->load("$path/cpanfile");
 
             my $prereqs = $cpanfile->prereqs->as_string_hash;
 
             my @deps;
-            foreach my $phase (keys %$prereqs) {
-                foreach my $type (keys %{ $prereqs->{$phase} }) {
-                    foreach my $module (keys %{ $prereqs->{$phase}->{$type} }) {
+            foreach my $phase ( keys %$prereqs ) {
+                foreach my $type ( keys %{ $prereqs->{$phase} } ) {
+                    foreach my $module ( keys %{ $prereqs->{$phase}->{$type} } )
+                    {
                         my $version = $prereqs->{$phase}->{$type}->{$module};
 
                         next if $module eq 'perl';
@@ -132,21 +141,55 @@ sub command {
                 }
             }
 
-            $self->output('Analyzed %d deps', scalar(@deps));
+            $self->output( 'Detected %d deps', scalar(@deps) );
 
             foreach my $dep (@deps) {
-                my $release = CPAN::Audit::DB->db->{module2dist}->{$dep->{module}};
-                next unless $release;
-
-                my $dist = CPAN::Audit::DB->db->{dists}->{$release};
+                my $dist =
+                  CPAN::Audit::DB->db->{module2dist}->{ $dep->{module} };
                 next unless $dist;
 
-                $self->query( $dist, $dep->{version} );
+                $dists{$dist} = $dep->{version};
             }
         }
     }
     else {
         $self->error("Error: unknown command: $command. See -h");
+    }
+
+    my $total_advisories = 0;
+
+    if (%dists) {
+        my $query = CPAN::Audit::Query->new( db => CPAN::Audit::DB->db );
+
+        foreach my $distname ( sort keys %dists ) {
+            my $version_range = $dists{$distname};
+
+            my @advisories =
+              $query->advisories_for( $distname, $version_range );
+
+            $version_range = 'Any'
+              if $version_range eq '' || $version_range eq '0';
+
+            if (@advisories) {
+                $self->output(
+                    '__RED__%s (requires %s) has %d advisories__RESET__',
+                    $distname, $version_range, scalar(@advisories) );
+
+                foreach my $advisory (@advisories) {
+                    $self->print_advisory($advisory);
+                }
+            }
+
+            $total_advisories += @advisories;
+        }
+    }
+
+    if ($total_advisories) {
+        $self->output( '__RED__Total advisories found: %d__RESET__',
+            $total_advisories );
+    }
+    else {
+        $self->output('__GREEN__No advisories found__RESET__');
     }
 }
 
@@ -182,85 +225,6 @@ sub output {
     print "$msg\n";
 }
 
-sub query {
-    my $self = shift;
-    my ( $dist, $version_range ) = @_;
-
-    my @advisories = @{ $dist->{advisories} };
-    my @versions   = @{ $dist->{versions} };
-
-    if ( !$version_range ) {
-        $self->output( "__RED__[!] Available %d %s\n",
-            scalar(@advisories), @advisories > 1 ? 'advisories' : 'advisory' );
-
-        foreach my $advisory (@advisories) {
-            $self->print_advisory($advisory);
-        }
-
-        return;
-    }
-
-    my $version_checker = CPAN::Audit::Version->new;
-
-    my @all_versions = map { $_->{version} } @versions;
-    my @selected_versions;
-
-    foreach my $version (@all_versions) {
-        if ( $version_checker->in_range( $version, $version_range ) ) {
-            push @selected_versions, $version;
-        }
-    }
-
-    if ( !@selected_versions ) {
-        $self->output("Not versions available for this range");
-        return;
-    }
-
-    my @matched_advisories;
-    foreach my $advisory (@advisories) {
-        my @affected_versions = $version_checker->affected_versions(
-            [ map { $_->{version} } @versions ],
-            $advisory->{affected_versions}
-        );
-        next unless @affected_versions;
-
-        foreach my $affected_version ( reverse @affected_versions ) {
-            if ( $version_checker->in_range( $affected_version, $version_range )
-              )
-            {
-                push @matched_advisories, $advisory;
-                last;
-            }
-        }
-    }
-
-    if ( !@matched_advisories ) {
-        $self->output("No advisories for this version range");
-        return;
-    }
-
-    if ( $self->{verbose} ) {
-        $self->output(
-            "Selected %d versions: %s\n",
-            scalar(@selected_versions),
-            join( ', ', @selected_versions )
-        );
-    }
-    else {
-        $self->output( "Selected %d versions\n", scalar(@selected_versions) );
-    }
-
-    $self->output(
-        "__RED__[!]__RESET__ Found %d %s:\n",
-        scalar(@matched_advisories),
-        @matched_advisories > 1 ? 'advisories' : 'advisory'
-    );
-
-    foreach my $matched_advisory (@matched_advisories) {
-        $self->print_advisory($matched_advisory);
-    }
-}
-
 sub print_advisory {
     my $self = shift;
     my ($advisory) = @_;
@@ -269,7 +233,15 @@ sub print_advisory {
 
     if ( $self->{verbose} ) {
         print "    $advisory->{description}\n";
-        print "    Affected range: $advisory->{affected_versions}\n";
+        if ( $advisory->{affected_versions} ) {
+            print "    Affected range: $advisory->{affected_versions}\n";
+        }
+        if ( $advisory->{fixed_versions} ) {
+            print "    Fixed range: $advisory->{fixed_versions}\n";
+        }
+        foreach my $reference ( @{ $advisory->{references} // [] } ) {
+            print "    $reference\n";
+        }
         print "\n";
     }
 }
