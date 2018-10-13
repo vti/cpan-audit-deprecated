@@ -82,6 +82,85 @@ sub db {
                                                               }
                                                             ]
                                             },
+                       'App-Github-Email' => {
+                                               'advisories' => [
+                                                                 {
+                                                                   'affected_versions' => '<0.3.3',
+                                                                   'cves' => [
+                                                                               'CVE-2015-7686'
+                                                                             ],
+                                                                   'description' => 'Insecure dependency on Email::Address.
+',
+                                                                   'distribution' => 'App-Github-Email',
+                                                                   'fixed_versions' => '>=0.3.3',
+                                                                   'id' => 'CPANSA-App-Github-Email-2018-01',
+                                                                   'references' => [
+                                                                                     'https://metacpan.org/changes/distribution/App-Github-Email',
+                                                                                     'https://github.com/faraco/App-Github-Email/commit/b7f052280d1c8ae97bdefc106ca3cbba4aea7213'
+                                                                                   ],
+                                                                   'reported' => '2018-01-20'
+                                                                 }
+                                                               ],
+                                               'main_module' => 'App::Github::Email',
+                                               'versions' => [
+                                                               {
+                                                                 'date' => '2017-01-16T08:03:02',
+                                                                 'version' => '0.0.1'
+                                                               },
+                                                               {
+                                                                 'date' => '2017-01-16T12:56:51',
+                                                                 'version' => '0.0.2'
+                                                               },
+                                                               {
+                                                                 'date' => '2017-01-16T17:38:16',
+                                                                 'version' => '0.0.3'
+                                                               },
+                                                               {
+                                                                 'date' => '2017-03-11T10:45:23',
+                                                                 'version' => '0.0.4'
+                                                               },
+                                                               {
+                                                                 'date' => '2017-04-05T11:19:02',
+                                                                 'version' => '0.0.5'
+                                                               },
+                                                               {
+                                                                 'date' => '2017-04-15T17:35:18',
+                                                                 'version' => '0.0.6'
+                                                               },
+                                                               {
+                                                                 'date' => '2017-05-19T05:05:24',
+                                                                 'version' => '0.0.7'
+                                                               },
+                                                               {
+                                                                 'date' => '2017-12-18T14:11:19',
+                                                                 'version' => '0.1.0'
+                                                               },
+                                                               {
+                                                                 'date' => '2017-12-21T08:24:12',
+                                                                 'version' => '0.1.1'
+                                                               },
+                                                               {
+                                                                 'date' => '2018-01-15T03:18:05',
+                                                                 'version' => '0.2.0'
+                                                               },
+                                                               {
+                                                                 'date' => '2018-01-20T12:55:34',
+                                                                 'version' => '0.2.1'
+                                                               },
+                                                               {
+                                                                 'date' => '2018-08-30T16:07:18',
+                                                                 'version' => '0.3.1'
+                                                               },
+                                                               {
+                                                                 'date' => '2018-08-30T16:13:54',
+                                                                 'version' => '0.3.2'
+                                                               },
+                                                               {
+                                                                 'date' => '2018-08-31T03:49:31',
+                                                                 'version' => '0.3.3'
+                                                               }
+                                                             ]
+                                             },
                        'Archive-Tar' => {
                                           'advisories' => [
                                                             {
@@ -6297,6 +6376,204 @@ sub db {
                                                         }
                                                       ]
                                       },
+                       'Crypt-OpenSSL-DSA' => {
+                                                'advisories' => [
+                                                                  {
+                                                                    'affected_versions' => '<0.14',
+                                                                    'cves' => [
+                                                                                'CVE-2009-0129'
+                                                                              ],
+                                                                    'description' => 'Missing error check in do_verify, which might allow remote attackers to bypass validation of the certificate chain via a malformed SSL/TLS signature.
+',
+                                                                    'distribution' => 'Crypt-OpenSSL-DSA',
+                                                                    'fixed_versions' => '>=0.14',
+                                                                    'id' => 'CPANSA-Crypt-OpenSSL-DSA-2009-01',
+                                                                    'references' => [
+                                                                                      'https://metacpan.org/changes/distribution/Crypt-OpenSSL-DSA',
+                                                                                      'https://www.openwall.com/lists/oss-security/2009/01/12/4',
+                                                                                      'https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=511519'
+                                                                                    ],
+                                                                    'reported' => '2009-01-15'
+                                                                  }
+                                                                ],
+                                                'main_module' => 'Crypt::OpenSSL::DSA',
+                                                'versions' => [
+                                                                {
+                                                                  'date' => '2001-09-19T04:45:14',
+                                                                  'version' => '0.01'
+                                                                },
+                                                                {
+                                                                  'date' => '2001-09-24T17:32:49',
+                                                                  'version' => '0.02'
+                                                                },
+                                                                {
+                                                                  'date' => '2002-02-07T05:57:36',
+                                                                  'version' => '0.03'
+                                                                },
+                                                                {
+                                                                  'date' => '2002-09-24T04:52:06',
+                                                                  'version' => '0.04'
+                                                                },
+                                                                {
+                                                                  'date' => '2002-09-26T00:21:17',
+                                                                  'version' => '0.10'
+                                                                },
+                                                                {
+                                                                  'date' => '2003-01-06T19:08:08',
+                                                                  'version' => '0.11'
+                                                                },
+                                                                {
+                                                                  'date' => '2005-05-23T01:44:36',
+                                                                  'version' => '0.12'
+                                                                },
+                                                                {
+                                                                  'date' => '2005-10-15T21:37:10',
+                                                                  'version' => '0.13'
+                                                                },
+                                                                {
+                                                                  'date' => '2012-10-16T22:55:16',
+                                                                  'version' => '0.14'
+                                                                },
+                                                                {
+                                                                  'date' => '2015-02-03T21:57:37',
+                                                                  'version' => '0.15'
+                                                                },
+                                                                {
+                                                                  'date' => '2016-10-27T11:25:18',
+                                                                  'version' => '0.16'
+                                                                },
+                                                                {
+                                                                  'date' => '2016-10-27T18:54:42',
+                                                                  'version' => '0.17'
+                                                                },
+                                                                {
+                                                                  'date' => '2016-11-17T10:33:35',
+                                                                  'version' => '0.18'
+                                                                },
+                                                                {
+                                                                  'date' => '2017-01-13T08:24:56',
+                                                                  'version' => '0.19'
+                                                                }
+                                                              ]
+                                              },
+                       'Crypt-Passwd-XS' => {
+                                              'advisories' => [
+                                                                {
+                                                                  'affected_versions' => '<0.601',
+                                                                  'cves' => [
+                                                                              'CVE-2012-2143'
+                                                                            ],
+                                                                  'description' => 'The crypt_des (aka DES-based crypt) function does not process the complete cleartext password if this password contains a 0x80 character, which makes it easier for context-dependent attackers to obtain access via an authentication attempt with an initial substring of the intended password, as demonstrated by a Unicode password.
+',
+                                                                  'distribution' => 'Crypt-Passwd-XS',
+                                                                  'fixed_versions' => '>=0.601',
+                                                                  'id' => 'CPANSA-Crypt-Passwd-XS-2012-01',
+                                                                  'references' => [
+                                                                                    'https://metacpan.org/changes/distribution/Crypt-Passwd-XS'
+                                                                                  ],
+                                                                  'reported' => '2012-05-07'
+                                                                }
+                                                              ],
+                                              'main_module' => 'Crypt::Passwd::XS',
+                                              'versions' => [
+                                                              {
+                                                                'date' => '2010-11-14T21:18:18',
+                                                                'version' => '0.4'
+                                                              },
+                                                              {
+                                                                'date' => '2010-11-17T02:03:54',
+                                                                'version' => '0.501'
+                                                              },
+                                                              {
+                                                                'date' => '2010-11-17T23:25:17',
+                                                                'version' => '0.503'
+                                                              },
+                                                              {
+                                                                'date' => '2010-11-20T00:37:33',
+                                                                'version' => '0.504'
+                                                              },
+                                                              {
+                                                                'date' => '2010-11-24T00:59:34',
+                                                                'version' => '0.505'
+                                                              },
+                                                              {
+                                                                'date' => '2011-03-09T16:18:01',
+                                                                'version' => '0.506'
+                                                              },
+                                                              {
+                                                                'date' => '2011-03-09T21:40:38',
+                                                                'version' => '0.507'
+                                                              },
+                                                              {
+                                                                'date' => '2011-07-26T16:37:20',
+                                                                'version' => '0.600'
+                                                              },
+                                                              {
+                                                                'date' => '2012-12-06T19:57:57',
+                                                                'version' => '0.601'
+                                                              }
+                                                            ]
+                                            },
+                       'DBD-MariaDB' => {
+                                          'advisories' => [
+                                                            {
+                                                              'affected_versions' => '<1.00',
+                                                              'cves' => [
+                                                                          'CVE-2018-2767'
+                                                                        ],
+                                                              'description' => 'SSL problems of MySQL and MariaDB clients.
+',
+                                                              'distribution' => 'DBD-MariaDB',
+                                                              'fixed_versions' => '>=1.00',
+                                                              'id' => 'CPANSA-DBD-MariaDB-2018-01',
+                                                              'references' => [
+                                                                                'https://metacpan.org/changes/distribution/DBD-MariaDB'
+                                                                              ],
+                                                              'reported' => '2017-07-01'
+                                                            },
+                                                            {
+                                                              'affected_versions' => '<1.00',
+                                                              'cves' => [
+                                                                          'CVE-2017-10788'
+                                                                        ],
+                                                              'description' => 'Use-after-free after calling mysql_stmt_close().
+',
+                                                              'distribution' => 'DBD-MariaDB',
+                                                              'fixed_versions' => '>=1.00',
+                                                              'id' => 'CPANSA-DBD-MariaDB-2017-02',
+                                                              'references' => [
+                                                                                'https://metacpan.org/changes/distribution/DBD-MariaDB'
+                                                                              ],
+                                                              'reported' => '2017-07-01'
+                                                            },
+                                                            {
+                                                              'affected_versions' => '<1.00',
+                                                              'cves' => [
+                                                                          'CVE-2017-3302'
+                                                                        ],
+                                                              'description' => 'Leaking dangling pointers.
+',
+                                                              'distribution' => 'DBD-MariaDB',
+                                                              'fixed_versions' => '>=1.00',
+                                                              'id' => 'CPANSA-DBD-MariaDB-2017-01',
+                                                              'references' => [
+                                                                                'https://metacpan.org/changes/distribution/DBD-MariaDB'
+                                                                              ],
+                                                              'reported' => '2017-07-01'
+                                                            }
+                                                          ],
+                                          'main_module' => 'DBD::MariaDB',
+                                          'versions' => [
+                                                          {
+                                                            'date' => '2018-06-26T14:23:29',
+                                                            'version' => '0.90_01'
+                                                          },
+                                                          {
+                                                            'date' => '2018-07-12T13:36:05',
+                                                            'version' => '1.00'
+                                                          }
+                                                        ]
+                                        },
                        'DBD-mysql' => {
                                         'advisories' => [
                                                           {
@@ -8657,6 +8934,939 @@ sub db {
                                                           }
                                                         ]
                                         },
+                       'Dancer' => {
+                                     'advisories' => [
+                                                       {
+                                                         'affected_versions' => '<1.3114',
+                                                         'cves' => [
+                                                                     'CVE-2012-5572'
+                                                                   ],
+                                                         'description' => 'CRLF injection vulnerability in the cookie method allows remote attackers to inject arbitrary HTTP headers and conduct HTTP response splitting attacks via a cookie name.
+',
+                                                         'distribution' => 'Dancer',
+                                                         'fixed_versions' => '>=1.3114',
+                                                         'id' => 'CPANSA-Dancer-2014-01',
+                                                         'references' => [
+                                                                           'https://metacpan.org/changes/distribution/Dancer',
+                                                                           'https://github.com/PerlDancer/Dancer/commit/46ef9124f3149f697455061499ac7cee40930349'
+                                                                         ],
+                                                         'reported' => '2014-05-30'
+                                                       },
+                                                       {
+                                                         'affected_versions' => '<1.3051',
+                                                         'cves' => [
+                                                                     'CVE-2011-1589'
+                                                                   ],
+                                                         'description' => 'Directory traversal vulnerability (Mojolicious report, but Dancer was vulnerable as well).
+',
+                                                         'distribution' => 'Dancer',
+                                                         'fixed_versions' => '>=1.3051',
+                                                         'id' => 'CPANSA-Dancer-2011-01',
+                                                         'references' => [
+                                                                           'https://metacpan.org/changes/distribution/Dancer',
+                                                                           'https://github.com/PerlDancer/Dancer/commit/91d0bf6a36705b0971b18f7d38fa2f3df8c7b994'
+                                                                         ],
+                                                         'reported' => '2011-04-05'
+                                                       }
+                                                     ],
+                                     'main_module' => 'Dancer',
+                                     'versions' => [
+                                                     {
+                                                       'date' => '2009-07-27T13:18:07',
+                                                       'version' => '20090727.1315'
+                                                     },
+                                                     {
+                                                       'date' => '2009-07-27T14:14:13',
+                                                       'version' => '0_0.99'
+                                                     },
+                                                     {
+                                                       'date' => '2009-08-01T13:48:20',
+                                                       'version' => '0.9901'
+                                                     },
+                                                     {
+                                                       'date' => '2009-08-04T10:01:54',
+                                                       'version' => '0.9902'
+                                                     },
+                                                     {
+                                                       'date' => '2009-08-07T12:29:03',
+                                                       'version' => '0.9003'
+                                                     },
+                                                     {
+                                                       'date' => '2009-09-19T15:30:19',
+                                                       'version' => '0.9904'
+                                                     },
+                                                     {
+                                                       'date' => '2009-09-23T21:33:51',
+                                                       'version' => '0.9905'
+                                                     },
+                                                     {
+                                                       'date' => '2009-11-20T11:14:20',
+                                                       'version' => '1.000'
+                                                     },
+                                                     {
+                                                       'date' => '2010-01-06T13:53:28',
+                                                       'version' => '1.100'
+                                                     },
+                                                     {
+                                                       'date' => '2010-01-11T09:46:45',
+                                                       'version' => '1.110'
+                                                     },
+                                                     {
+                                                       'date' => '2010-01-15T16:03:35',
+                                                       'version' => '1.120'
+                                                     },
+                                                     {
+                                                       'date' => '2010-01-15T17:53:08',
+                                                       'version' => '1.121'
+                                                     },
+                                                     {
+                                                       'date' => '2010-01-20T07:48:38',
+                                                       'version' => '1.122'
+                                                     },
+                                                     {
+                                                       'date' => '2010-01-29T17:29:24',
+                                                       'version' => '1.130'
+                                                     },
+                                                     {
+                                                       'date' => '2010-02-09T07:55:18',
+                                                       'version' => '1.140'
+                                                     },
+                                                     {
+                                                       'date' => '2010-02-17T15:09:48',
+                                                       'version' => '1.150'
+                                                     },
+                                                     {
+                                                       'date' => '2010-03-07T17:50:01',
+                                                       'version' => '1.160'
+                                                     },
+                                                     {
+                                                       'date' => '2010-03-24T11:19:00',
+                                                       'version' => '1.170'
+                                                     },
+                                                     {
+                                                       'date' => '2010-03-24T13:44:04',
+                                                       'version' => '1.171'
+                                                     },
+                                                     {
+                                                       'date' => '2010-03-28T15:09:59',
+                                                       'version' => '1.172'
+                                                     },
+                                                     {
+                                                       'date' => '2010-04-01T14:13:30',
+                                                       'version' => '1.173'
+                                                     },
+                                                     {
+                                                       'date' => '2010-04-04T11:03:53',
+                                                       'version' => '1.173_01'
+                                                     },
+                                                     {
+                                                       'date' => '2010-04-08T13:49:39',
+                                                       'version' => '1.174'
+                                                     },
+                                                     {
+                                                       'date' => '2010-04-11T10:49:39',
+                                                       'version' => '1.175'
+                                                     },
+                                                     {
+                                                       'date' => '2010-04-19T08:43:22',
+                                                       'version' => '1.175_01'
+                                                     },
+                                                     {
+                                                       'date' => '2010-04-22T20:29:56',
+                                                       'version' => '1.176'
+                                                     },
+                                                     {
+                                                       'date' => '2010-05-05T12:21:26',
+                                                       'version' => '1.178_01'
+                                                     },
+                                                     {
+                                                       'date' => '2010-05-16T10:28:47',
+                                                       'version' => '1.1800'
+                                                     },
+                                                     {
+                                                       'date' => '2010-05-19T14:17:57',
+                                                       'version' => '1.1801'
+                                                     },
+                                                     {
+                                                       'date' => '2010-05-19T17:32:52',
+                                                       'version' => '1.1802'
+                                                     },
+                                                     {
+                                                       'date' => '2010-05-23T20:45:17',
+                                                       'version' => '1.1803'
+                                                     },
+                                                     {
+                                                       'date' => '2010-06-18T11:59:20',
+                                                       'version' => '1.1804'
+                                                     },
+                                                     {
+                                                       'date' => '2010-06-22T06:41:58',
+                                                       'version' => '1.1805'
+                                                     },
+                                                     {
+                                                       'date' => '2010-07-07T06:15:55',
+                                                       'version' => '1.1806_01'
+                                                     },
+                                                     {
+                                                       'date' => '2010-08-14T16:37:45',
+                                                       'version' => '1.1806_02'
+                                                     },
+                                                     {
+                                                       'date' => '2010-08-23T17:47:12',
+                                                       'version' => '1.1807'
+                                                     },
+                                                     {
+                                                       'date' => '2010-08-24T06:23:38',
+                                                       'version' => '1.1808'
+                                                     },
+                                                     {
+                                                       'date' => '2010-08-25T05:41:15',
+                                                       'version' => '1.1809'
+                                                     },
+                                                     {
+                                                       'date' => '2010-09-01T06:19:20',
+                                                       'version' => '1.1810'
+                                                     },
+                                                     {
+                                                       'date' => '2010-09-03T09:23:14',
+                                                       'version' => '1.1811'
+                                                     },
+                                                     {
+                                                       'date' => '2010-09-21T12:19:35',
+                                                       'version' => '1.1812'
+                                                     },
+                                                     {
+                                                       'date' => '2010-09-24T14:25:44',
+                                                       'version' => '1.1901'
+                                                     },
+                                                     {
+                                                       'date' => '2010-10-14T09:25:03',
+                                                       'version' => '1.1999_01'
+                                                     },
+                                                     {
+                                                       'date' => '2010-10-28T15:41:17',
+                                                       'version' => '1.1999_02'
+                                                     },
+                                                     {
+                                                       'date' => '2010-11-02T14:14:32',
+                                                       'version' => '1.1902'
+                                                     },
+                                                     {
+                                                       'date' => '2010-11-02T14:25:04',
+                                                       'version' => '1.1902'
+                                                     },
+                                                     {
+                                                       'date' => '2010-11-03T17:07:29',
+                                                       'version' => '1.1903'
+                                                     },
+                                                     {
+                                                       'date' => '2010-11-04T11:16:17',
+                                                       'version' => '1.1904'
+                                                     },
+                                                     {
+                                                       'date' => '2010-11-11T07:43:21',
+                                                       'version' => '1.1999_03'
+                                                     },
+                                                     {
+                                                       'date' => '2010-11-14T08:08:56',
+                                                       'version' => '1.1999_04'
+                                                     },
+                                                     {
+                                                       'date' => '2010-11-18T15:54:33',
+                                                       'version' => '1.200'
+                                                     },
+                                                     {
+                                                       'date' => '2010-11-18T16:52:47',
+                                                       'version' => '1.2000'
+                                                     },
+                                                     {
+                                                       'date' => '2010-11-29T22:05:38',
+                                                       'version' => '1.2000_01'
+                                                     },
+                                                     {
+                                                       'date' => '2010-11-30T10:00:23',
+                                                       'version' => '1.2000_02'
+                                                     },
+                                                     {
+                                                       'date' => '2010-11-30T19:59:09',
+                                                       'version' => '1.2001'
+                                                     },
+                                                     {
+                                                       'date' => '2010-12-02T12:18:12',
+                                                       'version' => '1.2001_01'
+                                                     },
+                                                     {
+                                                       'date' => '2010-12-03T20:28:56',
+                                                       'version' => '1.2002'
+                                                     },
+                                                     {
+                                                       'date' => '2010-12-07T18:05:50',
+                                                       'version' => '1.2002_01'
+                                                     },
+                                                     {
+                                                       'date' => '2010-12-08T21:38:17',
+                                                       'version' => '1.2002_02'
+                                                     },
+                                                     {
+                                                       'date' => '2010-12-10T18:28:16',
+                                                       'version' => '1.2003'
+                                                     },
+                                                     {
+                                                       'date' => '2010-12-22T17:57:55',
+                                                       'version' => '1.3000_01'
+                                                     },
+                                                     {
+                                                       'date' => '2011-01-03T15:17:14',
+                                                       'version' => '1.3000_02'
+                                                     },
+                                                     {
+                                                       'date' => '2011-01-27T10:00:22',
+                                                       'version' => '1.2004'
+                                                     },
+                                                     {
+                                                       'date' => '2011-01-27T10:09:31',
+                                                       'version' => '1.3001'
+                                                     },
+                                                     {
+                                                       'date' => '2011-02-02T15:42:28',
+                                                       'version' => '1.3002'
+                                                     },
+                                                     {
+                                                       'date' => '2011-02-05T17:07:15',
+                                                       'version' => '1.2005'
+                                                     },
+                                                     {
+                                                       'date' => '2011-02-06T13:12:28',
+                                                       'version' => '1.3003'
+                                                     },
+                                                     {
+                                                       'date' => '2011-02-10T20:48:48',
+                                                       'version' => '1.3010'
+                                                     },
+                                                     {
+                                                       'date' => '2011-02-12T12:50:18',
+                                                       'version' => '1.3010_01'
+                                                     },
+                                                     {
+                                                       'date' => '2011-02-14T15:58:10',
+                                                       'version' => '1.3011'
+                                                     },
+                                                     {
+                                                       'date' => '2011-03-01T19:00:52',
+                                                       'version' => '1.3012'
+                                                     },
+                                                     {
+                                                       'date' => '2011-03-03T08:41:00',
+                                                       'version' => '1.3013'
+                                                     },
+                                                     {
+                                                       'date' => '2011-03-04T12:56:36',
+                                                       'version' => '1.3014'
+                                                     },
+                                                     {
+                                                       'date' => '2011-03-10T14:16:24',
+                                                       'version' => '1.3014_01'
+                                                     },
+                                                     {
+                                                       'date' => '2011-03-13T13:17:43',
+                                                       'version' => '1.3019_01'
+                                                     },
+                                                     {
+                                                       'date' => '2011-03-14T07:44:57',
+                                                       'version' => '1.3019_02'
+                                                     },
+                                                     {
+                                                       'date' => '2011-03-21T13:44:17',
+                                                       'version' => '1.3020'
+                                                     },
+                                                     {
+                                                       'date' => '2011-04-01T15:22:58',
+                                                       'version' => '1.3029_01'
+                                                     },
+                                                     {
+                                                       'date' => '2011-04-08T20:07:26',
+                                                       'version' => '1.3029_02'
+                                                     },
+                                                     {
+                                                       'date' => '2011-04-10T08:18:44',
+                                                       'version' => '1.3029_03'
+                                                     },
+                                                     {
+                                                       'date' => '2011-04-13T08:26:50',
+                                                       'version' => '1.3030'
+                                                     },
+                                                     {
+                                                       'date' => '2011-04-27T14:58:57',
+                                                       'version' => '1.3039_01'
+                                                     },
+                                                     {
+                                                       'date' => '2011-05-01T14:55:49',
+                                                       'version' => '1.3040'
+                                                     },
+                                                     {
+                                                       'date' => '2011-05-14T15:03:00',
+                                                       'version' => '1.3049_01'
+                                                     },
+                                                     {
+                                                       'date' => '2011-05-20T10:57:10',
+                                                       'version' => '1.3050'
+                                                     },
+                                                     {
+                                                       'date' => '2011-05-27T12:57:27',
+                                                       'version' => '1.3051'
+                                                     },
+                                                     {
+                                                       'date' => '2011-05-27T13:07:51',
+                                                       'version' => '1.3059_01'
+                                                     },
+                                                     {
+                                                       'date' => '2011-05-29T14:06:24',
+                                                       'version' => '1.3059_02'
+                                                     },
+                                                     {
+                                                       'date' => '2011-06-11T14:02:50',
+                                                       'version' => '1.3059_03'
+                                                     },
+                                                     {
+                                                       'date' => '2011-06-12T17:31:55',
+                                                       'version' => '1.3059_04'
+                                                     },
+                                                     {
+                                                       'date' => '2011-06-15T10:35:07',
+                                                       'version' => '1.3060'
+                                                     },
+                                                     {
+                                                       'date' => '2011-07-07T13:19:45',
+                                                       'version' => '1.3069_01'
+                                                     },
+                                                     {
+                                                       'date' => '2011-07-10T16:14:53',
+                                                       'version' => '1.3069_02'
+                                                     },
+                                                     {
+                                                       'date' => '2011-07-14T13:47:19',
+                                                       'version' => '1.3070'
+                                                     },
+                                                     {
+                                                       'date' => '2011-07-26T16:21:51',
+                                                       'version' => '1.3071'
+                                                     },
+                                                     {
+                                                       'date' => '2011-08-17T15:27:53',
+                                                       'version' => '1.3079_01'
+                                                     },
+                                                     {
+                                                       'date' => '2011-08-23T09:55:46',
+                                                       'version' => '1.3072'
+                                                     },
+                                                     {
+                                                       'date' => '2011-08-28T14:13:40',
+                                                       'version' => '1.3079_02'
+                                                     },
+                                                     {
+                                                       'date' => '2011-09-10T15:10:29',
+                                                       'version' => '1.3079_03'
+                                                     },
+                                                     {
+                                                       'date' => '2011-10-02T16:07:02',
+                                                       'version' => '1.3079_04'
+                                                     },
+                                                     {
+                                                       'date' => '2011-10-18T14:43:22',
+                                                       'version' => '1.3079_05'
+                                                     },
+                                                     {
+                                                       'date' => '2011-10-25T21:16:42',
+                                                       'version' => '1.3080'
+                                                     },
+                                                     {
+                                                       'date' => '2011-11-27T06:51:43',
+                                                       'version' => '1.3089_01'
+                                                     },
+                                                     {
+                                                       'date' => '2011-12-13T14:41:24',
+                                                       'version' => '1.3090'
+                                                     },
+                                                     {
+                                                       'date' => '2011-12-17T11:09:48',
+                                                       'version' => '1.3091'
+                                                     },
+                                                     {
+                                                       'date' => '2012-01-27T14:38:05',
+                                                       'version' => '1.3092'
+                                                     },
+                                                     {
+                                                       'date' => '2012-02-29T14:34:55',
+                                                       'version' => '1.3093'
+                                                     },
+                                                     {
+                                                       'date' => '2012-03-31T09:57:40',
+                                                       'version' => '1.3094'
+                                                     },
+                                                     {
+                                                       'date' => '2012-04-01T19:22:56',
+                                                       'version' => '1.3095'
+                                                     },
+                                                     {
+                                                       'date' => '2012-06-22T20:18:54',
+                                                       'version' => '1.3095_01'
+                                                     },
+                                                     {
+                                                       'date' => '2012-07-03T07:27:28',
+                                                       'version' => '1.3095_02'
+                                                     },
+                                                     {
+                                                       'date' => '2012-07-05T23:09:20',
+                                                       'version' => '1.3096'
+                                                     },
+                                                     {
+                                                       'date' => '2012-07-08T18:36:14',
+                                                       'version' => '1.3097'
+                                                     },
+                                                     {
+                                                       'date' => '2012-07-28T14:40:15',
+                                                       'version' => '1.3098'
+                                                     },
+                                                     {
+                                                       'date' => '2012-08-11T13:54:49',
+                                                       'version' => '1.3099'
+                                                     },
+                                                     {
+                                                       'date' => '2012-08-25T19:42:47',
+                                                       'version' => '1.3100'
+                                                     },
+                                                     {
+                                                       'date' => '2012-10-06T13:24:53',
+                                                       'version' => '1.3110'
+                                                     },
+                                                     {
+                                                       'date' => '2012-12-24T13:17:58',
+                                                       'version' => '1.9999_01'
+                                                     },
+                                                     {
+                                                       'date' => '2012-12-24T13:48:35',
+                                                       'version' => '1.9999_02'
+                                                     },
+                                                     {
+                                                       'date' => '2013-01-22T21:38:11',
+                                                       'version' => '2.0000_01'
+                                                     },
+                                                     {
+                                                       'date' => '2013-02-22T15:33:14',
+                                                       'version' => '2.000001'
+                                                     },
+                                                     {
+                                                       'date' => '2013-02-24T22:51:59',
+                                                       'version' => '1.3111'
+                                                     },
+                                                     {
+                                                       'date' => '2013-03-30T16:33:05',
+                                                       'version' => '1.3111_01'
+                                                     },
+                                                     {
+                                                       'date' => '2013-04-01T22:31:08',
+                                                       'version' => '1.3111_02'
+                                                     },
+                                                     {
+                                                       'date' => '2013-04-11T01:04:37',
+                                                       'version' => '1.3112'
+                                                     },
+                                                     {
+                                                       'date' => '2013-05-09T00:36:16',
+                                                       'version' => '1.3113'
+                                                     },
+                                                     {
+                                                       'date' => '2013-06-02T16:49:58',
+                                                       'version' => '1.3114'
+                                                     },
+                                                     {
+                                                       'date' => '2013-06-09T23:54:16',
+                                                       'version' => '1.3115'
+                                                     },
+                                                     {
+                                                       'date' => '2013-07-04T01:35:27',
+                                                       'version' => '1.3116'
+                                                     },
+                                                     {
+                                                       'date' => '2013-07-31T22:40:52',
+                                                       'version' => '1.3117'
+                                                     },
+                                                     {
+                                                       'date' => '2013-09-01T16:45:13',
+                                                       'version' => '1.3118'
+                                                     },
+                                                     {
+                                                       'date' => '2013-10-26T19:42:59',
+                                                       'version' => '1.3119'
+                                                     },
+                                                     {
+                                                       'date' => '2013-12-24T16:23:20',
+                                                       'version' => '1.3120'
+                                                     },
+                                                     {
+                                                       'date' => '2014-02-02T22:26:53',
+                                                       'version' => '1.3121'
+                                                     },
+                                                     {
+                                                       'date' => '2014-04-10T23:16:40',
+                                                       'version' => '1.3122'
+                                                     },
+                                                     {
+                                                       'date' => '2014-04-12T15:47:53',
+                                                       'version' => '1.3123'
+                                                     },
+                                                     {
+                                                       'date' => '2014-05-10T16:15:17',
+                                                       'version' => '1.3124'
+                                                     },
+                                                     {
+                                                       'date' => '2014-07-12T17:19:08',
+                                                       'version' => '1.3125'
+                                                     },
+                                                     {
+                                                       'date' => '2014-07-15T02:01:21',
+                                                       'version' => '1.3126'
+                                                     },
+                                                     {
+                                                       'date' => '2014-09-09T00:49:19',
+                                                       'version' => '1.3127'
+                                                     },
+                                                     {
+                                                       'date' => '2014-09-09T11:47:21',
+                                                       'version' => '1.3128'
+                                                     },
+                                                     {
+                                                       'date' => '2014-09-10T00:50:37',
+                                                       'version' => '1.3129'
+                                                     },
+                                                     {
+                                                       'date' => '2014-09-16T01:21:25',
+                                                       'version' => '1.3130'
+                                                     },
+                                                     {
+                                                       'date' => '2014-10-11T18:59:22',
+                                                       'version' => '1.3131_0'
+                                                     },
+                                                     {
+                                                       'date' => '2014-10-13T23:25:36',
+                                                       'version' => '1.3131_1'
+                                                     },
+                                                     {
+                                                       'date' => '2014-10-20T23:14:23',
+                                                       'version' => '1.3132'
+                                                     },
+                                                     {
+                                                       'date' => '2014-11-26T22:20:35',
+                                                       'version' => '1.3133'
+                                                     },
+                                                     {
+                                                       'date' => '2015-02-23T01:33:08',
+                                                       'version' => '1.3134'
+                                                     },
+                                                     {
+                                                       'date' => '2015-04-23T01:54:25',
+                                                       'version' => '1.3135'
+                                                     },
+                                                     {
+                                                       'date' => '2015-05-24T15:48:19',
+                                                       'version' => '1.3136'
+                                                     },
+                                                     {
+                                                       'date' => '2015-06-05T20:05:21',
+                                                       'version' => '1.3137'
+                                                     },
+                                                     {
+                                                       'date' => '2015-06-12T20:55:50',
+                                                       'version' => '1.3138'
+                                                     },
+                                                     {
+                                                       'date' => '2015-06-25T20:13:45',
+                                                       'version' => '1.3139'
+                                                     },
+                                                     {
+                                                       'date' => '2015-07-03T13:56:32',
+                                                       'version' => '1.3140'
+                                                     },
+                                                     {
+                                                       'date' => '2015-09-07T15:15:26',
+                                                       'version' => '1.3141'
+                                                     },
+                                                     {
+                                                       'date' => '2015-09-15T00:52:23',
+                                                       'version' => '1.3142'
+                                                     },
+                                                     {
+                                                       'date' => '2015-10-26T21:15:31',
+                                                       'version' => '1.3143'
+                                                     },
+                                                     {
+                                                       'date' => '2015-11-04T12:36:07',
+                                                       'version' => '1.3144'
+                                                     },
+                                                     {
+                                                       'date' => '2015-11-06T22:12:42',
+                                                       'version' => '1.3200'
+                                                     },
+                                                     {
+                                                       'date' => '2015-11-07T19:27:25',
+                                                       'version' => '1.3201'
+                                                     },
+                                                     {
+                                                       'date' => '2015-11-07T21:52:17',
+                                                       'version' => '1.3202'
+                                                     },
+                                                     {
+                                                       'date' => '2016-02-15T21:33:45',
+                                                       'version' => '1.3300'
+                                                     },
+                                                     {
+                                                       'date' => '2016-02-16T22:42:44',
+                                                       'version' => '1.3301'
+                                                     },
+                                                     {
+                                                       'date' => '2018-05-20T19:52:07',
+                                                       'version' => '1.3203'
+                                                     },
+                                                     {
+                                                       'date' => '2018-05-23T13:43:34',
+                                                       'version' => '1.3204'
+                                                     },
+                                                     {
+                                                       'date' => '2018-06-13T22:02:36',
+                                                       'version' => '1.3205'
+                                                     },
+                                                     {
+                                                       'date' => '2018-06-15T22:11:45',
+                                                       'version' => '1.3400'
+                                                     },
+                                                     {
+                                                       'date' => '2018-10-01T11:53:31',
+                                                       'version' => '1.3401'
+                                                     },
+                                                     {
+                                                       'date' => '2018-10-10T10:44:29',
+                                                       'version' => '1.3402'
+                                                     },
+                                                     {
+                                                       'date' => '2018-10-11T22:45:37',
+                                                       'version' => '1.3403'
+                                                     },
+                                                     {
+                                                       'date' => '2018-10-12T20:33:54',
+                                                       'version' => '1.3500'
+                                                     }
+                                                   ]
+                                   },
+                       'Data-Dumper' => {
+                                          'advisories' => [
+                                                            {
+                                                              'affected_versions' => '<2.154',
+                                                              'cves' => [
+                                                                          'CVE-2014-4330'
+                                                                        ],
+                                                              'description' => 'Infinite recursion.
+',
+                                                              'distribution' => 'Data-Dumper',
+                                                              'fixed_versions' => '>=2.154',
+                                                              'id' => 'CPANSA-Data-Dumper-2014-01',
+                                                              'references' => [
+                                                                                'https://metacpan.org/changes/distribution/Data-Dumper'
+                                                                              ],
+                                                              'reported' => '2014-09-30'
+                                                            }
+                                                          ],
+                                          'main_module' => 'Data::Dumper',
+                                          'versions' => [
+                                                          {
+                                                            'date' => '1995-11-19T22:29:08',
+                                                            'version' => '1.21'
+                                                          },
+                                                          {
+                                                            'date' => '1995-11-23T05:45:27',
+                                                            'version' => '1.22'
+                                                          },
+                                                          {
+                                                            'date' => '1995-12-04T03:12:16',
+                                                            'version' => '1.23'
+                                                          },
+                                                          {
+                                                            'date' => '1996-04-09T15:54:26',
+                                                            'version' => '2.00'
+                                                          },
+                                                          {
+                                                            'date' => '1996-04-10T04:25:17',
+                                                            'version' => '2.01'
+                                                          },
+                                                          {
+                                                            'date' => '1996-04-13T07:14:35',
+                                                            'version' => '2.02'
+                                                          },
+                                                          {
+                                                            'date' => '1996-08-26T14:36:59',
+                                                            'version' => '2.03'
+                                                          },
+                                                          {
+                                                            'date' => '1996-08-28T20:11:49',
+                                                            'version' => '2.04'
+                                                          },
+                                                          {
+                                                            'date' => '1996-12-02T13:42:49',
+                                                            'version' => '2.05'
+                                                          },
+                                                          {
+                                                            'date' => '1996-12-02T23:07:56',
+                                                            'version' => '2.06'
+                                                          },
+                                                          {
+                                                            'date' => '1996-12-07T17:28:27',
+                                                            'version' => '2.07'
+                                                          },
+                                                          {
+                                                            'date' => '1997-12-07T21:27:09',
+                                                            'version' => '2.08'
+                                                          },
+                                                          {
+                                                            'date' => '1998-01-15T20:36:46',
+                                                            'version' => '2.081'
+                                                          },
+                                                          {
+                                                            'date' => '1998-03-06T21:08:49',
+                                                            'version' => '2.081'
+                                                          },
+                                                          {
+                                                            'date' => '1998-07-17T05:23:08',
+                                                            'version' => '2.09'
+                                                          },
+                                                          {
+                                                            'date' => '1998-07-21T12:08:19',
+                                                            'version' => '2.09'
+                                                          },
+                                                          {
+                                                            'date' => '1998-10-31T12:10:30',
+                                                            'version' => '2.10'
+                                                          },
+                                                          {
+                                                            'date' => '1999-05-01T02:01:03',
+                                                            'version' => '2.101'
+                                                          },
+                                                          {
+                                                            'date' => '1999-06-02T01:30:55',
+                                                            'version' => '2.101'
+                                                          },
+                                                          {
+                                                            'date' => '2003-07-20T16:59:48',
+                                                            'version' => '2.12_01'
+                                                          },
+                                                          {
+                                                            'date' => '2003-07-31T19:12:44',
+                                                            'version' => '2.12_02'
+                                                          },
+                                                          {
+                                                            'date' => '2003-08-25T11:49:41',
+                                                            'version' => '2.121'
+                                                          },
+                                                          {
+                                                            'date' => '2009-06-06T14:45:36',
+                                                            'version' => '2.121_20'
+                                                          },
+                                                          {
+                                                            'date' => '2009-06-09T15:49:12',
+                                                            'version' => '2.122'
+                                                          },
+                                                          {
+                                                            'date' => '2009-06-11T08:07:01',
+                                                            'version' => '2.123'
+                                                          },
+                                                          {
+                                                            'date' => '2009-06-13T15:22:32',
+                                                            'version' => '2.124'
+                                                          },
+                                                          {
+                                                            'date' => '2009-08-08T10:33:01',
+                                                            'version' => '2.125'
+                                                          },
+                                                          {
+                                                            'date' => '2010-04-15T19:55:01',
+                                                            'version' => '2.126'
+                                                          },
+                                                          {
+                                                            'date' => '2010-09-06T14:28:10',
+                                                            'version' => '2.126_01'
+                                                          },
+                                                          {
+                                                            'date' => '2010-09-10T07:08:41',
+                                                            'version' => '2.127'
+                                                          },
+                                                          {
+                                                            'date' => '2010-09-10T07:11:52',
+                                                            'version' => '2.128'
+                                                          },
+                                                          {
+                                                            'date' => '2011-05-20T15:53:12',
+                                                            'version' => '2.130_03'
+                                                          },
+                                                          {
+                                                            'date' => '2011-05-27T14:19:03',
+                                                            'version' => '2.131'
+                                                          },
+                                                          {
+                                                            'date' => '2011-12-19T08:23:05',
+                                                            'version' => '2.135_01'
+                                                          },
+                                                          {
+                                                            'date' => '2011-12-29T17:09:49',
+                                                            'version' => '2.135_02'
+                                                          },
+                                                          {
+                                                            'date' => '2012-08-07T06:59:51',
+                                                            'version' => '2.135_07'
+                                                          },
+                                                          {
+                                                            'date' => '2012-10-04T07:35:07',
+                                                            'version' => '2.136'
+                                                          },
+                                                          {
+                                                            'date' => '2012-12-12T06:30:48',
+                                                            'version' => '2.139'
+                                                          },
+                                                          {
+                                                            'date' => '2013-02-26T06:57:29',
+                                                            'version' => '2.143'
+                                                          },
+                                                          {
+                                                            'date' => '2013-03-15T09:46:49',
+                                                            'version' => '2.145'
+                                                          },
+                                                          {
+                                                            'date' => '2014-03-07T09:28:44',
+                                                            'version' => '2.151'
+                                                          },
+                                                          {
+                                                            'date' => '2014-09-18T15:47:37',
+                                                            'version' => '2.154'
+                                                          },
+                                                          {
+                                                            'date' => '2016-07-03T19:17:57',
+                                                            'version' => '2.160'
+                                                          },
+                                                          {
+                                                            'date' => '2016-07-11T20:13:06',
+                                                            'version' => '2.161'
+                                                          },
+                                                          {
+                                                            'date' => '2017-07-31T15:31:28',
+                                                            'version' => '2.167_01'
+                                                          },
+                                                          {
+                                                            'date' => '2017-08-04T08:05:22',
+                                                            'version' => '2.167_02'
+                                                          },
+                                                          {
+                                                            'date' => '2018-09-19T14:41:58',
+                                                            'version' => '2.172'
+                                                          }
+                                                        ]
+                                        },
                        'Dezi' => {
                                    'advisories' => [
                                                      {
@@ -8789,6 +9999,3422 @@ sub db {
                                                    }
                                                  ]
                                  },
+                       'Email-Address' => {
+                                            'advisories' => [
+                                                              {
+                                                                'affected_versions' => '<1.905',
+                                                                'cves' => [
+                                                                            'CVE-2014-0477'
+                                                                          ],
+                                                                'description' => 'Inefficient regular expression, which allows remote attackers to cause a denial of service (CPU consumption) via an empty quoted string in an RFC 2822 address.
+',
+                                                                'distribution' => 'Email-Address',
+                                                                'fixed_versions' => '>=1.905',
+                                                                'id' => 'CPANSA-Email-Address-2014-01',
+                                                                'references' => [
+                                                                                  'https://metacpan.org/changes/distribution/Email-Address'
+                                                                                ],
+                                                                'reported' => '2014-07-03'
+                                                              }
+                                                            ],
+                                            'main_module' => 'Email::Address',
+                                            'versions' => [
+                                                            {
+                                                              'date' => '2004-05-27T03:19:56',
+                                                              'version' => '1.1'
+                                                            },
+                                                            {
+                                                              'date' => '2004-06-02T16:35:30',
+                                                              'version' => '1.2'
+                                                            },
+                                                            {
+                                                              'date' => '2004-08-16T21:39:58',
+                                                              'version' => '1.3'
+                                                            },
+                                                            {
+                                                              'date' => '2004-10-05T18:10:42',
+                                                              'version' => '1.5'
+                                                            },
+                                                            {
+                                                              'date' => '2004-10-05T18:20:42',
+                                                              'version' => '1.6'
+                                                            },
+                                                            {
+                                                              'date' => '2004-10-13T10:21:17',
+                                                              'version' => '1.7'
+                                                            },
+                                                            {
+                                                              'date' => '2004-10-22T16:37:27',
+                                                              'version' => '1.80'
+                                                            },
+                                                            {
+                                                              'date' => '2006-07-11T15:04:28',
+                                                              'version' => '1.85'
+                                                            },
+                                                            {
+                                                              'date' => '2006-07-22T00:42:17',
+                                                              'version' => '1.86'
+                                                            },
+                                                            {
+                                                              'date' => '2006-08-10T16:48:44',
+                                                              'version' => '1.870'
+                                                            },
+                                                            {
+                                                              'date' => '2006-10-12T19:35:04',
+                                                              'version' => '1.861'
+                                                            },
+                                                            {
+                                                              'date' => '2006-10-12T22:16:28',
+                                                              'version' => '1.871'
+                                                            },
+                                                            {
+                                                              'date' => '2006-11-11T16:01:38',
+                                                              'version' => '1.880'
+                                                            },
+                                                            {
+                                                              'date' => '2006-11-19T21:19:02',
+                                                              'version' => '1.881'
+                                                            },
+                                                            {
+                                                              'date' => '2006-11-22T01:26:44',
+                                                              'version' => '1.882'
+                                                            },
+                                                            {
+                                                              'date' => '2006-11-25T13:53:46',
+                                                              'version' => '1.883'
+                                                            },
+                                                            {
+                                                              'date' => '2006-12-05T03:41:39',
+                                                              'version' => '1.884'
+                                                            },
+                                                            {
+                                                              'date' => '2007-03-01T01:08:16',
+                                                              'version' => '1.885'
+                                                            },
+                                                            {
+                                                              'date' => '2007-03-01T20:18:53',
+                                                              'version' => '1.886'
+                                                            },
+                                                            {
+                                                              'date' => '2007-04-01T19:15:49',
+                                                              'version' => '1.887'
+                                                            },
+                                                            {
+                                                              'date' => '2007-06-23T01:27:24',
+                                                              'version' => '1.888'
+                                                            },
+                                                            {
+                                                              'date' => '2007-12-19T22:14:37',
+                                                              'version' => '1.889'
+                                                            },
+                                                            {
+                                                              'date' => '2010-08-22T19:03:33',
+                                                              'version' => '1.890'
+                                                            },
+                                                            {
+                                                              'date' => '2010-08-31T00:56:53',
+                                                              'version' => '1.891'
+                                                            },
+                                                            {
+                                                              'date' => '2010-09-03T23:45:13',
+                                                              'version' => '1.892'
+                                                            },
+                                                            {
+                                                              'date' => '2012-01-03T03:55:12',
+                                                              'version' => '1.893'
+                                                            },
+                                                            {
+                                                              'date' => '2012-01-14T16:17:56',
+                                                              'version' => '1.894'
+                                                            },
+                                                            {
+                                                              'date' => '2012-01-15T18:41:33',
+                                                              'version' => '1.895'
+                                                            },
+                                                            {
+                                                              'date' => '2012-08-01T03:07:33',
+                                                              'version' => '1.896'
+                                                            },
+                                                            {
+                                                              'date' => '2012-12-17T15:16:33',
+                                                              'version' => '1.897'
+                                                            },
+                                                            {
+                                                              'date' => '2013-02-07T21:41:48',
+                                                              'version' => '1.898'
+                                                            },
+                                                            {
+                                                              'date' => '2013-08-02T14:54:13',
+                                                              'version' => '1.899'
+                                                            },
+                                                            {
+                                                              'date' => '2013-08-08T18:46:07',
+                                                              'version' => '1.900'
+                                                            },
+                                                            {
+                                                              'date' => '2014-01-29T03:43:28',
+                                                              'version' => '1.901'
+                                                            },
+                                                            {
+                                                              'date' => '2014-04-17T15:19:31',
+                                                              'version' => '1.902'
+                                                            },
+                                                            {
+                                                              'date' => '2014-04-18T01:07:10',
+                                                              'version' => '1.903'
+                                                            },
+                                                            {
+                                                              'date' => '2014-06-14T04:22:22',
+                                                              'version' => '1.904'
+                                                            },
+                                                            {
+                                                              'date' => '2014-06-18T02:55:59',
+                                                              'version' => '1.905'
+                                                            },
+                                                            {
+                                                              'date' => '2015-02-03T21:49:39',
+                                                              'version' => '1.906'
+                                                            },
+                                                            {
+                                                              'date' => '2015-02-03T22:48:46',
+                                                              'version' => '1.907'
+                                                            },
+                                                            {
+                                                              'date' => '2015-09-20T02:55:12',
+                                                              'version' => '1.908'
+                                                            },
+                                                            {
+                                                              'date' => '2018-03-05T03:26:56',
+                                                              'version' => '1.909'
+                                                            }
+                                                          ]
+                                          },
+                       'Encode' => {
+                                     'advisories' => [
+                                                       {
+                                                         'affected_versions' => '<2.85',
+                                                         'cves' => [
+                                                                     'CVE-2016-1238'
+                                                                   ],
+                                                         'description' => 'Loading optional modules from . (current directory).
+',
+                                                         'distribution' => 'Encode',
+                                                         'fixed_versions' => '>=2.85',
+                                                         'id' => 'CPANSA-Encode-2016-01',
+                                                         'references' => [
+                                                                           'https://metacpan.org/changes/distribution/Encode',
+                                                                           'https://github.com/dankogai/p5-encode/pull/58/commits/12be15d64ce089154c4367dc1842cd0dc0993ec6'
+                                                                         ],
+                                                         'reported' => '2016-07-27'
+                                                       }
+                                                     ],
+                                     'main_module' => 'Encode',
+                                     'versions' => [
+                                                     {
+                                                       'date' => '2002-03-20T08:30:40',
+                                                       'version' => '0.93'
+                                                     },
+                                                     {
+                                                       'date' => '2002-03-20T20:15:52',
+                                                       'version' => '0.94'
+                                                     },
+                                                     {
+                                                       'date' => '2002-03-21T16:07:21',
+                                                       'version' => '0.95'
+                                                     },
+                                                     {
+                                                       'date' => '2002-03-22T22:33:15',
+                                                       'version' => '0.96'
+                                                     },
+                                                     {
+                                                       'date' => '2002-03-23T20:36:05',
+                                                       'version' => '0.97'
+                                                     },
+                                                     {
+                                                       'date' => '2002-03-24T16:07:09',
+                                                       'version' => '0.98'
+                                                     },
+                                                     {
+                                                       'date' => '2002-03-25T19:45:16',
+                                                       'version' => '0.99'
+                                                     },
+                                                     {
+                                                       'date' => '2002-03-28T23:39:49',
+                                                       'version' => '1.00'
+                                                     },
+                                                     {
+                                                       'date' => '2002-03-29T21:43:17',
+                                                       'version' => '1.01'
+                                                     },
+                                                     {
+                                                       'date' => '2002-03-31T21:40:25',
+                                                       'version' => '1.10'
+                                                     },
+                                                     {
+                                                       'date' => '2002-03-31T22:27:07',
+                                                       'version' => '1.11'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-04T20:02:40',
+                                                       'version' => '1.20'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-07T15:36:48',
+                                                       'version' => '1.26'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-07T18:49:41',
+                                                       'version' => '1.27'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-07T19:05:34',
+                                                       'version' => '1.28'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-08T02:49:31',
+                                                       'version' => '1.30'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-08T18:51:14',
+                                                       'version' => '1.31'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-09T20:26:37',
+                                                       'version' => '1.32'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-10T22:44:19',
+                                                       'version' => '1.33'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-14T22:49:10',
+                                                       'version' => '1.40'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-16T23:47:16',
+                                                       'version' => '1.41'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-19T06:18:26',
+                                                       'version' => '1.50'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-20T10:08:39',
+                                                       'version' => '1.51'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-20T23:55:45',
+                                                       'version' => '1.52'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-22T09:56:04',
+                                                       'version' => '1.56'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-22T20:37:12',
+                                                       'version' => '1.57'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-23T00:22:06',
+                                                       'version' => '1.58'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-24T20:23:42',
+                                                       'version' => '1.60'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-26T03:19:40',
+                                                       'version' => '1.61'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-27T11:43:39',
+                                                       'version' => '1.62'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-27T19:52:51',
+                                                       'version' => '1.63'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-29T07:20:38',
+                                                       'version' => '1.64'
+                                                     },
+                                                     {
+                                                       'date' => '2002-04-30T16:40:07',
+                                                       'version' => '1.65'
+                                                     },
+                                                     {
+                                                       'date' => '2002-05-01T05:51:35',
+                                                       'version' => '1.66'
+                                                     },
+                                                     {
+                                                       'date' => '2002-05-02T07:43:35',
+                                                       'version' => '1.67'
+                                                     },
+                                                     {
+                                                       'date' => '2002-05-03T12:29:47',
+                                                       'version' => '1.68'
+                                                     },
+                                                     {
+                                                       'date' => '2002-05-04T16:50:40',
+                                                       'version' => '1.69'
+                                                     },
+                                                     {
+                                                       'date' => '2002-05-06T10:36:39',
+                                                       'version' => '1.70'
+                                                     },
+                                                     {
+                                                       'date' => '2002-05-07T16:30:42',
+                                                       'version' => '1.71'
+                                                     },
+                                                     {
+                                                       'date' => '2002-05-20T16:04:48',
+                                                       'version' => '1.72'
+                                                     },
+                                                     {
+                                                       'date' => '2002-05-28T18:41:36',
+                                                       'version' => '1.74'
+                                                     },
+                                                     {
+                                                       'date' => '2002-06-01T18:17:49',
+                                                       'version' => '1.75'
+                                                     },
+                                                     {
+                                                       'date' => '2002-08-25T15:18:49',
+                                                       'version' => '1.76'
+                                                     },
+                                                     {
+                                                       'date' => '2002-10-06T03:59:19',
+                                                       'version' => '1.77'
+                                                     },
+                                                     {
+                                                       'date' => '2002-10-20T15:55:16',
+                                                       'version' => '1.78'
+                                                     },
+                                                     {
+                                                       'date' => '2002-10-21T06:11:36',
+                                                       'version' => '1.79'
+                                                     },
+                                                     {
+                                                       'date' => '2002-10-21T20:42:56',
+                                                       'version' => '1.80'
+                                                     },
+                                                     {
+                                                       'date' => '2002-11-08T18:42:11',
+                                                       'version' => '1.81'
+                                                     },
+                                                     {
+                                                       'date' => '2002-11-14T23:17:11',
+                                                       'version' => '1.82'
+                                                     },
+                                                     {
+                                                       'date' => '2002-11-18T18:06:47',
+                                                       'version' => '1.83'
+                                                     },
+                                                     {
+                                                       'date' => '2003-01-10T12:09:05',
+                                                       'version' => '1.84'
+                                                     },
+                                                     {
+                                                       'date' => '2003-01-21T22:23:28',
+                                                       'version' => '1.85'
+                                                     },
+                                                     {
+                                                       'date' => '2003-01-22T03:36:42',
+                                                       'version' => '1.86'
+                                                     },
+                                                     {
+                                                       'date' => '2003-02-06T02:01:00',
+                                                       'version' => '1.87'
+                                                     },
+                                                     {
+                                                       'date' => '2003-02-20T14:46:12',
+                                                       'version' => '1.88'
+                                                     },
+                                                     {
+                                                       'date' => '2003-02-28T01:45:53',
+                                                       'version' => '1.89'
+                                                     },
+                                                     {
+                                                       'date' => '2003-03-09T17:54:26',
+                                                       'version' => '1.90'
+                                                     },
+                                                     {
+                                                       'date' => '2003-03-09T20:12:08',
+                                                       'version' => '1.91'
+                                                     },
+                                                     {
+                                                       'date' => '2003-03-31T03:51:31',
+                                                       'version' => '1.92'
+                                                     },
+                                                     {
+                                                       'date' => '2003-04-24T17:50:54',
+                                                       'version' => '1.93'
+                                                     },
+                                                     {
+                                                       'date' => '2003-05-10T18:31:48',
+                                                       'version' => '1.94'
+                                                     },
+                                                     {
+                                                       'date' => '2003-05-21T09:22:43',
+                                                       'version' => '1.95'
+                                                     },
+                                                     {
+                                                       'date' => '2003-06-18T09:41:21',
+                                                       'version' => '1.96'
+                                                     },
+                                                     {
+                                                       'date' => '2003-07-08T22:01:28',
+                                                       'version' => '1.97'
+                                                     },
+                                                     {
+                                                       'date' => '2003-08-25T11:47:32',
+                                                       'version' => '1.98'
+                                                     },
+                                                     {
+                                                       'date' => '2003-12-29T02:52:28',
+                                                       'version' => '1.99'
+                                                     },
+                                                     {
+                                                       'date' => '2004-05-16T21:05:06',
+                                                       'version' => '2.00'
+                                                     },
+                                                     {
+                                                       'date' => '2004-05-25T16:31:35',
+                                                       'version' => '2.01'
+                                                     },
+                                                     {
+                                                       'date' => '2004-08-31T11:01:51',
+                                                       'version' => '2.02'
+                                                     },
+                                                     {
+                                                       'date' => '2004-10-06T06:50:47',
+                                                       'version' => '2.03'
+                                                     },
+                                                     {
+                                                       'date' => '2004-10-16T21:26:58',
+                                                       'version' => '2.04'
+                                                     },
+                                                     {
+                                                       'date' => '2004-10-19T05:03:32',
+                                                       'version' => '2.05'
+                                                     },
+                                                     {
+                                                       'date' => '2004-10-22T06:29:14',
+                                                       'version' => '2.06'
+                                                     },
+                                                     {
+                                                       'date' => '2004-10-22T19:43:19',
+                                                       'version' => '2.07'
+                                                     },
+                                                     {
+                                                       'date' => '2004-10-24T13:04:29',
+                                                       'version' => '2.08'
+                                                     },
+                                                     {
+                                                       'date' => '2004-12-03T19:21:42',
+                                                       'version' => '2.09'
+                                                     },
+                                                     {
+                                                       'date' => '2005-05-16T18:54:53',
+                                                       'version' => '2.10'
+                                                     },
+                                                     {
+                                                       'date' => '2005-08-05T11:26:06',
+                                                       'version' => '2.11'
+                                                     },
+                                                     {
+                                                       'date' => '2005-09-08T14:23:38',
+                                                       'version' => '2.12'
+                                                     },
+                                                     {
+                                                       'date' => '2006-01-15T15:12:01',
+                                                       'version' => '2.13'
+                                                     },
+                                                     {
+                                                       'date' => '2006-01-15T15:57:41',
+                                                       'version' => '2.14'
+                                                     },
+                                                     {
+                                                       'date' => '2006-04-06T16:01:30',
+                                                       'version' => '2.15'
+                                                     },
+                                                     {
+                                                       'date' => '2006-05-03T18:38:44',
+                                                       'version' => '2.16'
+                                                     },
+                                                     {
+                                                       'date' => '2006-05-09T17:14:04',
+                                                       'version' => '2.17'
+                                                     },
+                                                     {
+                                                       'date' => '2006-06-03T20:34:08',
+                                                       'version' => '2.18'
+                                                     },
+                                                     {
+                                                       'date' => '2007-04-06T13:05:52',
+                                                       'version' => '2.19'
+                                                     },
+                                                     {
+                                                       'date' => '2007-04-22T15:17:34',
+                                                       'version' => '2.20'
+                                                     },
+                                                     {
+                                                       'date' => '2007-05-12T06:50:09',
+                                                       'version' => '2.21'
+                                                     },
+                                                     {
+                                                       'date' => '2007-05-29T07:43:07',
+                                                       'version' => '2.22'
+                                                     },
+                                                     {
+                                                       'date' => '2007-05-29T18:21:25',
+                                                       'version' => '2.23'
+                                                     },
+                                                     {
+                                                       'date' => '2008-03-12T10:12:18',
+                                                       'version' => '2.24'
+                                                     },
+                                                     {
+                                                       'date' => '2008-05-07T21:06:08',
+                                                       'version' => '2.25'
+                                                     },
+                                                     {
+                                                       'date' => '2008-07-01T21:03:33',
+                                                       'version' => '2.26'
+                                                     },
+                                                     {
+                                                       'date' => '2009-01-21T23:01:50',
+                                                       'version' => '2.27'
+                                                     },
+                                                     {
+                                                       'date' => '2009-02-01T13:16:44',
+                                                       'version' => '2.29'
+                                                     },
+                                                     {
+                                                       'date' => '2009-02-15T17:48:01',
+                                                       'version' => '2.30'
+                                                     },
+                                                     {
+                                                       'date' => '2009-02-16T06:25:32',
+                                                       'version' => '2.31'
+                                                     },
+                                                     {
+                                                       'date' => '2009-03-07T07:45:00',
+                                                       'version' => '2.32'
+                                                     },
+                                                     {
+                                                       'date' => '2009-03-25T08:01:10',
+                                                       'version' => '2.33'
+                                                     },
+                                                     {
+                                                       'date' => '2009-07-08T13:53:25',
+                                                       'version' => '2.34'
+                                                     },
+                                                     {
+                                                       'date' => '2009-07-13T02:32:45',
+                                                       'version' => '2.35'
+                                                     },
+                                                     {
+                                                       'date' => '2009-09-06T09:20:21',
+                                                       'version' => '2.36'
+                                                     },
+                                                     {
+                                                       'date' => '2009-09-06T14:37:23',
+                                                       'version' => '2.37'
+                                                     },
+                                                     {
+                                                       'date' => '2009-11-16T14:34:43',
+                                                       'version' => '2.38'
+                                                     },
+                                                     {
+                                                       'date' => '2009-11-26T09:31:02',
+                                                       'version' => '2.39'
+                                                     },
+                                                     {
+                                                       'date' => '2010-09-18T18:47:17',
+                                                       'version' => '2.40'
+                                                     },
+                                                     {
+                                                       'date' => '2010-12-23T11:12:33',
+                                                       'version' => '2.41'
+                                                     },
+                                                     {
+                                                       'date' => '2010-12-31T22:52:35',
+                                                       'version' => '2.42'
+                                                     },
+                                                     {
+                                                       'date' => '2011-05-21T23:21:24',
+                                                       'version' => '2.43'
+                                                     },
+                                                     {
+                                                       'date' => '2011-08-09T08:01:30',
+                                                       'version' => '2.44'
+                                                     },
+                                                     {
+                                                       'date' => '2012-08-05T23:15:11',
+                                                       'version' => '2.45'
+                                                     },
+                                                     {
+                                                       'date' => '2012-08-12T05:52:45',
+                                                       'version' => '2.46'
+                                                     },
+                                                     {
+                                                       'date' => '2012-08-15T05:40:21',
+                                                       'version' => '2.47'
+                                                     },
+                                                     {
+                                                       'date' => '2013-02-18T02:43:35',
+                                                       'version' => '2.48'
+                                                     },
+                                                     {
+                                                       'date' => '2013-03-05T03:19:15',
+                                                       'version' => '2.49'
+                                                     },
+                                                     {
+                                                       'date' => '2013-04-26T18:36:59',
+                                                       'version' => '2.50'
+                                                     },
+                                                     {
+                                                       'date' => '2013-04-29T22:21:31',
+                                                       'version' => '2.51'
+                                                     },
+                                                     {
+                                                       'date' => '2013-08-14T02:33:46',
+                                                       'version' => '2.52'
+                                                     },
+                                                     {
+                                                       'date' => '2013-08-29T15:27:02',
+                                                       'version' => '2.53'
+                                                     },
+                                                     {
+                                                       'date' => '2013-08-29T16:50:08',
+                                                       'version' => '2.54'
+                                                     },
+                                                     {
+                                                       'date' => '2013-09-14T07:58:54',
+                                                       'version' => '2.55'
+                                                     },
+                                                     {
+                                                       'date' => '2013-12-22T04:12:07',
+                                                       'version' => '2.56'
+                                                     },
+                                                     {
+                                                       'date' => '2014-01-03T04:55:36',
+                                                       'version' => '2.57'
+                                                     },
+                                                     {
+                                                       'date' => '2014-03-28T02:41:54',
+                                                       'version' => '2.58'
+                                                     },
+                                                     {
+                                                       'date' => '2014-04-06T17:41:19',
+                                                       'version' => '2.59'
+                                                     },
+                                                     {
+                                                       'date' => '2014-04-29T16:34:10',
+                                                       'version' => '2.60'
+                                                     },
+                                                     {
+                                                       'date' => '2014-05-31T09:55:56',
+                                                       'version' => '2.61'
+                                                     },
+                                                     {
+                                                       'date' => '2014-05-31T12:20:28',
+                                                       'version' => '2.62'
+                                                     },
+                                                     {
+                                                       'date' => '2014-10-19T07:13:44',
+                                                       'version' => '2.63'
+                                                     },
+                                                     {
+                                                       'date' => '2014-10-29T15:42:04',
+                                                       'version' => '2.64'
+                                                     },
+                                                     {
+                                                       'date' => '2014-11-27T14:12:57',
+                                                       'version' => '2.65'
+                                                     },
+                                                     {
+                                                       'date' => '2014-12-02T23:37:28',
+                                                       'version' => '2.66'
+                                                     },
+                                                     {
+                                                       'date' => '2014-12-04T20:28:33',
+                                                       'version' => '2.67'
+                                                     },
+                                                     {
+                                                       'date' => '2015-01-22T10:29:46',
+                                                       'version' => '2.68'
+                                                     },
+                                                     {
+                                                       'date' => '2015-02-05T10:43:34',
+                                                       'version' => '2.69'
+                                                     },
+                                                     {
+                                                       'date' => '2015-02-05T10:56:52',
+                                                       'version' => '2.70'
+                                                     },
+                                                     {
+                                                       'date' => '2015-03-12T00:14:19',
+                                                       'version' => '2.71'
+                                                     },
+                                                     {
+                                                       'date' => '2015-03-14T02:51:25',
+                                                       'version' => '2.72'
+                                                     },
+                                                     {
+                                                       'date' => '2015-04-15T23:27:13',
+                                                       'version' => '2.73'
+                                                     },
+                                                     {
+                                                       'date' => '2015-06-25T00:59:20',
+                                                       'version' => '2.74'
+                                                     },
+                                                     {
+                                                       'date' => '2015-06-30T10:10:03',
+                                                       'version' => '2.75'
+                                                     },
+                                                     {
+                                                       'date' => '2015-07-31T02:26:51',
+                                                       'version' => '2.76'
+                                                     },
+                                                     {
+                                                       'date' => '2015-09-15T14:03:35',
+                                                       'version' => '2.77'
+                                                     },
+                                                     {
+                                                       'date' => '2015-09-24T02:29:52',
+                                                       'version' => '2.78'
+                                                     },
+                                                     {
+                                                       'date' => '2016-01-22T07:08:25',
+                                                       'version' => '2.79'
+                                                     },
+                                                     {
+                                                       'date' => '2016-01-25T15:04:42',
+                                                       'version' => '2.80'
+                                                     },
+                                                     {
+                                                       'date' => '2016-02-06T19:34:58',
+                                                       'version' => '2.81'
+                                                     },
+                                                     {
+                                                       'date' => '2016-02-06T20:21:37',
+                                                       'version' => '2.82'
+                                                     },
+                                                     {
+                                                       'date' => '2016-03-24T08:00:30',
+                                                       'version' => '2.83'
+                                                     },
+                                                     {
+                                                       'date' => '2016-04-11T07:24:26',
+                                                       'version' => '2.84'
+                                                     },
+                                                     {
+                                                       'date' => '2016-08-04T03:37:23',
+                                                       'version' => '2.85'
+                                                     },
+                                                     {
+                                                       'date' => '2016-08-10T18:25:39',
+                                                       'version' => '2.86'
+                                                     },
+                                                     {
+                                                       'date' => '2016-10-28T05:15:33',
+                                                       'version' => '2.87'
+                                                     },
+                                                     {
+                                                       'date' => '2016-11-29T23:38:19',
+                                                       'version' => '2.88'
+                                                     },
+                                                     {
+                                                       'date' => '2017-04-21T05:24:59',
+                                                       'version' => '2.89'
+                                                     },
+                                                     {
+                                                       'date' => '2017-06-10T17:46:11',
+                                                       'version' => '2.90'
+                                                     },
+                                                     {
+                                                       'date' => '2017-06-22T08:18:22',
+                                                       'version' => '2.91'
+                                                     },
+                                                     {
+                                                       'date' => '2017-07-18T07:23:39',
+                                                       'version' => '2.92'
+                                                     },
+                                                     {
+                                                       'date' => '2017-10-06T22:33:35',
+                                                       'version' => '2.93'
+                                                     },
+                                                     {
+                                                       'date' => '2018-01-09T06:04:38',
+                                                       'version' => '2.94'
+                                                     },
+                                                     {
+                                                       'date' => '2018-02-08T00:41:02',
+                                                       'version' => '2.95'
+                                                     },
+                                                     {
+                                                       'date' => '2018-02-11T05:41:37',
+                                                       'version' => '2.96'
+                                                     },
+                                                     {
+                                                       'date' => '2018-02-21T12:30:05',
+                                                       'version' => '2.97'
+                                                     },
+                                                     {
+                                                       'date' => '2018-04-22T09:14:59',
+                                                       'version' => '2.98'
+                                                     }
+                                                   ]
+                                   },
+                       'ExtUtils-MakeMaker' => {
+                                                 'advisories' => [
+                                                                   {
+                                                                     'affected_versions' => '<7.22',
+                                                                     'cves' => [
+                                                                                 'CVE-2016-1238'
+                                                                               ],
+                                                                     'description' => 'Loading modules from . (current directory).
+',
+                                                                     'distribution' => 'ExtUtils-MakeMaker',
+                                                                     'fixed_versions' => '>=7.22',
+                                                                     'id' => 'CPANSA-ExtUtils-MakeMaker-2016-01',
+                                                                     'references' => [
+                                                                                       'https://metacpan.org/changes/distribution/ExtUtils-MakeMaker',
+                                                                                       'https://github.com/Perl-Toolchain-Gang/ExtUtils-MakeMaker/commit/3e9df17d11c40f2561c23ec79693c8c390e0ae88'
+                                                                                     ],
+                                                                     'reported' => '2016-08-07'
+                                                                   }
+                                                                 ],
+                                                 'main_module' => 'ExtUtils::MakeMaker',
+                                                 'versions' => [
+                                                                 {
+                                                                   'date' => '2001-07-06T08:23:56',
+                                                                   'version' => '5.47_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-01-16T20:19:18',
+                                                                   'version' => '5.48_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-01-18T04:56:33',
+                                                                   'version' => '5.48_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-01-22T00:33:31',
+                                                                   'version' => '5.48_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-02-04T08:46:04',
+                                                                   'version' => '5.49_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-03-05T04:53:40',
+                                                                   'version' => '5.50_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-03-25T07:53:14',
+                                                                   'version' => '5.51_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-03-26T05:56:07',
+                                                                   'version' => '5.52_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-03-31T03:55:52',
+                                                                   'version' => '5.54_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-04-05T05:01:52',
+                                                                   'version' => '5.55_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-04-06T08:29:20',
+                                                                   'version' => '5.55_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-04-07T03:04:18',
+                                                                   'version' => '5.55_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-04-11T05:32:04',
+                                                                   'version' => '5.90_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-04-24T04:21:44',
+                                                                   'version' => '5.91_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-04-30T03:43:53',
+                                                                   'version' => '5.92_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-05-06T06:02:08',
+                                                                   'version' => '5.93_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-05-17T19:04:41',
+                                                                   'version' => '5.94_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-05-17T21:24:13',
+                                                                   'version' => '5.94_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-05-18T18:43:02',
+                                                                   'version' => '5.95_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-05-23T21:01:02',
+                                                                   'version' => '5.96_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-05-26T01:25:25',
+                                                                   'version' => '6.00'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-05-30T19:02:20',
+                                                                   'version' => '6.01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-06-16T05:41:28',
+                                                                   'version' => '6.02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-06-19T21:24:32',
+                                                                   'version' => '6.03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-08-27T01:42:36',
+                                                                   'version' => '6.04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-08-27T23:24:30',
+                                                                   'version' => '6.05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-12-19T08:42:01',
+                                                                   'version' => '6.06_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2002-12-24T04:54:53',
+                                                                   'version' => '6.06_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-03-30T03:49:59',
+                                                                   'version' => '6.06_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-03-31T04:37:55',
+                                                                   'version' => '6.06_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-03-31T10:50:00',
+                                                                   'version' => '6.06_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-04-07T02:46:10',
+                                                                   'version' => '6.10_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-04-07T08:33:23',
+                                                                   'version' => '6.10_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-04-11T07:27:36',
+                                                                   'version' => '6.10_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-05-23T09:05:27',
+                                                                   'version' => '6.10_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-06-07T01:32:29',
+                                                                   'version' => '6.10_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-06-07T08:00:14',
+                                                                   'version' => '6.10_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-07-05T23:40:34',
+                                                                   'version' => '6.10_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-07-22T01:23:46',
+                                                                   'version' => '6.10_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-07-28T04:00:19',
+                                                                   'version' => '6.11'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-07-30T05:28:47',
+                                                                   'version' => '6.12'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-07-31T23:51:40',
+                                                                   'version' => '6.13'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-08-03T23:27:51',
+                                                                   'version' => '6.14'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-08-03T23:46:11',
+                                                                   'version' => '6.15'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-08-18T08:43:08',
+                                                                   'version' => '6.16'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-09-15T22:23:01',
+                                                                   'version' => '6.17'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-11-04T04:12:53',
+                                                                   'version' => '6.18'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-11-04T07:03:30',
+                                                                   'version' => '6.19'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-11-06T10:37:47',
+                                                                   'version' => '6.20'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2003-11-11T08:26:17',
+                                                                   'version' => '6.21'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-04-03T21:33:45',
+                                                                   'version' => '6.21_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-11-24T04:06:20',
+                                                                   'version' => '6.22'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-11-26T21:15:45',
+                                                                   'version' => '6.23'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-11-30T20:42:14',
+                                                                   'version' => '6.24'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-12-09T06:00:53',
+                                                                   'version' => '6.24_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-12-15T12:05:50',
+                                                                   'version' => '6.25'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-12-18T02:34:56',
+                                                                   'version' => '6.25_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-12-20T08:36:56',
+                                                                   'version' => '6.25_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-12-21T04:17:27',
+                                                                   'version' => '6.25_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-12-21T05:58:10',
+                                                                   'version' => '6.25_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-12-22T13:05:53',
+                                                                   'version' => '6.25_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-12-26T22:26:26',
+                                                                   'version' => '6.25_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2004-12-31T08:53:31',
+                                                                   'version' => '6.25_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-02-08T14:21:17',
+                                                                   'version' => '6.25_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-03-12T18:29:26',
+                                                                   'version' => '6.25_09'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-03-14T00:17:26',
+                                                                   'version' => '6.25_10'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-03-15T10:05:07',
+                                                                   'version' => '6.25_11'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-03-19T00:19:47',
+                                                                   'version' => '6.25_12'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-03-22T22:50:34',
+                                                                   'version' => '6.26'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-03-29T05:48:40',
+                                                                   'version' => '6.26_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-04-04T23:55:46',
+                                                                   'version' => '6.27'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-04-12T23:23:53',
+                                                                   'version' => '6.28'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-05-19T21:22:00',
+                                                                   'version' => '6.29'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-05-20T23:14:45',
+                                                                   'version' => '6.30'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2005-08-17T06:59:11',
+                                                                   'version' => '6.30_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2006-09-01T19:07:28',
+                                                                   'version' => '6.30_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2006-09-01T21:06:57',
+                                                                   'version' => '6.30_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2006-09-11T20:20:27',
+                                                                   'version' => '6.30_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2006-10-10T01:04:44',
+                                                                   'version' => '6.31'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2007-02-21T16:02:09',
+                                                                   'version' => '6.32'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2007-06-29T22:18:15',
+                                                                   'version' => '6.33'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2007-06-30T16:10:15',
+                                                                   'version' => '6.34'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2007-07-02T03:56:25',
+                                                                   'version' => '6.35'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2007-07-03T08:10:57',
+                                                                   'version' => '6.36'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2007-11-26T01:10:14',
+                                                                   'version' => '6.37_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2007-11-26T07:35:50',
+                                                                   'version' => '6.37_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2007-11-26T22:18:55',
+                                                                   'version' => '6.37_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2007-11-29T00:04:35',
+                                                                   'version' => '6.38'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2007-12-06T11:08:15',
+                                                                   'version' => '6.40'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2007-12-08T01:02:26',
+                                                                   'version' => '6.42'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2008-01-02T00:09:23',
+                                                                   'version' => '6.43_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2008-02-29T00:08:42',
+                                                                   'version' => '6.44'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2008-09-06T10:22:44',
+                                                                   'version' => '6.45_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2008-09-07T21:18:05',
+                                                                   'version' => '6.45_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2008-09-27T21:37:54',
+                                                                   'version' => '6.46'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2008-10-14T16:41:49',
+                                                                   'version' => '6.47_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2008-10-16T23:18:52',
+                                                                   'version' => '6.47_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2008-10-20T18:20:40',
+                                                                   'version' => '6.48'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-02-20T01:11:08',
+                                                                   'version' => '6.49_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-03-22T19:30:00',
+                                                                   'version' => '6.50'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-04-10T21:33:29',
+                                                                   'version' => '6.51_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-04-14T04:22:58',
+                                                                   'version' => '6.51_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-05-24T05:41:35',
+                                                                   'version' => '6.51_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-05-24T21:07:28',
+                                                                   'version' => '6.51_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-05-30T18:41:35',
+                                                                   'version' => '6.52'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-06-08T02:05:24',
+                                                                   'version' => '6.53_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-06-08T02:28:24',
+                                                                   'version' => '6.53_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-07-02T21:55:25',
+                                                                   'version' => '6.53_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-07-07T23:53:09',
+                                                                   'version' => '6.54'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-07-14T23:02:39',
+                                                                   'version' => '6.55_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-08-05T07:40:59',
+                                                                   'version' => '6.55_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-12-05T07:09:23',
+                                                                   'version' => '6.55_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2009-12-17T22:06:47',
+                                                                   'version' => '6.56'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2010-08-24T08:38:36',
+                                                                   'version' => '6.57_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2010-09-07T23:43:49',
+                                                                   'version' => '6.57_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2010-09-08T22:33:36',
+                                                                   'version' => '6.57_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2010-09-09T23:52:37',
+                                                                   'version' => '6.57_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2010-09-11T20:25:23',
+                                                                   'version' => '6.57_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2010-10-06T10:53:43',
+                                                                   'version' => '6.57_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-03-25T03:41:39',
+                                                                   'version' => '6.57_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-03-27T11:00:41',
+                                                                   'version' => '6.57_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-03-28T00:15:59',
+                                                                   'version' => '6.57_09'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-04-04T05:33:46',
+                                                                   'version' => '6.57_10'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-05-20T00:34:23',
+                                                                   'version' => '6.57_11'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-07-06T21:22:27',
+                                                                   'version' => '6.58'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-08-03T20:25:34',
+                                                                   'version' => '6.58_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-08-05T13:07:58',
+                                                                   'version' => '6.59'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-09-25T05:23:43',
+                                                                   'version' => '6.61_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-10-23T23:48:06',
+                                                                   'version' => '6.62'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-10-24T00:40:49',
+                                                                   'version' => '6.63_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2011-11-02T00:07:43',
+                                                                   'version' => '6.63_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2012-11-02T03:58:40',
+                                                                   'version' => '6.63_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2012-11-22T21:25:35',
+                                                                   'version' => '6.63_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2012-12-17T02:35:20',
+                                                                   'version' => '6.64'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-03-18T23:21:28',
+                                                                   'version' => '6.65_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-04-14T09:59:15',
+                                                                   'version' => '6.65_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-04-15T12:50:31',
+                                                                   'version' => '6.65_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-04-19T17:52:08',
+                                                                   'version' => '6.66'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-04-25T20:08:31',
+                                                                   'version' => '6.67_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-06-02T17:31:16',
+                                                                   'version' => '6.67_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-06-05T21:09:00',
+                                                                   'version' => '6.67_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-06-10T19:25:22',
+                                                                   'version' => '6.67_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-06-13T20:55:25',
+                                                                   'version' => '6.67_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-06-14T22:35:24',
+                                                                   'version' => '6.68'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-06-20T12:00:00',
+                                                                   'version' => '6.69_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-02T12:16:23',
+                                                                   'version' => '6.69_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-09T21:47:07',
+                                                                   'version' => '6.69_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-10T10:50:08',
+                                                                   'version' => '6.69_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-11T21:20:53',
+                                                                   'version' => '6.69_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-12T13:51:50',
+                                                                   'version' => '6.69_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-16T14:34:32',
+                                                                   'version' => '6.69_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-16T23:40:44',
+                                                                   'version' => '6.69_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-21T08:26:44',
+                                                                   'version' => '6.69_09'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-23T21:42:47',
+                                                                   'version' => '6.70'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-24T08:33:58',
+                                                                   'version' => '6.71_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-24T17:42:20',
+                                                                   'version' => '6.72'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-24T22:53:41',
+                                                                   'version' => '6.73_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-26T12:34:19',
+                                                                   'version' => '6.73_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-07-30T21:12:02',
+                                                                   'version' => '6.73_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-08-01T21:41:12',
+                                                                   'version' => '6.73_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-08-05T16:45:38',
+                                                                   'version' => '6.73_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-08-05T23:52:18',
+                                                                   'version' => '6.73_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-08-07T15:09:12',
+                                                                   'version' => '6.73_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-08-09T18:52:24',
+                                                                   'version' => '6.73_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-08-09T19:00:18',
+                                                                   'version' => '6.73_09'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-08-16T15:43:35',
+                                                                   'version' => '6.73_10'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-08-17T21:57:55',
+                                                                   'version' => '6.73_11'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-08-23T09:52:43',
+                                                                   'version' => '6.73_12'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-08-27T11:45:55',
+                                                                   'version' => '6.74'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-08-29T14:09:22',
+                                                                   'version' => '6.75_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-01T20:52:29',
+                                                                   'version' => '6.75_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-02T23:26:56',
+                                                                   'version' => '6.75_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-05T11:10:20',
+                                                                   'version' => '6.75_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-06T12:40:59',
+                                                                   'version' => '6.76'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-10T14:22:45',
+                                                                   'version' => '6.77_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-12T20:23:49',
+                                                                   'version' => '6.77_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-16T11:23:59',
+                                                                   'version' => '6.77_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-18T18:25:33',
+                                                                   'version' => '6.77_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-19T13:12:32',
+                                                                   'version' => '6.77_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-19T14:43:24',
+                                                                   'version' => '6.77_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-21T08:48:44',
+                                                                   'version' => '6.77_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-22T17:46:50',
+                                                                   'version' => '6.77_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-09-23T12:47:39',
+                                                                   'version' => '6.78'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-10-01T14:01:33',
+                                                                   'version' => '6.79_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-10-11T12:01:23',
+                                                                   'version' => '6.79_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-10-11T13:00:29',
+                                                                   'version' => '6.79_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-10-11T17:59:30',
+                                                                   'version' => '6.79_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-10-15T15:08:06',
+                                                                   'version' => '6.80'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-10-16T08:04:29',
+                                                                   'version' => '6.81_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-10-17T11:24:19',
+                                                                   'version' => '6.81_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-10-24T19:54:34',
+                                                                   'version' => '6.81_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-11-01T19:56:13',
+                                                                   'version' => '6.81_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-11-02T21:44:06',
+                                                                   'version' => '6.81_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-11-04T19:24:38',
+                                                                   'version' => '6.82'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-11-05T11:45:54',
+                                                                   'version' => '6.83_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-11-12T11:15:21',
+                                                                   'version' => '6.83_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-11-15T09:49:39',
+                                                                   'version' => '6.83_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-11-17T11:44:01',
+                                                                   'version' => '6.83_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-11-25T22:52:46',
+                                                                   'version' => '6.83_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-11-29T21:55:40',
+                                                                   'version' => '6.83_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-11-30T15:27:01',
+                                                                   'version' => '6.84'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-12-16T13:18:35',
+                                                                   'version' => '6.85_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-12-17T10:17:50',
+                                                                   'version' => '6.85_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-12-23T14:59:36',
+                                                                   'version' => '6.85_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-12-23T15:02:38',
+                                                                   'version' => '6.85_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-12-29T11:28:14',
+                                                                   'version' => '6.85_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2013-12-30T23:18:09',
+                                                                   'version' => '6.85_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-01-01T19:00:36',
+                                                                   'version' => '6.85_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-01-04T12:21:05',
+                                                                   'version' => '6.86'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-01-12T10:34:38',
+                                                                   'version' => '6.87_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-01-18T13:30:15',
+                                                                   'version' => '6.87_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-01-19T17:53:19',
+                                                                   'version' => '6.87_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-01-26T19:33:34',
+                                                                   'version' => '6.87_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-01-28T14:00:44',
+                                                                   'version' => '6.87_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-01-31T20:59:13',
+                                                                   'version' => '6.88'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-02-17T16:23:55',
+                                                                   'version' => '6.89_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-02-20T20:49:24',
+                                                                   'version' => '6.90'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-03-06T13:52:24',
+                                                                   'version' => '6.91_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-03-13T16:34:37',
+                                                                   'version' => '6.92'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-03-24T16:57:01',
+                                                                   'version' => '6.93_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-03-25T20:38:21',
+                                                                   'version' => '6.94'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-04-02T20:52:53',
+                                                                   'version' => '6.95_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-04-07T14:29:26',
+                                                                   'version' => '6.95_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-04-11T21:09:21',
+                                                                   'version' => '6.96'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-04-24T13:29:12',
+                                                                   'version' => '6.97_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-04-28T10:55:44',
+                                                                   'version' => '6.97_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-04-29T20:41:00',
+                                                                   'version' => '6.98'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-06-03T21:19:42',
+                                                                   'version' => '6.99_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-06-05T11:18:25',
+                                                                   'version' => '6.99_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-07-04T10:15:23',
+                                                                   'version' => '6.99_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-07-12T11:54:35',
+                                                                   'version' => '6.99_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-07-22T11:42:12',
+                                                                   'version' => '6.99_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-07-28T14:07:14',
+                                                                   'version' => '6.99_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-07-30T16:44:02',
+                                                                   'version' => '6.99_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-08-18T13:19:18',
+                                                                   'version' => '6.99_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-08-28T10:13:30',
+                                                                   'version' => '6.99_09'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-09-04T14:04:55',
+                                                                   'version' => '6.99_10'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-09-08T13:39:46',
+                                                                   'version' => '6.99_11'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-09-11T14:32:19',
+                                                                   'version' => '6.99_12'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-09-15T19:11:34',
+                                                                   'version' => '6.99_13'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-09-19T14:06:14',
+                                                                   'version' => '6.99_14'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-09-21T12:23:58',
+                                                                   'version' => '6.99_15'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-10-02T18:50:08',
+                                                                   'version' => '6.99_16'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-10-12T18:41:24',
+                                                                   'version' => '6.99_17'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-10-20T09:14:39',
+                                                                   'version' => '6.99_18'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-10-22T19:48:56',
+                                                                   'version' => '7.00'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-10-25T12:49:55',
+                                                                   'version' => '7.01_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-10-25T16:49:40',
+                                                                   'version' => '7.01_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-10-30T19:48:04',
+                                                                   'version' => '7.01_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-10-31T10:13:56',
+                                                                   'version' => '7.01_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-11-03T12:53:43',
+                                                                   'version' => '7.01_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-11-03T20:55:23',
+                                                                   'version' => '7.01_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-11-04T19:40:07',
+                                                                   'version' => '7.01_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-11-04T20:29:00',
+                                                                   'version' => '7.01_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-11-06T21:59:55',
+                                                                   'version' => '7.01_09'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-11-08T10:39:16',
+                                                                   'version' => '7.02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-11-18T21:47:11',
+                                                                   'version' => '7.03_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-11-24T13:26:46',
+                                                                   'version' => '7.03_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-11-25T16:43:06',
+                                                                   'version' => '7.03_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-11-27T14:42:51',
+                                                                   'version' => '7.03_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-11-28T18:32:48',
+                                                                   'version' => '7.03_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-12-01T15:37:46',
+                                                                   'version' => '7.03_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-12-02T12:56:02',
+                                                                   'version' => '7.04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-12-06T16:58:07',
+                                                                   'version' => '7.05_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-12-15T20:13:08',
+                                                                   'version' => '7.05_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-12-24T12:12:00',
+                                                                   'version' => '7.05_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-12-24T14:49:46',
+                                                                   'version' => '7.05_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2014-12-31T23:21:05',
+                                                                   'version' => '7.05_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-01-08T19:09:29',
+                                                                   'version' => '7.05_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-01-09T16:23:43',
+                                                                   'version' => '7.05_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-01-20T10:13:21',
+                                                                   'version' => '7.05_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-01-23T10:51:30',
+                                                                   'version' => '7.05_09'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-01-26T15:19:01',
+                                                                   'version' => '7.05_10'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-01-31T16:40:19',
+                                                                   'version' => '7.05_11'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-02-07T15:19:11',
+                                                                   'version' => '7.05_12'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-02-18T22:49:29',
+                                                                   'version' => '7.05_13'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-02-20T17:32:55',
+                                                                   'version' => '7.05_14'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-03-05T19:44:02',
+                                                                   'version' => '7.05_15'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-03-09T11:35:12',
+                                                                   'version' => '7.05_16'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-03-24T12:27:52',
+                                                                   'version' => '7.05_17'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-03-27T12:20:03',
+                                                                   'version' => '7.05_18'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-03-27T16:59:34',
+                                                                   'version' => '7.05_19'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-04-04T15:53:36',
+                                                                   'version' => '7.05_20'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-06-13T14:19:26',
+                                                                   'version' => '7.05_21'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-06-14T13:44:56',
+                                                                   'version' => '7.05_22'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-06-24T19:51:24',
+                                                                   'version' => '7.05_23'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-07-01T18:30:38',
+                                                                   'version' => '7.05_24'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-07-07T17:18:36',
+                                                                   'version' => '7.05_25'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-08-04T19:41:25',
+                                                                   'version' => '7.05_26'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-08-05T09:35:40',
+                                                                   'version' => '7.05_27'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-08-19T18:10:20',
+                                                                   'version' => '7.05_28'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-08-24T15:26:22',
+                                                                   'version' => '7.05_29'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-08-31T18:06:48',
+                                                                   'version' => '7.06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-09-02T11:55:33',
+                                                                   'version' => '7.07_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-09-08T19:59:05',
+                                                                   'version' => '7.08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-09-10T18:55:41',
+                                                                   'version' => '7.10'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-11-12T12:35:03',
+                                                                   'version' => '7.11_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-11-21T20:23:22',
+                                                                   'version' => '7.11_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2015-11-25T15:40:06',
+                                                                   'version' => '7.11_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-02-15T11:40:55',
+                                                                   'version' => '7.11_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-03-19T10:07:11',
+                                                                   'version' => '7.11_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-03-29T18:44:47',
+                                                                   'version' => '7.11_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-04-19T11:41:10',
+                                                                   'version' => '7.12'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-04-23T16:35:56',
+                                                                   'version' => '7.13_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-04-24T13:20:40',
+                                                                   'version' => '7.14'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-04-27T18:27:25',
+                                                                   'version' => '7.15_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-04-28T12:15:28',
+                                                                   'version' => '7.15_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-05-01T13:29:10',
+                                                                   'version' => '7.15_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-05-07T10:28:49',
+                                                                   'version' => '7.16'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-05-09T19:14:54',
+                                                                   'version' => '7.17_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-05-09T23:07:33',
+                                                                   'version' => '7.17_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-05-11T18:22:21',
+                                                                   'version' => '7.17_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-05-23T15:39:08',
+                                                                   'version' => '7.18'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-06-02T14:01:28',
+                                                                   'version' => '7.19_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-06-13T09:11:52',
+                                                                   'version' => '7.19_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-06-13T13:44:33',
+                                                                   'version' => '7.19_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-06-14T11:35:43',
+                                                                   'version' => '7.19_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-06-20T14:40:57',
+                                                                   'version' => '7.19_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-06-27T12:04:29',
+                                                                   'version' => '7.19_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-07-03T14:30:23',
+                                                                   'version' => '7.19_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-07-28T12:26:56',
+                                                                   'version' => '7.19_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-08-05T08:57:09',
+                                                                   'version' => '7.20'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-08-07T09:54:04',
+                                                                   'version' => '7.21_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-08-08T08:42:10',
+                                                                   'version' => '7.22'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-08-19T09:24:06',
+                                                                   'version' => '7.23_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2016-08-20T12:35:27',
+                                                                   'version' => '7.24'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-02-03T15:21:22',
+                                                                   'version' => '7.25_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-05-11T11:19:49',
+                                                                   'version' => '7.25_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-05-11T17:09:16',
+                                                                   'version' => '7.25_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-05-12T12:25:54',
+                                                                   'version' => '7.25_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-05-15T09:41:49',
+                                                                   'version' => '7.25_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-05-23T19:31:28',
+                                                                   'version' => '7.25_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-05-27T20:21:06',
+                                                                   'version' => '7.26'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-05-28T10:50:55',
+                                                                   'version' => '7.27_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-05-30T08:56:32',
+                                                                   'version' => '7.27_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-05-30T21:26:23',
+                                                                   'version' => '7.28'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-05-31T08:32:44',
+                                                                   'version' => '7.29_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-06-11T11:17:55',
+                                                                   'version' => '7.29_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-06-12T12:31:08',
+                                                                   'version' => '7.30'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-06-14T15:10:23',
+                                                                   'version' => '7.31_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-06-26T13:14:10',
+                                                                   'version' => '7.31_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-07-10T09:02:35',
+                                                                   'version' => '7.31_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-10-05T12:19:00',
+                                                                   'version' => '7.31_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2017-11-25T09:37:04',
+                                                                   'version' => '7.31_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-01-16T13:28:46',
+                                                                   'version' => '7.31_06'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-01-16T16:24:23',
+                                                                   'version' => '7.31_07'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-02-12T12:32:45',
+                                                                   'version' => '7.31_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-02-16T20:25:44',
+                                                                   'version' => '7.32'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-02-20T10:44:19',
+                                                                   'version' => '7.33_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-02-24T14:05:00',
+                                                                   'version' => '7.33_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-02-24T20:21:42',
+                                                                   'version' => '7.33_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-03-19T10:51:54',
+                                                                   'version' => '7.34'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-04-19T12:46:01',
+                                                                   'version' => '7.35_01'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-04-24T11:01:35',
+                                                                   'version' => '7.35_02'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-04-27T13:59:23',
+                                                                   'version' => '7.35_03'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-07-09T09:50:43',
+                                                                   'version' => '7.35_04'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-07-10T09:18:31',
+                                                                   'version' => '7.35_05'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2018-07-19T19:49:08',
+                                                                   'version' => '7.35_06'
+                                                                 }
+                                                               ]
+                                               },
+                       'FCGI' => {
+                                   'advisories' => [
+                                                     {
+                                                       'affected_versions' => '<0.74',
+                                                       'cves' => [
+                                                                   'CVE-2011-2766'
+                                                                 ],
+                                                       'description' => 'Leaking information across requests when using the deprecated and undocumented old FCGI interface.
+',
+                                                       'distribution' => 'FCGI',
+                                                       'fixed_versions' => '>=0.74',
+                                                       'id' => 'CPANSA-FCGI-2011-01',
+                                                       'references' => [
+                                                                         'https://metacpan.org/changes/distribution/FCGI',
+                                                                         'https://github.com/perl-catalyst/FCGI/commit/297693dc8362d25bb25e473899c72508a0f71d2e'
+                                                                       ],
+                                                       'reported' => '2011-09-24'
+                                                     }
+                                                   ],
+                                   'main_module' => 'FCGI',
+                                   'versions' => [
+                                                   {
+                                                     'date' => '1996-09-25T17:48:57',
+                                                     'version' => '0.25'
+                                                   },
+                                                   {
+                                                     'date' => '1996-10-15T21:51:06',
+                                                     'version' => '0.26'
+                                                   },
+                                                   {
+                                                     'date' => '1997-02-20T08:55:44',
+                                                     'version' => '0.27'
+                                                   },
+                                                   {
+                                                     'date' => '1997-02-25T07:14:13',
+                                                     'version' => '0.28'
+                                                   },
+                                                   {
+                                                     'date' => '1997-06-10T18:16:17',
+                                                     'version' => '0.29'
+                                                   },
+                                                   {
+                                                     'date' => '1997-06-24T17:17:05',
+                                                     'version' => '0.30'
+                                                   },
+                                                   {
+                                                     'date' => '1997-07-24T11:05:43',
+                                                     'version' => '0.31'
+                                                   },
+                                                   {
+                                                     'date' => '1998-06-17T10:24:17',
+                                                     'version' => '0.34'
+                                                   },
+                                                   {
+                                                     'date' => '1998-06-22T15:38:51',
+                                                     'version' => '0.35'
+                                                   },
+                                                   {
+                                                     'date' => '1998-06-24T19:42:57',
+                                                     'version' => '0.36'
+                                                   },
+                                                   {
+                                                     'date' => '1998-06-27T16:08:39',
+                                                     'version' => '0.37'
+                                                   },
+                                                   {
+                                                     'date' => '1998-07-15T15:24:00',
+                                                     'version' => '0.40'
+                                                   },
+                                                   {
+                                                     'date' => '1998-07-29T16:05:51',
+                                                     'version' => '0.41'
+                                                   },
+                                                   {
+                                                     'date' => '1998-08-28T15:30:49',
+                                                     'version' => '0.42'
+                                                   },
+                                                   {
+                                                     'date' => '1998-12-22T22:34:14',
+                                                     'version' => '0.43'
+                                                   },
+                                                   {
+                                                     'date' => '1998-12-23T11:28:39',
+                                                     'version' => '0.44'
+                                                   },
+                                                   {
+                                                     'date' => '1999-03-08T17:04:02',
+                                                     'version' => '0.45'
+                                                   },
+                                                   {
+                                                     'date' => '1999-07-30T08:26:31',
+                                                     'version' => '0.46'
+                                                   },
+                                                   {
+                                                     'date' => '1999-07-31T21:58:01',
+                                                     'version' => '0.47'
+                                                   },
+                                                   {
+                                                     'date' => '1999-08-27T13:41:54',
+                                                     'version' => '0.48'
+                                                   },
+                                                   {
+                                                     'date' => '2000-04-09T18:58:32',
+                                                     'version' => '0.49'
+                                                   },
+                                                   {
+                                                     'date' => '2000-04-10T07:04:43',
+                                                     'version' => '0.50'
+                                                   },
+                                                   {
+                                                     'date' => '2000-04-12T12:27:09',
+                                                     'version' => '0.51'
+                                                   },
+                                                   {
+                                                     'date' => '2000-04-12T14:10:02',
+                                                     'version' => '0.52'
+                                                   },
+                                                   {
+                                                     'date' => '2000-07-10T10:01:51',
+                                                     'version' => '0.53'
+                                                   },
+                                                   {
+                                                     'date' => '2000-10-08T19:52:29',
+                                                     'version' => '0.54'
+                                                   },
+                                                   {
+                                                     'date' => '2000-10-18T21:22:46',
+                                                     'version' => '0.55'
+                                                   },
+                                                   {
+                                                     'date' => '2000-11-03T15:44:28',
+                                                     'version' => '0.56'
+                                                   },
+                                                   {
+                                                     'date' => '2000-11-12T15:15:01',
+                                                     'version' => '0.57'
+                                                   },
+                                                   {
+                                                     'date' => '2000-11-14T23:20:24',
+                                                     'version' => '0.58'
+                                                   },
+                                                   {
+                                                     'date' => '2000-12-31T22:05:44',
+                                                     'version' => '0.59'
+                                                   },
+                                                   {
+                                                     'date' => '2001-06-08T15:19:08',
+                                                     'version' => '0.60'
+                                                   },
+                                                   {
+                                                     'date' => '2001-09-20T12:34:13',
+                                                     'version' => '0.61'
+                                                   },
+                                                   {
+                                                     'date' => '2001-09-21T16:19:42',
+                                                     'version' => '0.62'
+                                                   },
+                                                   {
+                                                     'date' => '2001-09-24T20:43:48',
+                                                     'version' => '0.63'
+                                                   },
+                                                   {
+                                                     'date' => '2001-09-25T08:26:24',
+                                                     'version' => '0.64'
+                                                   },
+                                                   {
+                                                     'date' => '2002-02-19T14:16:27',
+                                                     'version' => '0.65'
+                                                   },
+                                                   {
+                                                     'date' => '2002-09-05T16:23:07',
+                                                     'version' => '0.66'
+                                                   },
+                                                   {
+                                                     'date' => '2002-12-23T10:21:36',
+                                                     'version' => '0.67'
+                                                   },
+                                                   {
+                                                     'date' => '2009-12-20T21:05:48',
+                                                     'version' => '0.67_01'
+                                                   },
+                                                   {
+                                                     'date' => '2010-01-06T10:07:05',
+                                                     'version' => '0.68'
+                                                   },
+                                                   {
+                                                     'date' => '2010-01-10T01:35:11',
+                                                     'version' => '0.68_01'
+                                                   },
+                                                   {
+                                                     'date' => '2010-01-13T19:25:40',
+                                                     'version' => '0.68_02'
+                                                   },
+                                                   {
+                                                     'date' => '2010-02-15T23:08:12',
+                                                     'version' => '0.69'
+                                                   },
+                                                   {
+                                                     'date' => '2010-03-22T14:35:03',
+                                                     'version' => '0.70'
+                                                   },
+                                                   {
+                                                     'date' => '2010-04-01T00:55:33',
+                                                     'version' => '0.71'
+                                                   },
+                                                   {
+                                                     'date' => '2010-08-24T21:32:56',
+                                                     'version' => '0.71_01'
+                                                   },
+                                                   {
+                                                     'date' => '2011-04-28T08:50:09',
+                                                     'version' => '0.71_02'
+                                                   },
+                                                   {
+                                                     'date' => '2011-04-28T09:05:42',
+                                                     'version' => '0.71_03'
+                                                   },
+                                                   {
+                                                     'date' => '2011-05-19T09:06:02',
+                                                     'version' => '0.72'
+                                                   },
+                                                   {
+                                                     'date' => '2011-05-28T01:35:17',
+                                                     'version' => '0.73'
+                                                   },
+                                                   {
+                                                     'date' => '2011-09-24T08:31:47',
+                                                     'version' => '0.74'
+                                                   },
+                                                   {
+                                                     'date' => '2014-07-17T00:19:02',
+                                                     'version' => '0.75'
+                                                   },
+                                                   {
+                                                     'date' => '2014-08-05T01:29:06',
+                                                     'version' => '0.76'
+                                                   },
+                                                   {
+                                                     'date' => '2014-08-05T15:53:28',
+                                                     'version' => '0.77'
+                                                   },
+                                                   {
+                                                     'date' => '2016-03-07T00:08:23',
+                                                     'version' => '0.78'
+                                                   }
+                                                 ]
+                                 },
+                       'Fake-Encode' => {
+                                          'advisories' => [
+                                                            {
+                                                              'affected_versions' => '<0.08',
+                                                              'cves' => [
+                                                                          'CVE-2016-1238'
+                                                                        ],
+                                                              'description' => 'Loading modules from . (current directory).
+',
+                                                              'distribution' => 'Fake-Encode',
+                                                              'fixed_versions' => '>=0.08',
+                                                              'id' => 'CPANSA-Fake-Encode-2017-01',
+                                                              'references' => [
+                                                                                'https://metacpan.org/changes/distribution/Fake-Encode'
+                                                                              ],
+                                                              'reported' => '2017-01-23'
+                                                            }
+                                                          ],
+                                          'main_module' => 'Fake::Encode',
+                                          'versions' => [
+                                                          {
+                                                            'date' => '2016-05-31T14:11:49',
+                                                            'version' => '0.01'
+                                                          },
+                                                          {
+                                                            'date' => '2017-01-23T12:34:23',
+                                                            'version' => '0.02'
+                                                          },
+                                                          {
+                                                            'date' => '2017-01-25T15:52:13',
+                                                            'version' => '0.03'
+                                                          },
+                                                          {
+                                                            'date' => '2017-01-26T15:17:01',
+                                                            'version' => '0.04'
+                                                          },
+                                                          {
+                                                            'date' => '2017-03-06T16:01:40',
+                                                            'version' => '0.05'
+                                                          },
+                                                          {
+                                                            'date' => '2017-09-08T17:54:14',
+                                                            'version' => '0.06'
+                                                          },
+                                                          {
+                                                            'date' => '2017-09-09T15:27:50',
+                                                            'version' => '0.07'
+                                                          },
+                                                          {
+                                                            'date' => '2018-02-03T14:50:49',
+                                                            'version' => '0.08'
+                                                          },
+                                                          {
+                                                            'date' => '2018-02-19T12:21:04',
+                                                            'version' => '0.09'
+                                                          }
+                                                        ]
+                                        },
+                       'Fake-Our' => {
+                                       'advisories' => [
+                                                         {
+                                                           'affected_versions' => '<0.06',
+                                                           'cves' => [
+                                                                       'CVE-2016-1238'
+                                                                     ],
+                                                           'description' => 'Loading modules from . (current directory).
+',
+                                                           'distribution' => 'Fake-Our',
+                                                           'fixed_versions' => '>=0.06',
+                                                           'id' => 'CPANSA-Fake-Our-2017-01',
+                                                           'references' => [
+                                                                             'https://metacpan.org/changes/distribution/Fake-Our'
+                                                                           ],
+                                                           'reported' => '2017-01-23'
+                                                         }
+                                                       ],
+                                       'main_module' => 'Fake::Our',
+                                       'versions' => [
+                                                       {
+                                                         'date' => '2014-02-09T05:36:09',
+                                                         'version' => '0.01'
+                                                       },
+                                                       {
+                                                         'date' => '2014-08-06T17:33:15',
+                                                         'version' => '0.02'
+                                                       },
+                                                       {
+                                                         'date' => '2014-08-09T02:35:25',
+                                                         'version' => '0.03'
+                                                       },
+                                                       {
+                                                         'date' => '2014-08-10T15:33:58',
+                                                         'version' => '0.04'
+                                                       },
+                                                       {
+                                                         'date' => '2015-06-21T04:09:47',
+                                                         'version' => '0.05'
+                                                       },
+                                                       {
+                                                         'date' => '2017-01-23T12:34:34',
+                                                         'version' => '0.06'
+                                                       },
+                                                       {
+                                                         'date' => '2017-01-26T15:21:45',
+                                                         'version' => '0.07'
+                                                       },
+                                                       {
+                                                         'date' => '2017-01-27T15:18:56',
+                                                         'version' => '0.08'
+                                                       },
+                                                       {
+                                                         'date' => '2017-01-28T15:07:50',
+                                                         'version' => '0.09'
+                                                       },
+                                                       {
+                                                         'date' => '2017-03-06T16:01:51',
+                                                         'version' => '0.10'
+                                                       },
+                                                       {
+                                                         'date' => '2018-02-03T11:05:49',
+                                                         'version' => '0.11'
+                                                       },
+                                                       {
+                                                         'date' => '2018-02-16T17:54:00',
+                                                         'version' => '0.12'
+                                                       },
+                                                       {
+                                                         'date' => '2018-02-17T01:35:58',
+                                                         'version' => '0.13'
+                                                       },
+                                                       {
+                                                         'date' => '2018-02-18T15:32:17',
+                                                         'version' => '0.14'
+                                                       }
+                                                     ]
+                                     },
+                       'File-DataClass' => {
+                                             'advisories' => [
+                                                               {
+                                                                 'affected_versions' => '<0.72.1',
+                                                                 'cves' => [
+                                                                             'CVE-2016-1238'
+                                                                           ],
+                                                                 'description' => 'Loading modules from . (current directory).
+',
+                                                                 'distribution' => 'File-DataClass',
+                                                                 'fixed_versions' => '>=0.72.1',
+                                                                 'id' => 'CPANSA-File-DataClass-2017-01',
+                                                                 'references' => [
+                                                                                   'https://metacpan.org/changes/distribution/File-DataClass'
+                                                                                 ],
+                                                                 'reported' => '2017-04-01'
+                                                               }
+                                                             ],
+                                             'main_module' => 'File::DataClass',
+                                             'versions' => [
+                                                             {
+                                                               'date' => '2010-09-29T16:37:04',
+                                                               'version' => '0.1.228'
+                                                             },
+                                                             {
+                                                               'date' => '2010-10-06T14:20:31',
+                                                               'version' => '0.2.234'
+                                                             },
+                                                             {
+                                                               'date' => '2011-01-26T18:14:50',
+                                                               'version' => '0.3.238'
+                                                             },
+                                                             {
+                                                               'date' => '2011-02-27T23:09:38',
+                                                               'version' => '0.3.239'
+                                                             },
+                                                             {
+                                                               'date' => '2011-04-12T19:44:59',
+                                                               'version' => '0.3.259'
+                                                             },
+                                                             {
+                                                               'date' => '2011-05-15T17:45:09',
+                                                               'version' => '0.4.268'
+                                                             },
+                                                             {
+                                                               'date' => '2011-05-30T01:47:40',
+                                                               'version' => '0.5.271'
+                                                             },
+                                                             {
+                                                               'date' => '2011-07-11T13:39:10',
+                                                               'version' => '0.6.286'
+                                                             },
+                                                             {
+                                                               'date' => '2011-11-30T00:05:18',
+                                                               'version' => '0.7.321'
+                                                             },
+                                                             {
+                                                               'date' => '2011-12-02T04:40:20',
+                                                               'version' => '0.7.325'
+                                                             },
+                                                             {
+                                                               'date' => '2011-12-02T22:39:25',
+                                                               'version' => '0.7.326'
+                                                             },
+                                                             {
+                                                               'date' => '2011-12-03T18:43:58',
+                                                               'version' => '0.7.328'
+                                                             },
+                                                             {
+                                                               'date' => '2012-02-22T18:28:29',
+                                                               'version' => '0.7.330'
+                                                             },
+                                                             {
+                                                               'date' => '2012-02-23T11:00:24',
+                                                               'version' => '0.7.331'
+                                                             },
+                                                             {
+                                                               'date' => '2012-02-24T10:52:18',
+                                                               'version' => '0.7.332'
+                                                             },
+                                                             {
+                                                               'date' => '2012-03-12T17:34:58',
+                                                               'version' => '0.7.335'
+                                                             },
+                                                             {
+                                                               'date' => '2012-03-20T18:24:26',
+                                                               'version' => '0.7.336'
+                                                             },
+                                                             {
+                                                               'date' => '2012-03-21T22:43:50',
+                                                               'version' => '0.7.338'
+                                                             },
+                                                             {
+                                                               'date' => '2012-03-22T13:48:59',
+                                                               'version' => '0.7.339'
+                                                             },
+                                                             {
+                                                               'date' => '2012-03-24T00:37:31',
+                                                               'version' => '0.7.343'
+                                                             },
+                                                             {
+                                                               'date' => '2012-03-28T23:58:41',
+                                                               'version' => '0.8.351'
+                                                             },
+                                                             {
+                                                               'date' => '2012-03-29T22:05:21',
+                                                               'version' => '0.8.355'
+                                                             },
+                                                             {
+                                                               'date' => '2012-04-03T00:26:12',
+                                                               'version' => '0.8.357'
+                                                             },
+                                                             {
+                                                               'date' => '2012-04-04T15:19:03',
+                                                               'version' => '0.8.360'
+                                                             },
+                                                             {
+                                                               'date' => '2012-04-17T18:57:01',
+                                                               'version' => '0.9.368'
+                                                             },
+                                                             {
+                                                               'date' => '2012-05-19T21:05:56',
+                                                               'version' => '0.10.380'
+                                                             },
+                                                             {
+                                                               'date' => '2012-07-10T00:34:23',
+                                                               'version' => '0.11.401'
+                                                             },
+                                                             {
+                                                               'date' => '2012-09-02T13:43:37',
+                                                               'version' => '0.12.406'
+                                                             },
+                                                             {
+                                                               'date' => '2012-09-06T14:02:06',
+                                                               'version' => '0.12.409'
+                                                             },
+                                                             {
+                                                               'date' => '2012-11-07T07:49:39',
+                                                               'version' => '0.13.416'
+                                                             },
+                                                             {
+                                                               'date' => '2012-11-13T20:16:27',
+                                                               'version' => '0.13.418'
+                                                             },
+                                                             {
+                                                               'date' => '2012-12-12T23:25:16',
+                                                               'version' => '0.13.420'
+                                                             },
+                                                             {
+                                                               'date' => '2012-12-14T17:58:08',
+                                                               'version' => '0.13.421'
+                                                             },
+                                                             {
+                                                               'date' => '2012-12-19T22:23:08',
+                                                               'version' => '0.13.422'
+                                                             },
+                                                             {
+                                                               'date' => '2012-12-21T20:48:41',
+                                                               'version' => '0.13.424'
+                                                             },
+                                                             {
+                                                               'date' => '2012-12-30T03:05:28',
+                                                               'version' => '0.13.427'
+                                                             },
+                                                             {
+                                                               'date' => '2013-01-07T00:52:48',
+                                                               'version' => '0.14.429'
+                                                             },
+                                                             {
+                                                               'date' => '2013-04-01T01:14:44',
+                                                               'version' => '0.15.431'
+                                                             },
+                                                             {
+                                                               'date' => '2013-04-02T14:21:13',
+                                                               'version' => '0.15.434'
+                                                             },
+                                                             {
+                                                               'date' => '2013-04-14T16:15:55',
+                                                               'version' => 'v0.16.438'
+                                                             },
+                                                             {
+                                                               'date' => '2013-04-15T20:42:56',
+                                                               'version' => 'v0.16.442'
+                                                             },
+                                                             {
+                                                               'date' => '2013-04-24T03:47:54',
+                                                               'version' => 'v0.16.445'
+                                                             },
+                                                             {
+                                                               'date' => '2013-04-29T17:12:37',
+                                                               'version' => 'v0.17.450'
+                                                             },
+                                                             {
+                                                               'date' => '2013-04-30T22:15:36',
+                                                               'version' => 'v0.18.6'
+                                                             },
+                                                             {
+                                                               'date' => '2013-05-02T14:14:57',
+                                                               'version' => 'v0.19.1'
+                                                             },
+                                                             {
+                                                               'date' => '2013-05-07T23:33:06',
+                                                               'version' => 'v0.20.6'
+                                                             },
+                                                             {
+                                                               'date' => '2013-05-10T14:58:03',
+                                                               'version' => 'v0.20.7'
+                                                             },
+                                                             {
+                                                               'date' => '2013-05-14T13:32:28',
+                                                               'version' => 'v0.20.8'
+                                                             },
+                                                             {
+                                                               'date' => '2013-05-15T20:03:34',
+                                                               'version' => 'v0.20.9'
+                                                             },
+                                                             {
+                                                               'date' => '2013-05-16T00:11:50',
+                                                               'version' => 'v0.20.10'
+                                                             },
+                                                             {
+                                                               'date' => '2013-05-17T16:07:41',
+                                                               'version' => 'v0.20.12'
+                                                             },
+                                                             {
+                                                               'date' => '2013-06-08T13:26:40',
+                                                               'version' => 'v0.20.13'
+                                                             },
+                                                             {
+                                                               'date' => '2013-07-28T17:41:14',
+                                                               'version' => 'v0.22.1'
+                                                             },
+                                                             {
+                                                               'date' => '2013-07-29T11:39:49',
+                                                               'version' => 'v0.22.2'
+                                                             },
+                                                             {
+                                                               'date' => '2013-07-29T11:46:28',
+                                                               'version' => 'v0.22.3'
+                                                             },
+                                                             {
+                                                               'date' => '2013-07-29T18:37:14',
+                                                               'version' => 'v0.22.4'
+                                                             },
+                                                             {
+                                                               'date' => '2013-07-30T10:19:23',
+                                                               'version' => 'v0.22.5'
+                                                             },
+                                                             {
+                                                               'date' => '2013-07-30T16:25:59',
+                                                               'version' => 'v0.22.7'
+                                                             },
+                                                             {
+                                                               'date' => '2013-07-31T09:54:30',
+                                                               'version' => 'v0.22.8'
+                                                             },
+                                                             {
+                                                               'date' => '2013-08-02T19:06:49',
+                                                               'version' => 'v0.22.9'
+                                                             },
+                                                             {
+                                                               'date' => '2013-08-06T17:19:31',
+                                                               'version' => 'v0.23.1'
+                                                             },
+                                                             {
+                                                               'date' => '2013-08-07T13:14:13',
+                                                               'version' => 'v0.23.2'
+                                                             },
+                                                             {
+                                                               'date' => '2013-08-13T18:01:24',
+                                                               'version' => '0.24.1'
+                                                             },
+                                                             {
+                                                               'date' => '2013-08-16T22:49:23',
+                                                               'version' => '0.24.3'
+                                                             },
+                                                             {
+                                                               'date' => '2013-09-03T13:11:17',
+                                                               'version' => '0.25.1'
+                                                             },
+                                                             {
+                                                               'date' => '2013-09-26T16:04:18',
+                                                               'version' => '0.26.1'
+                                                             },
+                                                             {
+                                                               'date' => '2013-11-22T09:42:00',
+                                                               'version' => '0.27.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-01-01T15:02:23',
+                                                               'version' => '0.28.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-01-01T17:03:18',
+                                                               'version' => '0.29.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-01-02T02:33:28',
+                                                               'version' => '0.30.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-01-13T18:41:29',
+                                                               'version' => '0.31.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-01-24T20:56:21',
+                                                               'version' => '0.33.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-04-04T10:52:59',
+                                                               'version' => '0.34.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-05-01T14:40:32',
+                                                               'version' => '0.35.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-05-13T10:03:54',
+                                                               'version' => '0.36.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-05-13T21:08:07',
+                                                               'version' => '0.37.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-05-15T00:11:43',
+                                                               'version' => '0.38.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-05-16T08:19:01',
+                                                               'version' => '0.39.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-05-22T09:37:34',
+                                                               'version' => '0.40.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-05-22T14:10:49',
+                                                               'version' => '0.40.2'
+                                                             },
+                                                             {
+                                                               'date' => '2014-05-28T10:28:42',
+                                                               'version' => '0.41.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-07-03T23:27:53',
+                                                               'version' => '0.42.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-07-04T09:25:10',
+                                                               'version' => '0.42.2'
+                                                             },
+                                                             {
+                                                               'date' => '2014-07-04T12:19:02',
+                                                               'version' => '0.43.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-07-16T12:39:03',
+                                                               'version' => '0.44.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-08-18T23:00:05',
+                                                               'version' => '0.45.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-08-26T12:43:14',
+                                                               'version' => '0.45.5'
+                                                             },
+                                                             {
+                                                               'date' => '2014-08-26T16:41:35',
+                                                               'version' => '0.46.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-08-27T16:17:50',
+                                                               'version' => '0.47.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-09-03T22:25:51',
+                                                               'version' => '0.48.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-10-02T17:39:13',
+                                                               'version' => '0.48.3'
+                                                             },
+                                                             {
+                                                               'date' => '2014-10-02T19:59:28',
+                                                               'version' => '0.49.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-11-07T18:51:52',
+                                                               'version' => '0.50.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-11-08T21:45:45',
+                                                               'version' => '0.50.2'
+                                                             },
+                                                             {
+                                                               'date' => '2014-11-09T13:19:50',
+                                                               'version' => '0.50.3'
+                                                             },
+                                                             {
+                                                               'date' => '2014-11-09T15:52:41',
+                                                               'version' => '0.51.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-11-10T12:44:49',
+                                                               'version' => '0.52.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-12-19T11:49:49',
+                                                               'version' => '0.53.1'
+                                                             },
+                                                             {
+                                                               'date' => '2014-12-19T22:54:41',
+                                                               'version' => '0.54.1'
+                                                             },
+                                                             {
+                                                               'date' => '2015-02-05T00:04:33',
+                                                               'version' => '0.55.1'
+                                                             },
+                                                             {
+                                                               'date' => '2015-03-19T14:59:03',
+                                                               'version' => '0.56.1'
+                                                             },
+                                                             {
+                                                               'date' => '2015-04-04T20:00:58',
+                                                               'version' => '0.57.1'
+                                                             },
+                                                             {
+                                                               'date' => '2015-04-04T20:16:31',
+                                                               'version' => '0.58.1'
+                                                             },
+                                                             {
+                                                               'date' => '2015-04-05T17:58:31',
+                                                               'version' => '0.59.1'
+                                                             },
+                                                             {
+                                                               'date' => '2015-04-08T23:10:28',
+                                                               'version' => '0.60.1'
+                                                             },
+                                                             {
+                                                               'date' => '2015-05-11T12:15:05',
+                                                               'version' => '0.61.1'
+                                                             },
+                                                             {
+                                                               'date' => '2015-05-24T11:52:28',
+                                                               'version' => '0.62.1'
+                                                             },
+                                                             {
+                                                               'date' => '2015-06-21T21:42:17',
+                                                               'version' => '0.63.1'
+                                                             },
+                                                             {
+                                                               'date' => '2015-08-29T08:58:54',
+                                                               'version' => '0.66.1'
+                                                             },
+                                                             {
+                                                               'date' => '2016-02-01T00:18:43',
+                                                               'version' => '0.67.1'
+                                                             },
+                                                             {
+                                                               'date' => '2016-02-01T14:33:11',
+                                                               'version' => '0.68.1'
+                                                             },
+                                                             {
+                                                               'date' => '2016-07-05T00:36:52',
+                                                               'version' => '0.69.1'
+                                                             },
+                                                             {
+                                                               'date' => '2016-07-29T15:24:24',
+                                                               'version' => '0.70.1'
+                                                             },
+                                                             {
+                                                               'date' => '2016-07-29T18:59:13',
+                                                               'version' => '0.71.1'
+                                                             },
+                                                             {
+                                                               'date' => '2017-04-02T08:23:47',
+                                                               'version' => '0.72.1'
+                                                             },
+                                                             {
+                                                               'date' => '2017-06-02T00:03:17',
+                                                               'version' => '0.73.1'
+                                                             }
+                                                           ]
+                                           },
+                       'File-Path' => {
+                                        'advisories' => [
+                                                          {
+                                                            'affected_versions' => '<2.13',
+                                                            'cves' => [
+                                                                        'CVE-2017-6512'
+                                                                      ],
+                                                            'description' => 'Race condition in the rmtree and remove_tree functions allows attackers to set the mode on arbitrary files via vectors involving directory-permission loosening logic.
+',
+                                                            'distribution' => 'Fake-Encode',
+                                                            'fixed_versions' => '>=2.13',
+                                                            'id' => 'CPANSA-File-Path-2017-01',
+                                                            'references' => [
+                                                                              'https://metacpan.org/changes/distribution/File-Path',
+                                                                              'https://github.com/jkeenan/File-Path/commit/e5ef95276ee8ad471c66ee574a5d42552b3a6af2'
+                                                                            ],
+                                                            'reported' => '2017-05-02'
+                                                          }
+                                                        ],
+                                        'main_module' => 'File::Path',
+                                        'versions' => [
+                                                        {
+                                                          'date' => '2007-05-17T13:46:15',
+                                                          'version' => '1.99_01'
+                                                        },
+                                                        {
+                                                          'date' => '2007-05-27T09:29:48',
+                                                          'version' => '1.99_02'
+                                                        },
+                                                        {
+                                                          'date' => '2007-06-27T19:23:09',
+                                                          'version' => '2.00_05'
+                                                        },
+                                                        {
+                                                          'date' => '2007-07-04T21:37:13',
+                                                          'version' => '2.00_06'
+                                                        },
+                                                        {
+                                                          'date' => '2007-07-09T19:37:02',
+                                                          'version' => '2.00_07'
+                                                        },
+                                                        {
+                                                          'date' => '2007-08-01T00:10:43',
+                                                          'version' => '2.00_08'
+                                                        },
+                                                        {
+                                                          'date' => '2007-08-20T18:15:55',
+                                                          'version' => '2.00_09'
+                                                        },
+                                                        {
+                                                          'date' => '2007-09-04T17:20:45',
+                                                          'version' => '2.00_10'
+                                                        },
+                                                        {
+                                                          'date' => '2007-09-08T12:53:07',
+                                                          'version' => '2.00_11'
+                                                        },
+                                                        {
+                                                          'date' => '2007-09-29T10:29:32',
+                                                          'version' => '2.01'
+                                                        },
+                                                        {
+                                                          'date' => '2007-10-24T10:36:09',
+                                                          'version' => '2.02'
+                                                        },
+                                                        {
+                                                          'date' => '2007-11-04T18:36:19',
+                                                          'version' => '2.03'
+                                                        },
+                                                        {
+                                                          'date' => '2007-11-24T09:53:23',
+                                                          'version' => '2.04'
+                                                        },
+                                                        {
+                                                          'date' => '2008-05-07T08:25:05',
+                                                          'version' => '2.05'
+                                                        },
+                                                        {
+                                                          'date' => '2008-05-08T09:36:50',
+                                                          'version' => '2.06'
+                                                        },
+                                                        {
+                                                          'date' => '2008-05-10T21:02:47',
+                                                          'version' => '2.06_01'
+                                                        },
+                                                        {
+                                                          'date' => '2008-05-12T10:07:46',
+                                                          'version' => '2.06_02'
+                                                        },
+                                                        {
+                                                          'date' => '2008-05-12T21:43:43',
+                                                          'version' => '2.06_03'
+                                                        },
+                                                        {
+                                                          'date' => '2008-05-13T14:40:30',
+                                                          'version' => '2.06_04'
+                                                        },
+                                                        {
+                                                          'date' => '2008-10-01T20:41:37',
+                                                          'version' => '2.06_05'
+                                                        },
+                                                        {
+                                                          'date' => '2008-10-05T21:59:58',
+                                                          'version' => '2.06_06'
+                                                        },
+                                                        {
+                                                          'date' => '2008-10-29T17:55:36',
+                                                          'version' => '2.06_07'
+                                                        },
+                                                        {
+                                                          'date' => '2008-11-05T00:12:29',
+                                                          'version' => '2.06_08'
+                                                        },
+                                                        {
+                                                          'date' => '2008-11-09T13:11:17',
+                                                          'version' => '2.07'
+                                                        },
+                                                        {
+                                                          'date' => '2009-06-21T13:23:32',
+                                                          'version' => '2.07_03'
+                                                        },
+                                                        {
+                                                          'date' => '2009-10-04T10:31:05',
+                                                          'version' => '2.08'
+                                                        },
+                                                        {
+                                                          'date' => '2013-01-16T21:36:05',
+                                                          'version' => '2.09'
+                                                        },
+                                                        {
+                                                          'date' => '2015-06-24T17:03:22',
+                                                          'version' => '2.10_001'
+                                                        },
+                                                        {
+                                                          'date' => '2015-06-26T17:28:20',
+                                                          'version' => '2.10_002'
+                                                        },
+                                                        {
+                                                          'date' => '2015-07-08T16:59:11',
+                                                          'version' => '2.10_003'
+                                                        },
+                                                        {
+                                                          'date' => '2015-07-10T11:34:44',
+                                                          'version' => '2.10_004'
+                                                        },
+                                                        {
+                                                          'date' => '2015-07-17T15:03:07',
+                                                          'version' => '2.10_005'
+                                                        },
+                                                        {
+                                                          'date' => '2015-07-18T02:28:14',
+                                                          'version' => '2.11'
+                                                        },
+                                                        {
+                                                          'date' => '2015-07-24T23:01:36',
+                                                          'version' => '2.11_001'
+                                                        },
+                                                        {
+                                                          'date' => '2015-07-25T09:56:18',
+                                                          'version' => '2.11_002'
+                                                        },
+                                                        {
+                                                          'date' => '2015-08-03T18:07:05',
+                                                          'version' => '2.11_003'
+                                                        },
+                                                        {
+                                                          'date' => '2015-10-01T19:34:07',
+                                                          'version' => '2.11_004'
+                                                        },
+                                                        {
+                                                          'date' => '2015-10-09T12:11:52',
+                                                          'version' => '2.12'
+                                                        },
+                                                        {
+                                                          'date' => '2016-09-18T13:35:39',
+                                                          'version' => '2.12_001'
+                                                        },
+                                                        {
+                                                          'date' => '2017-03-12T22:09:35',
+                                                          'version' => '2.12_002'
+                                                        },
+                                                        {
+                                                          'date' => '2017-04-07T13:59:30',
+                                                          'version' => '2.12_003'
+                                                        },
+                                                        {
+                                                          'date' => '2017-04-18T18:37:56',
+                                                          'version' => '2.12_004'
+                                                        },
+                                                        {
+                                                          'date' => '2017-04-21T12:03:20',
+                                                          'version' => '2.12_005'
+                                                        },
+                                                        {
+                                                          'date' => '2017-04-21T21:58:56',
+                                                          'version' => '2.12_006'
+                                                        },
+                                                        {
+                                                          'date' => '2017-04-22T20:09:24',
+                                                          'version' => '2.12_007'
+                                                        },
+                                                        {
+                                                          'date' => '2017-05-07T17:48:35',
+                                                          'version' => '2.12_008'
+                                                        },
+                                                        {
+                                                          'date' => '2017-05-31T23:44:51',
+                                                          'version' => '2.13'
+                                                        },
+                                                        {
+                                                          'date' => '2017-06-07T21:34:52',
+                                                          'version' => '2.14'
+                                                        },
+                                                        {
+                                                          'date' => '2017-07-30T02:40:36',
+                                                          'version' => '2.15'
+                                                        },
+                                                        {
+                                                          'date' => '2018-08-31T13:04:13',
+                                                          'version' => '2.16'
+                                                        }
+                                                      ]
+                                      },
                        'GBrowse' => {
                                       'advisories' => [
                                                         {
@@ -9526,8 +14152,330 @@ sub db {
                                                         }
                                                       ]
                                       },
+                       'HTTP-Tiny' => {
+                                        'advisories' => [
+                                                          {
+                                                            'affected_versions' => '<0.059',
+                                                            'cves' => [
+                                                                        'CVE-2016-1238'
+                                                                      ],
+                                                            'description' => 'Loading modules from . (current directory).
+',
+                                                            'distribution' => 'HTTP-Tiny',
+                                                            'fixed_versions' => '>=0.059',
+                                                            'id' => 'CPANSA-HTTP-Tiny-2016-01',
+                                                            'references' => [
+                                                                              'https://metacpan.org/changes/distribution/HTTP-Tiny',
+                                                                              'https://github.com/chansen/p5-http-tiny/commit/b239c95ea7a256cfee9b8848f1bd4d1df6e66444'
+                                                                            ],
+                                                            'reported' => '2016-07-29'
+                                                          }
+                                                        ],
+                                        'main_module' => 'HTTP::Tiny',
+                                        'versions' => [
+                                                        {
+                                                          'date' => '2010-12-11T12:59:31',
+                                                          'version' => '0.001'
+                                                        },
+                                                        {
+                                                          'date' => '2010-12-14T02:59:37',
+                                                          'version' => '0.002'
+                                                        },
+                                                        {
+                                                          'date' => '2010-12-15T17:30:49',
+                                                          'version' => '0.003'
+                                                        },
+                                                        {
+                                                          'date' => '2010-12-16T03:53:33',
+                                                          'version' => '0.004'
+                                                        },
+                                                        {
+                                                          'date' => '2011-01-08T11:32:21',
+                                                          'version' => '0.005'
+                                                        },
+                                                        {
+                                                          'date' => '2011-01-10T12:27:39',
+                                                          'version' => '0.006'
+                                                        },
+                                                        {
+                                                          'date' => '2011-01-12T09:56:28',
+                                                          'version' => '0.007'
+                                                        },
+                                                        {
+                                                          'date' => '2011-01-14T11:34:51',
+                                                          'version' => '0.008'
+                                                        },
+                                                        {
+                                                          'date' => '2011-01-17T21:29:27',
+                                                          'version' => '0.009'
+                                                        },
+                                                        {
+                                                          'date' => '2011-02-04T07:45:53',
+                                                          'version' => '0.010'
+                                                        },
+                                                        {
+                                                          'date' => '2011-03-20T00:49:53',
+                                                          'version' => '0.011'
+                                                        },
+                                                        {
+                                                          'date' => '2011-03-31T19:49:33',
+                                                          'version' => '0.012'
+                                                        },
+                                                        {
+                                                          'date' => '2011-07-18T03:15:12',
+                                                          'version' => '0.013'
+                                                        },
+                                                        {
+                                                          'date' => '2011-10-20T17:55:01',
+                                                          'version' => '0.014'
+                                                        },
+                                                        {
+                                                          'date' => '2011-10-26T20:42:15',
+                                                          'version' => '0.015'
+                                                        },
+                                                        {
+                                                          'date' => '2011-10-27T03:06:06',
+                                                          'version' => '0.016'
+                                                        },
+                                                        {
+                                                          'date' => '2012-02-23T02:58:42',
+                                                          'version' => '0.017'
+                                                        },
+                                                        {
+                                                          'date' => '2012-04-18T13:41:15',
+                                                          'version' => '0.018'
+                                                        },
+                                                        {
+                                                          'date' => '2012-05-14T11:15:52',
+                                                          'version' => '0.019'
+                                                        },
+                                                        {
+                                                          'date' => '2012-05-14T19:25:57',
+                                                          'version' => '0.020'
+                                                        },
+                                                        {
+                                                          'date' => '2012-05-16T02:39:55',
+                                                          'version' => '0.021'
+                                                        },
+                                                        {
+                                                          'date' => '2012-06-02T03:32:21',
+                                                          'version' => '0.022'
+                                                        },
+                                                        {
+                                                          'date' => '2012-09-19T16:06:37',
+                                                          'version' => '0.023'
+                                                        },
+                                                        {
+                                                          'date' => '2012-10-10T00:45:59',
+                                                          'version' => '0.024'
+                                                        },
+                                                        {
+                                                          'date' => '2012-12-26T17:11:23',
+                                                          'version' => '0.025'
+                                                        },
+                                                        {
+                                                          'date' => '2013-03-05T03:54:12',
+                                                          'version' => '0.026'
+                                                        },
+                                                        {
+                                                          'date' => '2013-03-05T17:04:07',
+                                                          'version' => '0.027'
+                                                        },
+                                                        {
+                                                          'date' => '2013-03-05T19:13:42',
+                                                          'version' => '0.028'
+                                                        },
+                                                        {
+                                                          'date' => '2013-04-17T17:51:23',
+                                                          'version' => '0.029'
+                                                        },
+                                                        {
+                                                          'date' => '2013-06-13T15:47:33',
+                                                          'version' => '0.030'
+                                                        },
+                                                        {
+                                                          'date' => '2013-06-17T03:18:45',
+                                                          'version' => '0.031'
+                                                        },
+                                                        {
+                                                          'date' => '2013-06-20T15:42:26',
+                                                          'version' => '0.032'
+                                                        },
+                                                        {
+                                                          'date' => '2013-06-21T10:27:45',
+                                                          'version' => '0.033'
+                                                        },
+                                                        {
+                                                          'date' => '2013-06-26T23:03:50',
+                                                          'version' => '0.034'
+                                                        },
+                                                        {
+                                                          'date' => '2013-09-10T16:30:04',
+                                                          'version' => '0.035'
+                                                        },
+                                                        {
+                                                          'date' => '2013-09-25T16:11:04',
+                                                          'version' => '0.036'
+                                                        },
+                                                        {
+                                                          'date' => '2013-10-28T17:50:02',
+                                                          'version' => '0.037'
+                                                        },
+                                                        {
+                                                          'date' => '2013-11-18T17:57:17',
+                                                          'version' => '0.038'
+                                                        },
+                                                        {
+                                                          'date' => '2013-11-28T00:49:36',
+                                                          'version' => '0.039'
+                                                        },
+                                                        {
+                                                          'date' => '2014-02-17T18:05:10',
+                                                          'version' => '0.040'
+                                                        },
+                                                        {
+                                                          'date' => '2014-02-17T18:09:12',
+                                                          'version' => '0.041'
+                                                        },
+                                                        {
+                                                          'date' => '2014-02-18T16:24:50',
+                                                          'version' => '0.042'
+                                                        },
+                                                        {
+                                                          'date' => '2014-02-21T01:42:05',
+                                                          'version' => '0.043'
+                                                        },
+                                                        {
+                                                          'date' => '2014-07-17T03:47:41',
+                                                          'version' => '0.044'
+                                                        },
+                                                        {
+                                                          'date' => '2014-07-20T23:24:33',
+                                                          'version' => '0.045'
+                                                        },
+                                                        {
+                                                          'date' => '2014-07-21T14:33:53',
+                                                          'version' => '0.046'
+                                                        },
+                                                        {
+                                                          'date' => '2014-07-29T18:13:01',
+                                                          'version' => '0.047'
+                                                        },
+                                                        {
+                                                          'date' => '2014-08-21T17:20:45',
+                                                          'version' => '0.048'
+                                                        },
+                                                        {
+                                                          'date' => '2014-09-02T15:21:17',
+                                                          'version' => '0.049'
+                                                        },
+                                                        {
+                                                          'date' => '2014-09-23T19:32:00',
+                                                          'version' => '0.050'
+                                                        },
+                                                        {
+                                                          'date' => '2014-11-18T03:59:56',
+                                                          'version' => '0.051'
+                                                        },
+                                                        {
+                                                          'date' => '2014-12-11T20:25:19',
+                                                          'version' => '0.052'
+                                                        },
+                                                        {
+                                                          'date' => '2014-12-12T04:43:37',
+                                                          'version' => '0.053'
+                                                        },
+                                                        {
+                                                          'date' => '2015-01-27T12:18:58',
+                                                          'version' => '0.054'
+                                                        },
+                                                        {
+                                                          'date' => '2015-05-07T22:15:24',
+                                                          'version' => '0.055'
+                                                        },
+                                                        {
+                                                          'date' => '2015-05-19T10:01:27',
+                                                          'version' => '0.056'
+                                                        },
+                                                        {
+                                                          'date' => '2016-04-18T14:19:09',
+                                                          'version' => '0.057'
+                                                        },
+                                                        {
+                                                          'date' => '2016-05-03T17:49:33',
+                                                          'version' => '0.058'
+                                                        },
+                                                        {
+                                                          'date' => '2016-07-29T20:12:12',
+                                                          'version' => '0.059'
+                                                        },
+                                                        {
+                                                          'date' => '2016-08-05T16:12:02',
+                                                          'version' => '0.061'
+                                                        },
+                                                        {
+                                                          'date' => '2016-08-08T16:20:33',
+                                                          'version' => '0.063'
+                                                        },
+                                                        {
+                                                          'date' => '2016-08-17T01:43:01',
+                                                          'version' => '0.064'
+                                                        },
+                                                        {
+                                                          'date' => '2016-09-10T02:43:48',
+                                                          'version' => '0.065'
+                                                        },
+                                                        {
+                                                          'date' => '2016-09-14T15:45:04',
+                                                          'version' => '0.067'
+                                                        },
+                                                        {
+                                                          'date' => '2016-09-23T20:15:05',
+                                                          'version' => '0.068'
+                                                        },
+                                                        {
+                                                          'date' => '2016-10-05T15:37:11',
+                                                          'version' => '0.069'
+                                                        },
+                                                        {
+                                                          'date' => '2016-10-10T03:25:33',
+                                                          'version' => '0.070'
+                                                        },
+                                                        {
+                                                          'date' => '2018-07-24T15:35:02',
+                                                          'version' => '0.073'
+                                                        },
+                                                        {
+                                                          'date' => '2018-07-30T19:37:29',
+                                                          'version' => '0.074'
+                                                        },
+                                                        {
+                                                          'date' => '2018-08-01T11:10:11',
+                                                          'version' => '0.075'
+                                                        },
+                                                        {
+                                                          'date' => '2018-08-06T01:09:54',
+                                                          'version' => '0.076'
+                                                        }
+                                                      ]
+                                      },
                        'Imager' => {
                                      'advisories' => [
+                                                       {
+                                                         'affected_versions' => '<1.006',
+                                                         'cves' => [
+                                                                     'CVE-2016-1238'
+                                                                   ],
+                                                         'description' => 'Loading modules from . (current directory).
+',
+                                                         'distribution' => 'Imager',
+                                                         'fixed_versions' => '>=1.006',
+                                                         'id' => 'CPANSA-Imager-2016-01',
+                                                         'references' => [
+                                                                           'https://metacpan.org/changes/distribution/Imager'
+                                                                         ],
+                                                         'reported' => '2017-08-26'
+                                                       },
                                                        {
                                                          'affected_versions' => '<0.64',
                                                          'cves' => [
@@ -13769,6 +18717,291 @@ sub db {
                                                       }
                                                     ]
                                     },
+                       'PathTools' => {
+                                        'advisories' => [
+                                                          {
+                                                            'affected_versions' => '<3.65',
+                                                            'cves' => [
+                                                                        'CVE-2016-1238'
+                                                                      ],
+                                                            'description' => 'Does not properly remove . (period) characters from the end of the includes directory array, which might allow local users to gain privileges via a Trojan horse module under the current working directory.
+',
+                                                            'distribution' => 'PathTools',
+                                                            'fixed_versions' => '>=3.65',
+                                                            'id' => 'CPANSA-PathTools-2016-02',
+                                                            'references' => [
+                                                                              'https://metacpan.org/changes/distribution/PathTools'
+                                                                            ],
+                                                            'reported' => '2016-02-08'
+                                                          },
+                                                          {
+                                                            'affected_versions' => '<3.62',
+                                                            'cves' => [
+                                                                        'CVE-2015-8607'
+                                                                      ],
+                                                            'description' => 'Does not properly preserve the taint attribute of data, which might allow context-dependent attackers to bypass the taint protection mechanism via a crafted string.
+',
+                                                            'distribution' => 'PathTools',
+                                                            'fixed_versions' => '>=3.62',
+                                                            'id' => 'CPANSA-PathTools-2016-01',
+                                                            'references' => [
+                                                                              'https://metacpan.org/changes/distribution/PathTools'
+                                                                            ],
+                                                            'reported' => '2016-01-11'
+                                                          }
+                                                        ],
+                                        'main_module' => 'Cwd',
+                                        'versions' => [
+                                                        {
+                                                          'date' => '2004-09-03T03:40:00',
+                                                          'version' => '3.00'
+                                                        },
+                                                        {
+                                                          'date' => '2004-09-07T03:39:26',
+                                                          'version' => '3.01'
+                                                        },
+                                                        {
+                                                          'date' => '2004-11-19T04:26:35',
+                                                          'version' => '3.01_01'
+                                                        },
+                                                        {
+                                                          'date' => '2004-11-29T04:20:10',
+                                                          'version' => '3.01_02'
+                                                        },
+                                                        {
+                                                          'date' => '2004-11-30T02:34:46',
+                                                          'version' => '3.01_03'
+                                                        },
+                                                        {
+                                                          'date' => '2005-01-10T01:33:05',
+                                                          'version' => '3.02'
+                                                        },
+                                                        {
+                                                          'date' => '2005-01-22T03:59:59',
+                                                          'version' => '3.03'
+                                                        },
+                                                        {
+                                                          'date' => '2005-02-07T00:28:43',
+                                                          'version' => '3.04'
+                                                        },
+                                                        {
+                                                          'date' => '2005-02-28T13:27:37',
+                                                          'version' => '3.05'
+                                                        },
+                                                        {
+                                                          'date' => '2005-04-14T02:06:10',
+                                                          'version' => '3.06'
+                                                        },
+                                                        {
+                                                          'date' => '2005-05-06T12:50:38',
+                                                          'version' => '3.07'
+                                                        },
+                                                        {
+                                                          'date' => '2005-05-28T15:13:27',
+                                                          'version' => '3.08'
+                                                        },
+                                                        {
+                                                          'date' => '2005-06-15T23:45:19',
+                                                          'version' => '3.09'
+                                                        },
+                                                        {
+                                                          'date' => '2005-08-26T03:29:11',
+                                                          'version' => '3.10'
+                                                        },
+                                                        {
+                                                          'date' => '2005-08-28T01:16:38',
+                                                          'version' => '3.11'
+                                                        },
+                                                        {
+                                                          'date' => '2005-10-04T03:14:00',
+                                                          'version' => '3.12'
+                                                        },
+                                                        {
+                                                          'date' => '2005-11-16T05:58:53',
+                                                          'version' => '3.13'
+                                                        },
+                                                        {
+                                                          'date' => '2005-11-18T00:15:37',
+                                                          'version' => '3.14'
+                                                        },
+                                                        {
+                                                          'date' => '2005-12-10T04:51:57',
+                                                          'version' => '3.14_01'
+                                                        },
+                                                        {
+                                                          'date' => '2005-12-14T05:11:27',
+                                                          'version' => '3.14_02'
+                                                        },
+                                                        {
+                                                          'date' => '2005-12-27T20:32:26',
+                                                          'version' => '3.15'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-31T02:52:07',
+                                                          'version' => '3.16'
+                                                        },
+                                                        {
+                                                          'date' => '2006-03-03T22:55:18',
+                                                          'version' => '3.17'
+                                                        },
+                                                        {
+                                                          'date' => '2006-04-28T03:04:00',
+                                                          'version' => '3.18'
+                                                        },
+                                                        {
+                                                          'date' => '2006-07-12T03:43:15',
+                                                          'version' => '3.19'
+                                                        },
+                                                        {
+                                                          'date' => '2006-10-05T02:18:51',
+                                                          'version' => '3.21'
+                                                        },
+                                                        {
+                                                          'date' => '2006-10-10T02:53:23',
+                                                          'version' => '3.22'
+                                                        },
+                                                        {
+                                                          'date' => '2006-10-11T17:13:59',
+                                                          'version' => '3.23'
+                                                        },
+                                                        {
+                                                          'date' => '2006-11-20T04:53:56',
+                                                          'version' => '3.24'
+                                                        },
+                                                        {
+                                                          'date' => '2007-05-22T02:08:53',
+                                                          'version' => '3.25'
+                                                        },
+                                                        {
+                                                          'date' => '2007-10-14T02:15:40',
+                                                          'version' => '3.25_01'
+                                                        },
+                                                        {
+                                                          'date' => '2007-12-25T02:34:28',
+                                                          'version' => '3.2501'
+                                                        },
+                                                        {
+                                                          'date' => '2008-01-14T12:02:28',
+                                                          'version' => '3.26'
+                                                        },
+                                                        {
+                                                          'date' => '2008-01-15T23:27:33',
+                                                          'version' => '3.26_01'
+                                                        },
+                                                        {
+                                                          'date' => '2008-01-17T02:21:47',
+                                                          'version' => '3.27'
+                                                        },
+                                                        {
+                                                          'date' => '2008-02-12T03:46:01',
+                                                          'version' => '3.2701'
+                                                        },
+                                                        {
+                                                          'date' => '2008-07-26T02:19:45',
+                                                          'version' => '3.28_01'
+                                                        },
+                                                        {
+                                                          'date' => '2008-10-27T19:27:37',
+                                                          'version' => '3.28_02'
+                                                        },
+                                                        {
+                                                          'date' => '2008-10-27T21:16:35',
+                                                          'version' => '3.28_03'
+                                                        },
+                                                        {
+                                                          'date' => '2008-10-29T20:11:52',
+                                                          'version' => '3.29'
+                                                        },
+                                                        {
+                                                          'date' => '2009-05-07T18:27:46',
+                                                          'version' => '3.29_01'
+                                                        },
+                                                        {
+                                                          'date' => '2009-05-10T08:59:46',
+                                                          'version' => '3.30'
+                                                        },
+                                                        {
+                                                          'date' => '2009-09-21T12:46:15',
+                                                          'version' => '3.30_01'
+                                                        },
+                                                        {
+                                                          'date' => '2009-09-29T06:22:30',
+                                                          'version' => '3.30_02'
+                                                        },
+                                                        {
+                                                          'date' => '2009-11-01T14:22:36',
+                                                          'version' => '3.31'
+                                                        },
+                                                        {
+                                                          'date' => '2010-07-23T08:10:31',
+                                                          'version' => '3.31_02'
+                                                        },
+                                                        {
+                                                          'date' => '2010-09-17T13:24:05',
+                                                          'version' => '3.31_03'
+                                                        },
+                                                        {
+                                                          'date' => '2010-09-19T15:53:14',
+                                                          'version' => '3.32'
+                                                        },
+                                                        {
+                                                          'date' => '2010-09-20T07:54:00',
+                                                          'version' => '3.33'
+                                                        },
+                                                        {
+                                                          'date' => '2011-12-20T07:42:29',
+                                                          'version' => '3.39_01'
+                                                        },
+                                                        {
+                                                          'date' => '2013-01-16T06:35:08',
+                                                          'version' => '3.40'
+                                                        },
+                                                        {
+                                                          'date' => '2014-05-01T18:34:31',
+                                                          'version' => '3.46_01'
+                                                        },
+                                                        {
+                                                          'date' => '2014-05-23T17:00:38',
+                                                          'version' => '3.47'
+                                                        },
+                                                        {
+                                                          'date' => '2015-07-11T22:18:08',
+                                                          'version' => '3.56_01'
+                                                        },
+                                                        {
+                                                          'date' => '2015-07-16T15:33:27',
+                                                          'version' => '3.56_02'
+                                                        },
+                                                        {
+                                                          'date' => '2015-11-09T22:09:25',
+                                                          'version' => '3.58_01'
+                                                        },
+                                                        {
+                                                          'date' => '2015-11-13T23:46:00',
+                                                          'version' => '3.59'
+                                                        },
+                                                        {
+                                                          'date' => '2015-11-19T02:32:50',
+                                                          'version' => '3.60'
+                                                        },
+                                                        {
+                                                          'date' => '2016-01-11T13:49:31',
+                                                          'version' => '3.62'
+                                                        },
+                                                        {
+                                                          'date' => '2018-02-18T20:27:27',
+                                                          'version' => '3.73'
+                                                        },
+                                                        {
+                                                          'date' => '2018-02-19T08:41:14',
+                                                          'version' => '3.74'
+                                                        },
+                                                        {
+                                                          'date' => '2018-08-29T19:53:19',
+                                                          'version' => '3.75'
+                                                        }
+                                                      ]
+                                      },
                        'Perl-Version' => {
                                            'advisories' => [
                                                              {
@@ -16019,6 +21252,7 @@ sub db {
                              'Apache::SessionX::Store::File' => 'Apache-SessionX',
                              'Apache::XMLRPC::Lite' => 'SOAP-Lite',
                              'App::Cpan' => 'CPAN',
+                             'App::Github::Email' => 'App-Github-Email',
                              'Archive::Tar' => 'Archive-Tar',
                              'Archive::Tar::Constant' => 'Archive-Tar',
                              'Archive::Tar::File' => 'Archive-Tar',
@@ -16325,6 +21559,9 @@ sub db {
                              'Cpanel::JSON::XS' => 'Cpanel-JSON-XS',
                              'Cpanel::JSON::XS::Type' => 'Cpanel-JSON-XS',
                              'Crypt::CBC' => 'Crypt-CBC',
+                             'Crypt::OpenSSL::DSA' => 'Crypt-OpenSSL-DSA',
+                             'Crypt::Passwd::XS' => 'Crypt-Passwd-XS',
+                             'Cwd' => 'PathTools',
                              'DBD::DBM' => 'DBI',
                              'DBD::DBM::Statement' => 'DBI',
                              'DBD::DBM::Table' => 'DBI',
@@ -16357,6 +21594,7 @@ sub db {
                              'DBD::Gofer::db' => 'DBI',
                              'DBD::Gofer::dr' => 'DBI',
                              'DBD::Gofer::st' => 'DBI',
+                             'DBD::MariaDB' => 'DBD-MariaDB',
                              'DBD::Mem' => 'DBI',
                              'DBD::Mem::DataSource' => 'DBI',
                              'DBD::Mem::Statement' => 'DBI',
@@ -16442,13 +21680,177 @@ sub db {
                              'DBIx::Custom::Where' => 'DBIx-Custom',
                              'DBIx::Otogiri' => 'Otogiri',
                              'DBIx::Otogiri::Iterator' => 'Otogiri',
+                             'Dancer' => 'Dancer',
+                             'Dancer::App' => 'Dancer',
+                             'Dancer::Config' => 'Dancer',
+                             'Dancer::Config::Object' => 'Dancer',
+                             'Dancer::Continuation' => 'Dancer',
+                             'Dancer::Continuation::Halted' => 'Dancer',
+                             'Dancer::Continuation::Route' => 'Dancer',
+                             'Dancer::Continuation::Route::ErrorSent' => 'Dancer',
+                             'Dancer::Continuation::Route::FileSent' => 'Dancer',
+                             'Dancer::Continuation::Route::Forwarded' => 'Dancer',
+                             'Dancer::Continuation::Route::Passed' => 'Dancer',
+                             'Dancer::Continuation::Route::Templated' => 'Dancer',
+                             'Dancer::Cookie' => 'Dancer',
+                             'Dancer::Cookies' => 'Dancer',
+                             'Dancer::Deprecation' => 'Dancer',
+                             'Dancer::Engine' => 'Dancer',
+                             'Dancer::Error' => 'Dancer',
+                             'Dancer::Exception' => 'Dancer',
+                             'Dancer::Exception::Base' => 'Dancer',
+                             'Dancer::Exceptions' => 'Dancer',
+                             'Dancer::Factory::Hook' => 'Dancer',
+                             'Dancer::FileUtils' => 'Dancer',
+                             'Dancer::GetOpt' => 'Dancer',
+                             'Dancer::HTTP' => 'Dancer',
+                             'Dancer::Handler' => 'Dancer',
+                             'Dancer::Handler::Debug' => 'Dancer',
+                             'Dancer::Handler::PSGI' => 'Dancer',
+                             'Dancer::Handler::Standalone' => 'Dancer',
+                             'Dancer::Hook' => 'Dancer',
+                             'Dancer::Hook::Properties' => 'Dancer',
+                             'Dancer::Logger' => 'Dancer',
+                             'Dancer::Logger::Abstract' => 'Dancer',
+                             'Dancer::Logger::Capture' => 'Dancer',
+                             'Dancer::Logger::Capture::Trap' => 'Dancer',
+                             'Dancer::Logger::Console' => 'Dancer',
+                             'Dancer::Logger::Diag' => 'Dancer',
+                             'Dancer::Logger::File' => 'Dancer',
+                             'Dancer::Logger::Note' => 'Dancer',
+                             'Dancer::Logger::Null' => 'Dancer',
+                             'Dancer::MIME' => 'Dancer',
+                             'Dancer::ModuleLoader' => 'Dancer',
+                             'Dancer::Object' => 'Dancer',
+                             'Dancer::Object::Singleton' => 'Dancer',
+                             'Dancer::Plugin' => 'Dancer',
+                             'Dancer::Plugin::Ajax' => 'Dancer',
+                             'Dancer::Renderer' => 'Dancer',
+                             'Dancer::Request' => 'Dancer',
+                             'Dancer::Request::Upload' => 'Dancer',
+                             'Dancer::Response' => 'Dancer',
+                             'Dancer::Route' => 'Dancer',
+                             'Dancer::Route::Cache' => 'Dancer',
+                             'Dancer::Route::Registry' => 'Dancer',
+                             'Dancer::Serializer' => 'Dancer',
+                             'Dancer::Serializer::Abstract' => 'Dancer',
+                             'Dancer::Serializer::Dumper' => 'Dancer',
+                             'Dancer::Serializer::JSON' => 'Dancer',
+                             'Dancer::Serializer::JSONP' => 'Dancer',
+                             'Dancer::Serializer::Mutable' => 'Dancer',
+                             'Dancer::Serializer::XML' => 'Dancer',
+                             'Dancer::Serializer::YAML' => 'Dancer',
+                             'Dancer::Session' => 'Dancer',
+                             'Dancer::Session::Abstract' => 'Dancer',
+                             'Dancer::Session::Simple' => 'Dancer',
+                             'Dancer::Session::YAML' => 'Dancer',
+                             'Dancer::SharedData' => 'Dancer',
+                             'Dancer::Template' => 'Dancer',
+                             'Dancer::Template::Abstract' => 'Dancer',
+                             'Dancer::Template::Simple' => 'Dancer',
+                             'Dancer::Template::TemplateToolkit' => 'Dancer',
+                             'Dancer::Test' => 'Dancer',
+                             'Dancer::Timer' => 'Dancer',
+                             'Data::Dumper' => 'Data-Dumper',
                              'Dezi' => 'Dezi',
                              'Dezi::Config' => 'Dezi',
                              'Dezi::Server' => 'Dezi',
                              'Dezi::Server::About' => 'Dezi',
                              'Dwarf' => 'Cmd-Dwarf',
+                             'Email::Address' => 'Email-Address',
+                             'Encode' => 'Encode',
+                             'Encode::Alias' => 'Encode',
+                             'Encode::Byte' => 'Encode',
+                             'Encode::CJKConstants' => 'Encode',
+                             'Encode::CN' => 'Encode',
+                             'Encode::CN::HZ' => 'Encode',
+                             'Encode::Config' => 'Encode',
+                             'Encode::EBCDIC' => 'Encode',
+                             'Encode::Encoder' => 'Encode',
+                             'Encode::Encoding' => 'Encode',
+                             'Encode::GSM0338' => 'Encode',
+                             'Encode::Guess' => 'Encode',
+                             'Encode::Internal' => 'Encode',
+                             'Encode::JP' => 'Encode',
+                             'Encode::JP::H2Z' => 'Encode',
+                             'Encode::JP::JIS7' => 'Encode',
+                             'Encode::KR' => 'Encode',
+                             'Encode::KR::2022_KR' => 'Encode',
+                             'Encode::MIME::Header' => 'Encode',
+                             'Encode::MIME::Header::ISO_2022_JP' => 'Encode',
+                             'Encode::MIME::Name' => 'Encode',
+                             'Encode::Symbol' => 'Encode',
+                             'Encode::TW' => 'Encode',
+                             'Encode::UTF_EBCDIC' => 'Encode',
+                             'Encode::Unicode' => 'Encode',
+                             'Encode::Unicode::UTF7' => 'Encode',
+                             'Encode::XS' => 'Encode',
+                             'Encode::utf8' => 'Encode',
+                             'ExtUtils::Command' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::Command::MM' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::Liblist' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::Liblist::Kid' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_AIX' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_Any' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_BeOS' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_Cygwin' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_DOS' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_Darwin' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_MacOS' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_NW5' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_OS2' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_QNX' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_UWIN' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_Unix' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_VMS' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_VOS' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_Win32' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MM_Win95' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MY' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MakeMaker' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MakeMaker::Config' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MakeMaker::Locale' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MakeMaker::_version' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MakeMaker::charstar' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MakeMaker::version' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MakeMaker::version::regex' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::MakeMaker::version::vpp' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::Mkbootstrap' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::Mksymlists' => 'ExtUtils-MakeMaker',
+                             'ExtUtils::testlib' => 'ExtUtils-MakeMaker',
+                             'FCGI' => 'FCGI',
+                             'FCGI::Stream' => 'FCGI',
+                             'Fake::Encode' => 'Fake-Encode',
+                             'Fake::Our' => 'Fake-Our',
                              'FakeHomol' => 'GBrowse',
                              'Fh' => 'CGI',
+                             'File::DataClass' => 'File-DataClass',
+                             'File::DataClass::Cache' => 'File-DataClass',
+                             'File::DataClass::Constants' => 'File-DataClass',
+                             'File::DataClass::Exception' => 'File-DataClass',
+                             'File::DataClass::Functions' => 'File-DataClass',
+                             'File::DataClass::IO' => 'File-DataClass',
+                             'File::DataClass::List' => 'File-DataClass',
+                             'File::DataClass::Result' => 'File-DataClass',
+                             'File::DataClass::ResultSet' => 'File-DataClass',
+                             'File::DataClass::ResultSource' => 'File-DataClass',
+                             'File::DataClass::Schema' => 'File-DataClass',
+                             'File::DataClass::Storage' => 'File-DataClass',
+                             'File::DataClass::Storage::Any' => 'File-DataClass',
+                             'File::DataClass::Storage::JSON' => 'File-DataClass',
+                             'File::DataClass::Types' => 'File-DataClass',
+                             'File::Path' => 'File-Path',
+                             'File::Spec' => 'PathTools',
+                             'File::Spec::AmigaOS' => 'PathTools',
+                             'File::Spec::Cygwin' => 'PathTools',
+                             'File::Spec::Epoc' => 'PathTools',
+                             'File::Spec::Functions' => 'PathTools',
+                             'File::Spec::Mac' => 'PathTools',
+                             'File::Spec::OS2' => 'PathTools',
+                             'File::Spec::Unix' => 'PathTools',
+                             'File::Spec::VMS' => 'PathTools',
+                             'File::Spec::Win32' => 'PathTools',
                              'HTML::Perlinfo' => 'HTML-Perlinfo',
                              'HTML::Perlinfo::Apache' => 'HTML-Perlinfo',
                              'HTML::Perlinfo::Base' => 'HTML-Perlinfo',
@@ -16464,6 +21866,8 @@ sub db {
                              'HTTP::Body::UrlEncoded' => 'HTTP-Body',
                              'HTTP::Body::XForms' => 'HTTP-Body',
                              'HTTP::Body::XFormsMultipart' => 'HTTP-Body',
+                             'HTTP::Tiny' => 'HTTP-Tiny',
+                             'HTTP::Tiny::NoProxy' => 'Dancer',
                              'Imager' => 'Imager',
                              'Imager::Color' => 'Imager',
                              'Imager::Color::Float' => 'Imager',
@@ -16616,6 +22020,8 @@ sub db {
                              'Lemonldap::NG::Portal::_Slave' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::_WebForm' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::_i18n' => 'Lemonldap-NG-Portal',
+                             'MM' => 'ExtUtils-MakeMaker',
+                             'MY' => 'ExtUtils-MakeMaker',
                              'Mojo' => 'Mojolicious',
                              'Mojo::Asset' => 'Mojolicious',
                              'Mojo::Asset::File' => 'Mojolicious',
@@ -16918,6 +22324,7 @@ sub db {
                              'Storable' => 'Storable',
                              'TempFile' => 'CGI',
                              'Test::Mojo' => 'Mojolicious',
+                             'Test::Simply' => 'Fake-Our',
                              'Text::SmartyPants' => 'MojoMojo',
                              'Text::Wikispaces2Markdown' => 'MojoMojo',
                              'UDDI::Constants' => 'SOAP-Lite',
@@ -16940,6 +22347,7 @@ sub db {
                              'UI::Dialog::Screen::Druid' => 'UI-Dialog',
                              'UI::Dialog::Screen::Menu' => 'UI-Dialog',
                              'URI::jabber' => 'SOAP-Lite',
+                             'encoding' => 'Encode',
                              'ojo' => 'Mojolicious'
                            }
         };
