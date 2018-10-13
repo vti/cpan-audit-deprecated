@@ -30,6 +30,7 @@ provides( \%db );
 
 foreach my $dist ( keys %{ $db{dists} } ) {
     $db{dists}->{$dist}->{versions} = [ all_releases($dist) ];
+    $db{dists}->{$dist}->{main_module} = release($dist)->{main_module};
 }
 
 my $dump = Dumper( \%db );
@@ -87,6 +88,17 @@ sub provides {
     }
 
     close $fh;
+}
+
+sub release {
+    my ($distribution) = @_;
+
+    my $response = HTTP::Tiny->new->get(
+        'http://fastapi.metacpan.org/v1/release/' . $distribution );
+
+    my $content_json = JSON::decode_json( $response->{content} );
+
+    return $content_json;
 }
 
 sub all_releases {

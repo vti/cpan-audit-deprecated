@@ -27,6 +27,7 @@ sub db {
                                                                  'severity' => 'high'
                                                                }
                                                              ],
+                                             'main_module' => 'Apache::AuthCAS',
                                              'versions' => [
                                                              {
                                                                'date' => '2004-09-15T19:17:43',
@@ -65,6 +66,7 @@ sub db {
                                                                   'reported' => '2005-11-15'
                                                                 }
                                                               ],
+                                              'main_module' => 'Apache::SessionX',
                                               'versions' => [
                                                               {
                                                                 'date' => '2001-11-20T15:36:53',
@@ -99,6 +101,7 @@ sub db {
                                                               'severity' => 'medium'
                                                             }
                                                           ],
+                                          'main_module' => 'Archive::Tar',
                                           'versions' => [
                                                           {
                                                             'date' => '1998-02-02T06:13:59',
@@ -493,6 +496,7 @@ sub db {
                                                               'severity' => 'medium'
                                                             }
                                                           ],
+                                          'main_module' => 'Archive::Zip',
                                           'versions' => [
                                                           {
                                                             'date' => '2000-03-22T00:10:21',
@@ -854,6 +858,7 @@ sub db {
                                                       'reported' => '2010-02-05'
                                                     }
                                                   ],
+                                  'main_module' => 'CGI',
                                   'versions' => [
                                                   {
                                                     'date' => '1995-11-25T09:21:00',
@@ -1752,6 +1757,7 @@ sub db {
                                                                            'reported' => '2005-01-20'
                                                                          }
                                                                        ],
+                                                       'main_module' => 'CGI::Application::Dispatch',
                                                        'versions' => [
                                                                        {
                                                                          'date' => '2004-09-13T01:35:58',
@@ -1938,6 +1944,7 @@ sub db {
                                                                                      'reported' => '2005-03-04'
                                                                                    }
                                                                                  ],
+                                                                 'main_module' => 'CGI::Application::Plugin::AutoRunmode',
                                                                  'versions' => [
                                                                                  {
                                                                                    'date' => '2005-03-04T06:59:51',
@@ -2016,6 +2023,7 @@ sub db {
                                                                                         'reported' => '2008-10-20'
                                                                                       }
                                                                                     ],
+                                                                    'main_module' => 'CGI::Application::Plugin::RunmodeDeclare',
                                                                     'versions' => [
                                                                                     {
                                                                                       'date' => '2008-09-26T19:59:14',
@@ -2086,6 +2094,7 @@ sub db {
                                                                  'reported' => '2007-12-30'
                                                                }
                                                              ],
+                                             'main_module' => 'CGI::Auth::Basic',
                                              'versions' => [
                                                              {
                                                                'date' => '2004-02-21T14:58:09',
@@ -2156,6 +2165,7 @@ sub db {
                                                              'reported' => '2010-12-27'
                                                            }
                                                          ],
+                                         'main_module' => 'CGI::Simple',
                                          'versions' => [
                                                          {
                                                            'date' => '2007-01-09T22:31:27',
@@ -2298,6 +2308,7 @@ sub db {
                                                                 'reported' => '2016-01-31'
                                                               }
                                                             ],
+                                            'main_module' => 'CGI::apacheSSI',
                                             'versions' => [
                                                             {
                                                               'date' => '2014-08-20T22:55:20',
@@ -2332,6 +2343,7 @@ sub db {
                                                        'reported' => '2009-09-23'
                                                      }
                                                    ],
+                                   'main_module' => 'CPAN',
                                    'versions' => [
                                                    {
                                                      'date' => '1996-09-10T17:13:59',
@@ -3611,333 +3623,6 @@ sub db {
                                                    }
                                                  ]
                                  },
-                       'Catalyst' => {
-                                       'advisories' => [
-                                                         {
-                                                           'affected_versions' => '<5.90020',
-                                                           'description' => 'Passing a special host to the redirect page link makes it vulnerable to XSS attack.
-',
-                                                           'distribution' => 'Catalyst',
-                                                           'fixed_versions' => '>=5.90020',
-                                                           'id' => 'CPANSA-Catalyst-2013-01',
-                                                           'references' => [
-                                                                             'http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=catagits/Catalyst-Runtime.git;a=commitdiff;h=7af54927870a7c6f89323ac1876d49f92e7841f5'
-                                                                           ],
-                                                           'reported' => '2013-01-23'
-                                                         },
-                                                         {
-                                                           'affected_versions' => '<5.58',
-                                                           'description' => 'Path traversal in Static::Simple plugin.
-',
-                                                           'distribution' => 'Catalyst',
-                                                           'fixed_versions' => '>=5.58',
-                                                           'id' => 'CPANSA-Catalyst-2005-01',
-                                                           'reported' => '2005-11-24'
-                                                         }
-                                                       ],
-                                       'versions' => [
-                                                       {
-                                                         'date' => '2005-01-28T23:53:53',
-                                                         'version' => '2.99_12'
-                                                       },
-                                                       {
-                                                         'date' => '2005-01-30T17:42:52',
-                                                         'version' => '2.99_13'
-                                                       },
-                                                       {
-                                                         'date' => '2005-02-01T03:44:48',
-                                                         'version' => '2.99_14'
-                                                       },
-                                                       {
-                                                         'date' => '2005-02-04T02:03:17',
-                                                         'version' => '2.99_15'
-                                                       },
-                                                       {
-                                                         'date' => '2005-02-16T18:39:07',
-                                                         'version' => '3.00'
-                                                       },
-                                                       {
-                                                         'date' => '2005-02-16T20:08:23',
-                                                         'version' => '3.01'
-                                                       },
-                                                       {
-                                                         'date' => '2005-02-16T22:14:06',
-                                                         'version' => '3.03'
-                                                       },
-                                                       {
-                                                         'date' => '2005-02-17T21:12:03',
-                                                         'version' => '3.04'
-                                                       },
-                                                       {
-                                                         'date' => '2005-02-19T20:26:32',
-                                                         'version' => '3.10'
-                                                       },
-                                                       {
-                                                         'date' => '2005-02-23T22:17:00',
-                                                         'version' => '3.11'
-                                                       },
-                                                       {
-                                                         'date' => '2005-02-28T23:52:10',
-                                                         'version' => '4.00'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-01T18:44:38',
-                                                         'version' => '4.01'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-02T16:02:11',
-                                                         'version' => '4.10'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-02T21:26:08',
-                                                         'version' => '4.11'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-02T22:00:26',
-                                                         'version' => '4.12'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-05T01:03:58',
-                                                         'version' => '4.13'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-05T04:27:30',
-                                                         'version' => '4.20'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-05T16:59:05',
-                                                         'version' => '4.21'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-08T20:04:09',
-                                                         'version' => '4.22'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-10T21:43:39',
-                                                         'version' => '4.23'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-12T01:05:55',
-                                                         'version' => '4.24'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-14T21:43:52',
-                                                         'version' => '4.25'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-16T13:54:28',
-                                                         'version' => '4.26'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-19T06:24:18',
-                                                         'version' => '4.27'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-19T21:22:02',
-                                                         'version' => '4.28'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-21T23:52:36',
-                                                         'version' => '4.30'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-22T04:03:23',
-                                                         'version' => '4.31'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-22T04:11:56',
-                                                         'version' => '4.32'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-23T00:39:23',
-                                                         'version' => '4.33'
-                                                       },
-                                                       {
-                                                         'date' => '2005-03-23T06:47:45',
-                                                         'version' => '4.34'
-                                                       },
-                                                       {
-                                                         'date' => '2005-04-15T16:49:40',
-                                                         'version' => '5.00'
-                                                       },
-                                                       {
-                                                         'date' => '2005-04-17T15:49:26',
-                                                         'version' => '5.01'
-                                                       },
-                                                       {
-                                                         'date' => '2005-04-18T08:33:26',
-                                                         'version' => '5.02'
-                                                       },
-                                                       {
-                                                         'date' => '2005-04-19T18:47:31',
-                                                         'version' => '5.03'
-                                                       },
-                                                       {
-                                                         'date' => '2005-04-23T09:19:33',
-                                                         'version' => '5.10'
-                                                       },
-                                                       {
-                                                         'date' => '2005-05-18T19:04:04',
-                                                         'version' => '5.20'
-                                                       },
-                                                       {
-                                                         'date' => '2005-05-24T13:07:13',
-                                                         'version' => '5.21'
-                                                       },
-                                                       {
-                                                         'date' => '2005-05-26T13:08:55',
-                                                         'version' => '5.22'
-                                                       },
-                                                       {
-                                                         'date' => '2005-06-03T01:01:18',
-                                                         'version' => '5.23'
-                                                       },
-                                                       {
-                                                         'date' => '2005-07-04T11:08:13',
-                                                         'version' => '5.30'
-                                                       },
-                                                       {
-                                                         'date' => '2005-08-10T13:14:15',
-                                                         'version' => '5.32'
-                                                       },
-                                                       {
-                                                         'date' => '2005-08-10T13:29:14',
-                                                         'version' => '5.33'
-                                                       },
-                                                       {
-                                                         'date' => '2005-10-10T14:16:17',
-                                                         'version' => '5.49_01'
-                                                       },
-                                                       {
-                                                         'date' => '2005-10-25T22:59:34',
-                                                         'version' => '5.49_02'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-03T17:55:10',
-                                                         'version' => '5.49_03'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-10T03:56:36',
-                                                         'version' => '5.49_04'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-12T19:49:53',
-                                                         'version' => '5.49_05'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-13T22:29:10',
-                                                         'version' => '5.5'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-14T00:25:34',
-                                                         'version' => '5.51'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-14T10:26:49',
-                                                         'version' => '5.52'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-14T20:58:21',
-                                                         'version' => '5.53'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-14T22:54:38',
-                                                         'version' => '5.54'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-15T12:57:03',
-                                                         'version' => '5.55'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-16T09:37:50',
-                                                         'version' => '5.56'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-21T03:43:37',
-                                                         'version' => '5.57'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-30T14:51:13',
-                                                         'version' => '5.58'
-                                                       },
-                                                       {
-                                                         'date' => '2005-11-30T18:27:16',
-                                                         'version' => '5.59'
-                                                       },
-                                                       {
-                                                         'date' => '2005-12-02T03:22:22',
-                                                         'version' => '5.60'
-                                                       },
-                                                       {
-                                                         'date' => '2005-12-02T05:18:26',
-                                                         'version' => '5.61'
-                                                       },
-                                                       {
-                                                         'date' => '2006-01-17T21:33:40',
-                                                         'version' => '5.62'
-                                                       },
-                                                       {
-                                                         'date' => '2006-01-22T00:24:55',
-                                                         'version' => '5.63'
-                                                       },
-                                                       {
-                                                         'date' => '2006-02-07T19:33:54',
-                                                         'version' => '5.64'
-                                                       },
-                                                       {
-                                                         'date' => '2006-02-21T09:40:54',
-                                                         'version' => '5.65'
-                                                       },
-                                                       {
-                                                         'date' => '2006-03-10T18:01:16',
-                                                         'version' => '5.66'
-                                                       },
-                                                       {
-                                                         'date' => '2006-04-23T20:28:30',
-                                                         'version' => '5.67'
-                                                       },
-                                                       {
-                                                         'date' => '2006-04-24T06:39:35',
-                                                         'version' => '5.70_01'
-                                                       },
-                                                       {
-                                                         'date' => '2006-04-24T17:16:35',
-                                                         'version' => '5.67'
-                                                       },
-                                                       {
-                                                         'date' => '2006-04-26T18:44:11',
-                                                         'version' => '5.68'
-                                                       },
-                                                       {
-                                                         'date' => '2006-04-27T06:54:14',
-                                                         'version' => '5.56'
-                                                       },
-                                                       {
-                                                         'date' => '2006-04-27T12:05:03',
-                                                         'version' => '5.56'
-                                                       },
-                                                       {
-                                                         'date' => '2006-05-03T10:59:12',
-                                                         'version' => '5.56'
-                                                       },
-                                                       {
-                                                         'date' => '2006-05-03T14:17:25',
-                                                         'version' => '5.6901'
-                                                       },
-                                                       {
-                                                         'date' => '2006-05-04T16:59:42',
-                                                         'version' => '5.6902'
-                                                       },
-                                                       {
-                                                         'date' => '2006-12-12T16:15:50',
-                                                         'version' => '5.7000'
-                                                       },
-                                                       {
-                                                         'date' => '2006-12-12T16:29:56',
-                                                         'version' => '5.7001'
-                                                       }
-                                                     ]
-                                     },
                        'Catalyst-Authentication-Store-LDAP' => {
                                                                  'advisories' => [
                                                                                    {
@@ -3954,6 +3639,7 @@ sub db {
                                                                                      'severity' => 'high'
                                                                                    }
                                                                                  ],
+                                                                 'main_module' => 'Catalyst::Authentication::Store::LDAP',
                                                                  'versions' => [
                                                                                  {
                                                                                    'date' => '2008-02-05T18:18:24',
@@ -4040,6 +3726,7 @@ sub db {
                                                                               'reported' => '2010-05-21'
                                                                             }
                                                                           ],
+                                                          'main_module' => 'Catalyst::Controller::Combine',
                                                           'versions' => [
                                                                           {
                                                                             'date' => '2009-07-11T17:58:25',
@@ -4091,6 +3778,7 @@ sub db {
                                                                          'reported' => '2005-11-14'
                                                                        }
                                                                      ],
+                                                     'main_module' => 'Catalyst::Plugin::Static',
                                                      'versions' => [
                                                                      {
                                                                        'date' => '2005-01-29T00:00:20',
@@ -4166,6 +3854,7 @@ sub db {
                                                                    'reported' => '2005-11-24'
                                                                  }
                                                                ],
+                                               'main_module' => 'Catalyst::Runtime',
                                                'versions' => [
                                                                {
                                                                  'date' => '2006-06-25T19:20:53',
@@ -4889,6 +4578,7 @@ sub db {
                                                             'reported' => '2014-12-03'
                                                           }
                                                         ],
+                                        'main_module' => 'Cmd::Dwarf',
                                         'versions' => [
                                                         {
                                                           'date' => '2015-07-30T06:48:35',
@@ -4952,6 +4642,7 @@ sub db {
                                                                'reported' => '2014-07-07'
                                                              }
                                                            ],
+                                           'main_module' => 'Compress::LZ4',
                                            'versions' => [
                                                            {
                                                              'date' => '2012-02-11T16:33:26',
@@ -5100,6 +4791,7 @@ sub db {
                                                                'reported' => '2017-05-10'
                                                              }
                                                            ],
+                                           'main_module' => 'Config::Model',
                                            'versions' => [
                                                            {
                                                              'date' => '2006-04-21T12:27:44',
@@ -6105,6 +5797,7 @@ sub db {
                                                                  'reported' => '2016-10-06'
                                                                }
                                                              ],
+                                             'main_module' => 'Cpanel::JSON::XS',
                                              'versions' => [
                                                              {
                                                                'date' => '2013-03-01T00:52:41',
@@ -6468,6 +6161,7 @@ sub db {
                                                             'severity' => 'high'
                                                           }
                                                         ],
+                                        'main_module' => 'Crypt::CBC',
                                         'versions' => [
                                                         {
                                                           'date' => '1998-06-19T19:48:52',
@@ -6713,6 +6407,7 @@ sub db {
                                                             'reported' => '2014-07-30'
                                                           }
                                                         ],
+                                        'main_module' => 'DBD::mysql',
                                         'versions' => [
                                                         {
                                                           'date' => '2000-04-15T20:17:36',
@@ -7281,6 +6976,7 @@ sub db {
                                                               'severity' => 'high'
                                                             }
                                                           ],
+                                          'main_module' => 'DBD::mysqlPP',
                                           'versions' => [
                                                           {
                                                             'date' => '2002-04-04T07:20:36',
@@ -7340,6 +7036,7 @@ sub db {
                                                       'reported' => '2005-05-02'
                                                     }
                                                   ],
+                                  'main_module' => 'DBI',
                                   'versions' => [
                                                   {
                                                     'date' => '1995-10-27T08:14:00',
@@ -8132,6 +7829,7 @@ sub db {
                                                               'severity' => 'high'
                                                             }
                                                           ],
+                                          'main_module' => 'DBIx::Custom',
                                           'versions' => [
                                                           {
                                                             'date' => '2009-11-08T04:18:19',
@@ -8975,6 +8673,7 @@ sub db {
                                                        'reported' => '2012-09-13'
                                                      }
                                                    ],
+                                   'main_module' => 'Dezi',
                                    'versions' => [
                                                    {
                                                      'date' => '2011-06-22T04:53:57',
@@ -9129,6 +8828,7 @@ sub db {
                                                           'reported' => '2003-08-23'
                                                         }
                                                       ],
+                                      'main_module' => 'CGI::Toggle',
                                       'versions' => [
                                                       {
                                                         'date' => '2008-12-29T15:38:27',
@@ -9459,6 +9159,7 @@ sub db {
                                                                 'reported' => '2008-07-04'
                                                               }
                                                             ],
+                                            'main_module' => 'HTML::Perlinfo',
                                             'versions' => [
                                                             {
                                                               'date' => '2005-08-18T21:39:08',
@@ -9613,6 +9314,7 @@ sub db {
                                                                 'reported' => '2015-10-10'
                                                               }
                                                             ],
+                                            'main_module' => 'HTML::Scrubber',
                                             'versions' => [
                                                             {
                                                               'date' => '2003-04-18T14:10:19',
@@ -9696,6 +9398,7 @@ sub db {
                                                             'severity' => 'moderate'
                                                           }
                                                         ],
+                                        'main_module' => 'HTTP::Body',
                                         'versions' => [
                                                         {
                                                           'date' => '2005-10-06T23:31:10',
@@ -9859,6 +9562,7 @@ sub db {
                                                          'reported' => '2008-04-30'
                                                        }
                                                      ],
+                                     'main_module' => 'Imager',
                                      'versions' => [
                                                      {
                                                        'date' => '1999-07-19T14:26:37',
@@ -10330,6 +10034,7 @@ sub db {
                                                                         'reported' => '2012-11-28'
                                                                       }
                                                                     ],
+                                                    'main_module' => 'LWP::Protocol::Net::Curl',
                                                     'versions' => [
                                                                     {
                                                                       'date' => '2012-10-24T18:49:20',
@@ -10440,6 +10145,7 @@ sub db {
                                                                       'reported' => '2009-02-08'
                                                                     }
                                                                   ],
+                                                  'main_module' => 'Lemonldap::NG::Portal',
                                                   'versions' => [
                                                                   {
                                                                     'date' => '2005-06-29T18:44:50',
@@ -10831,6 +10537,7 @@ sub db {
                                                            'reported' => '2009-08-14'
                                                          }
                                                        ],
+                                       'main_module' => 'MojoMojo',
                                        'versions' => [
                                                        {
                                                          'date' => '2007-08-29T14:32:52',
@@ -11133,6 +10840,7 @@ sub db {
                                                               'severity' => 'high'
                                                             }
                                                           ],
+                                          'main_module' => 'Mojolicious',
                                           'versions' => [
                                                           {
                                                             'date' => '2010-02-11T02:04:14',
@@ -13696,6 +13404,7 @@ sub db {
                                                                             'reported' => '2014-10-07'
                                                                           }
                                                                         ],
+                                                        'main_module' => 'Mojolicious::Plugin::OAuth2',
                                                         'versions' => [
                                                                         {
                                                                           'date' => '2011-01-08T11:03:42',
@@ -13824,6 +13533,7 @@ sub db {
                                                                       'reported' => '2015-05-26'
                                                                     }
                                                                   ],
+                                                  'main_module' => 'Net::OpenID::Consumer',
                                                   'versions' => [
                                                                   {
                                                                     'date' => '2005-05-23T03:02:59',
@@ -13983,6 +13693,7 @@ sub db {
                                                           'reported' => '2014-07-03'
                                                         }
                                                       ],
+                                      'main_module' => 'Otogiri',
                                       'versions' => [
                                                       {
                                                         'date' => '2013-10-30T06:45:51',
@@ -14074,6 +13785,7 @@ sub db {
                                                                'reported' => '2014-02-12'
                                                              }
                                                            ],
+                                           'main_module' => 'Perl::Version',
                                            'versions' => [
                                                            {
                                                              'date' => '2007-02-07T19:41:42',
@@ -14187,6 +13899,7 @@ sub db {
                                                                         'reported' => '2012-05-18'
                                                                       }
                                                                     ],
+                                                    'main_module' => 'RT::Extension::MobileUI',
                                                     'versions' => [
                                                                     {
                                                                       'date' => '2010-08-05T20:58:09',
@@ -14281,6 +13994,7 @@ sub db {
                                                               'reported' => '2011-12-01'
                                                             }
                                                           ],
+                                          'main_module' => 'RTMP::Client',
                                           'versions' => [
                                                           {
                                                             'date' => '2011-07-26T08:17:20',
@@ -14348,6 +14062,7 @@ sub db {
                                                             'reported' => '2000-10-05'
                                                           }
                                                         ],
+                                        'main_module' => 'SOAP::Lite',
                                         'versions' => [
                                                         {
                                                           'date' => '2000-09-25T01:49:14',
@@ -14679,6 +14394,7 @@ sub db {
                                                                 'reported' => '2017-05-15'
                                                               }
                                                             ],
+                                            'main_module' => 'SVG::Sparkline',
                                             'versions' => [
                                                             {
                                                               'date' => '2009-04-02T02:42:59',
@@ -14766,6 +14482,7 @@ sub db {
                                                            'reported' => '2014-05-31'
                                                          }
                                                        ],
+                                       'main_module' => 'SVN::Look',
                                        'versions' => [
                                                        {
                                                          'date' => '2008-09-26T03:22:44',
@@ -14945,6 +14662,7 @@ sub db {
                                                                            'reported' => '2012-08-31'
                                                                          }
                                                                        ],
+                                                       'main_module' => 'Search::OpenSearch::Server',
                                                        'versions' => [
                                                                        {
                                                                          'date' => '2010-05-28T03:07:46',
@@ -15096,6 +14814,7 @@ sub db {
                                                            'reported' => '2017-01-29'
                                                          }
                                                        ],
+                                       'main_module' => 'Storable',
                                        'versions' => [
                                                        {
                                                          'date' => '1995-10-02T10:50:02',
@@ -15526,6 +15245,7 @@ sub db {
                                                             'reported' => '2004-02-18'
                                                           }
                                                         ],
+                                        'main_module' => 'UI::Dialog',
                                         'versions' => [
                                                         {
                                                           'date' => '2004-01-04T10:51:34',
@@ -15665,6 +15385,7 @@ sub db {
                                                               'reported' => '2001-03-14'
                                                             }
                                                           ],
+                                          'main_module' => 'LWP',
                                           'versions' => [
                                                           {
                                                             'date' => '1995-09-16T13:51:35',
