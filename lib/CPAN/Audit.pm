@@ -2,10 +2,7 @@ package CPAN::Audit;
 use 5.008001;
 use strict;
 use warnings;
-use Carton::Snapshot;
-use CPAN::DistnameInfo;
-use Module::CPANfile;
-use File::Find ();
+use CPAN::Audit::Discover;
 use CPAN::Audit::Version;
 use CPAN::Audit::Query;
 use CPAN::Audit::DB;
@@ -28,6 +25,9 @@ sub new {
         $self->{ascii}    = 1;
         $self->{no_color} = 1;
     }
+
+    $self->{query} = CPAN::Audit::Query->new( db => CPAN::Audit::DB->db );
+    $self->{discover} = CPAN::Audit::Discover->new( db => CPAN::Audit::DB->db );
 
     return $self;
 }
@@ -91,65 +91,16 @@ sub command {
 
         $self->error("Usage: deps <path>") unless -d $path;
 
-        if ( -f "$path/cpanfile.snapshot" ) {
-            $self->output('Detecting dependencies from cpanfile snapshot...');
+        my @deps = $self->{discover}->discover($path);
 
-            my $snapshot =
-              Carton::Snapshot->new( path => "$path/cpanfile.snapshot" );
-            $snapshot->load;
+        $self->output( 'Discovered %d dependencies', scalar(@deps) );
 
-            my @deps;
-            foreach my $dist ( $snapshot->distributions ) {
-                next unless my $d = CPAN::DistnameInfo->new( $dist->pathname );
-                push @deps,
-                  {
-                    dist    => $d->dist,
-                    version => $d->version,
-                  };
-            }
+        foreach my $dep (@deps) {
+            my $dist = $dep->{dist}
+              // CPAN::Audit::DB->db->{module2dist}->{ $dep->{module} };
+            next unless $dist;
 
-            $self->output( 'Detected %d deps', scalar(@deps) );
-
-            foreach my $dep (@deps) {
-                $dists{ $dep->{dist} } = $dep->{version};
-            }
-        }
-        elsif ( -f "$path/cpanfile" ) {
-            $self->output('Detecting dependencies from cpanfile...');
-
-            my $cpanfile = Module::CPANfile->load("$path/cpanfile");
-
-            my $prereqs = $cpanfile->prereqs->as_string_hash;
-
-            my @deps;
-            foreach my $phase ( keys %$prereqs ) {
-                foreach my $type ( keys %{ $prereqs->{$phase} } ) {
-                    foreach my $module ( keys %{ $prereqs->{$phase}->{$type} } )
-                    {
-                        my $version = $prereqs->{$phase}->{$type}->{$module};
-
-                        next if $module eq 'perl';
-
-                        push @deps,
-                          {
-                            module       => $module,
-                            version      => $version,
-                            phase        => $phase,
-                            relationship => $type,
-                          };
-                    }
-                }
-            }
-
-            $self->output( 'Detected %d deps', scalar(@deps) );
-
-            foreach my $dep (@deps) {
-                my $dist =
-                  CPAN::Audit::DB->db->{module2dist}->{ $dep->{module} };
-                next unless $dist;
-
-                $dists{$dist} = $dep->{version};
-            }
+            $dists{$dist} = $dep->{version};
         }
     }
     else {
@@ -159,7 +110,7 @@ sub command {
     my $total_advisories = 0;
 
     if (%dists) {
-        my $query = CPAN::Audit::Query->new( db => CPAN::Audit::DB->db );
+        my $query = $self->{query};
 
         foreach my $distname ( sort keys %dists ) {
             my $version_range = $dists{$distname};
