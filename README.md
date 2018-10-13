@@ -11,6 +11,7 @@ Commands:
     module  [version range]    audit module with optional version range (all by default)
     release [version range]    audit release with optional version range (all by default)
     deps    [directory]        audit dependencies from the directory (. by default)
+    installed                  audit all installed modules
     show    [advisory id]      show information about specific advisory
 
 Options:
@@ -29,6 +30,8 @@ Examples:
 
     cpan-audit deps .
     cpan-audit deps /path/to/distribution
+
+    cpan-audit installed
 
     cpan-audit show CPANSA-Mojolicious-2018-03
 

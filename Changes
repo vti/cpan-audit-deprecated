@@ -2,6 +2,31 @@ Revision history for Perl extension CPAN-Audit
 
 {{$NEXT}}
 
+0.03 2018-10-13T12:59:36Z
+
+    [ADVISORIES]
+    - CPANSA-App-Github-Email
+    - CPANSA-Crypt-OpenSSL-DSA
+    - CPANSA-Crypt-Passwd-XS
+    - CPANSA-DBD-MariaDB
+    - CPANSA-Dancer
+    - CPANSA-Data-Dumper
+    - CPANSA-Email-Address
+    - CPANSA-Encode
+    - CPANSA-ExtUtils-MakeMaker
+    - CPANSA-FCGI
+    - CPANSA-Fake-Encode
+    - CPANSA-Fake-Our
+    - CPANSA-File-DataClass
+    - CPANSA-File-Path
+    - CPANSA-HTTP-Tiny
+    - CPANSA-Imager
+    - CPANSA-PathTools
+
+    [FEATURES]
+    - new installed command to audit all installed modules
+    - cpan.snapshot support by Takumi Akiyama (github.com/akiym)
+
 0.02 2018-10-09T08:24:36Z
 
     - support perl 5.8
