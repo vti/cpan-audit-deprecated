@@ -2,6 +2,7 @@ package CPAN::Audit;
 use 5.008001;
 use strict;
 use warnings;
+use CPAN::Audit::Installed;
 use CPAN::Audit::Discover;
 use CPAN::Audit::Version;
 use CPAN::Audit::Query;
@@ -26,8 +27,9 @@ sub new {
         $self->{no_color} = 1;
     }
 
-    $self->{query} = CPAN::Audit::Query->new( db => CPAN::Audit::DB->db );
-    $self->{discover} = CPAN::Audit::Discover->new( db => CPAN::Audit::DB->db );
+    $self->{db}       = CPAN::Audit::DB->db;
+    $self->{query}    = CPAN::Audit::Query->new( db => $self->{db} );
+    $self->{discover} = CPAN::Audit::Discover->new( db => $self->{db} );
 
     return $self;
 }
@@ -42,8 +44,8 @@ sub command {
         my ( $module, $version_range ) = @args;
         $self->error("Usage: module <module> [version-range]") unless $module;
 
-        my $release = CPAN::Audit::DB->db->{module2dist}->{$module};
-        my $dist = $release ? CPAN::Audit::DB->db->{dists}->{$release} : undef;
+        my $release = $self->{db}->{module2dist}->{$module};
+        my $dist = $release ? $self->{db}->{dists}->{$release} : undef;
 
         if ( !$dist ) {
             $self->output("__GREEN__Module '$module' is not in database");
@@ -56,7 +58,7 @@ sub command {
         my ( $release, $version_range ) = @args;
         $self->error("Usage: release <module> [version-range]") unless $release;
 
-        my $dist = CPAN::Audit::DB->db->{dists}->{$release};
+        my $dist = $self->{db}->{dists}->{$release};
 
         if ( !$dist ) {
             $self->output(
@@ -73,7 +75,7 @@ sub command {
         my ($release) = $advisory_id =~ m/^CPANSA-(.*?)-(\d+)-(\d+)$/;
         $self->error("Invalid advisory id") unless $release;
 
-        my $dist = CPAN::Audit::DB->db->{dists}->{$release};
+        my $dist = $self->{db}->{dists}->{$release};
         $self->error("Unknown advisory id") unless $dist;
 
         my ($advisory) =
@@ -97,10 +99,24 @@ sub command {
 
         foreach my $dep (@deps) {
             my $dist = $dep->{dist}
-              // CPAN::Audit::DB->db->{module2dist}->{ $dep->{module} };
+              // $self->{db}->{module2dist}->{ $dep->{module} };
             next unless $dist;
 
             $dists{$dist} = $dep->{version};
+        }
+    }
+    elsif ( $command eq 'installed' ) {
+        $self->output(
+            'Collecting all installed modules. This can take a while...');
+
+        my @deps = CPAN::Audit::Installed->new( db => $self->{db} )->find;
+
+        foreach my $dep (@deps) {
+            my $dist = $dep->{dist}
+              // $self->{db}->{module2dist}->{ $dep->{module} };
+            next unless $dist;
+
+            $dists{ $dep->{dist} } = $dep->{version};
         }
     }
     else {
@@ -182,19 +198,30 @@ sub print_advisory {
 
     $self->output("  __BOLD__* $advisory->{id}");
 
-    if ( $self->{verbose} ) {
-        print "    $advisory->{description}\n";
-        if ( $advisory->{affected_versions} ) {
-            print "    Affected range: $advisory->{affected_versions}\n";
-        }
-        if ( $advisory->{fixed_versions} ) {
-            print "    Fixed range: $advisory->{fixed_versions}\n";
-        }
+    print "    $advisory->{description}\n";
+
+    if ( $advisory->{affected_versions} ) {
+        print "    Affected range: $advisory->{affected_versions}\n";
+    }
+
+    if ( $advisory->{fixed_versions} ) {
+        print "    Fixed range: $advisory->{fixed_versions}\n";
+    }
+
+    if ( $advisory->{cves} ) {
+        print "\n    CVEs: ";
+        print join ', ', @{ $advisory->{cves} };
+        print "\n";
+    }
+
+    if ( $advisory->{references} ) {
+        print "\n    References:\n";
         foreach my $reference ( @{ $advisory->{references} // [] } ) {
             print "    $reference\n";
         }
-        print "\n";
     }
+
+    print "\n";
 }
 
 1;
