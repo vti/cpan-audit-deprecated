@@ -5,7 +5,7 @@ use Capture::Tiny qw(capture);
 
 subtest 'command: show' => sub {
     my ( $stdout, $stderr, $exit ) = capture {
-        system './script/cpan-audit', 'show', 'CPANSA-Catalyst-Runtime-2013-01';
+        system 'script/cpan-audit', 'show', 'CPANSA-Catalyst-Runtime-2013-01';
     };
 
     like $stdout, qr/CPANSA-Catalyst-Runtime-2013-01/;
@@ -15,7 +15,7 @@ subtest 'command: show' => sub {
 
 subtest 'command: show unknown advisory' => sub {
     my ( $stdout, $stderr, $exit ) = capture {
-        system './script/cpan-audit', 'show', 'CPANSA-UNKNOWN';
+        system 'script/cpan-audit', 'show', 'CPANSA-UNKNOWN';
     };
 
     is $stdout,   '';
@@ -25,7 +25,7 @@ subtest 'command: show unknown advisory' => sub {
 
 subtest 'command: show invalid invocation' => sub {
     my ( $stdout, $stderr, $exit ) = capture {
-        system './script/cpan-audit', 'show';
+        system 'script/cpan-audit', 'show';
     };
 
     is $stdout,   '';
