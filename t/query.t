@@ -24,7 +24,8 @@ subtest 'advisories_for' => sub {
                     versions => [
                         { version => '0.9' },
                         { version => '1.1' },
-                        { version => '1.2' }
+                        { version => '1.2' },
+                        { version => '1.3' }
                     ]
                 },
             }
@@ -35,6 +36,10 @@ subtest 'advisories_for' => sub {
 
     is scalar $query->advisories_for('Foo'), 2;
     is scalar $query->advisories_for( 'Foo', '1.1' ), 1;
+
+    is_deeply [ $query->advisories_for( 'Foo', '1.3' ) ], [];
+
+    is_deeply [ $query->advisories_for( 'Foo', '5' ) ], [];
 };
 
 done_testing;
