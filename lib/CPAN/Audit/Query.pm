@@ -46,15 +46,11 @@ sub advisories_for {
 
     my @matched_advisories;
     foreach my $advisory (@advisories) {
-        my @affected_versions =
-          $version_checker->affected_versions( \@all_versions,
-            $advisory->{affected_versions} );
+        my @affected_versions = $version_checker->affected_versions( \@all_versions, $advisory->{affected_versions} );
         next unless @affected_versions;
 
         foreach my $affected_version ( reverse @affected_versions ) {
-            if ( $version_checker->in_range( $affected_version, $version_range )
-              )
-            {
+            if ( $version_checker->in_range( $affected_version, $version_range ) ) {
                 push @matched_advisories, $advisory;
                 last;
             }

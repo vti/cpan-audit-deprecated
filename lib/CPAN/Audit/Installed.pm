@@ -38,9 +38,9 @@ sub find {
                         $module =~ s{/}{::}g;
 
                         my $distname = $self->{db}->{module2dist}->{$module};
-                        if ( $distname) {
+                        if ($distname) {
                             my $dist = $self->{db}->{dists}->{$distname};
-                            if ($dist->{main_module} eq $module) {
+                            if ( $dist->{main_module} eq $module ) {
                                 return if $seen{$module}++;
 
                                 my $version = module_version($File::Find::fullname);

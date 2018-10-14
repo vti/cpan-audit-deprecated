@@ -26,8 +26,7 @@ sub in_range {
         my ( $op, $range_version ) = $and =~ m/^(<=|<|>=|>|==|!=)?\s*([^\s]+)$/;
 
         return
-          unless
-          defined( $range_version = eval { version->parse($range_version) } );
+          unless defined( $range_version = eval { version->parse($range_version) } );
 
         $op = '>=' unless defined $op;
 
@@ -59,11 +58,11 @@ sub in_range {
 
 sub affected_versions {
     my $self = shift;
-    my ($available_versions, $range) = @_;
+    my ( $available_versions, $range ) = @_;
 
     my @affected_versions;
     foreach my $version (@$available_versions) {
-        if ($self->in_range($version, $range)) {
+        if ( $self->in_range( $version, $range ) ) {
             push @affected_versions, $version;
         }
     }

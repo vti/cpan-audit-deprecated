@@ -20,7 +20,7 @@ sub discover {
     if ( -f "$path/cpanfile.snapshot" ) {
         return CPAN::Audit::Discover::CpanfileSnapshot->new->discover("$path/cpanfile.snapshot");
     }
-    elsif ( -f "$path/cpanfile") {
+    elsif ( -f "$path/cpanfile" ) {
         return CPAN::Audit::Discover::Cpanfile->new->discover("$path/cpanfile");
     }
     else {

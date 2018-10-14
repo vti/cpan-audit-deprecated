@@ -59,8 +59,7 @@ sub command {
           unless $distname;
 
         if ( !$self->{db}->{dists}->{$distname} ) {
-            $self->stdout(
-                "__GREEN__Distribution '$distname' is not in database");
+            $self->stdout("__GREEN__Distribution '$distname' is not in database");
             return 0;
         }
 
@@ -104,8 +103,7 @@ sub command {
         }
     }
     elsif ( $command eq 'installed' ) {
-        $self->stdout(
-            'Collecting all installed modules. This can take a while...');
+        $self->stdout('Collecting all installed modules. This can take a while...');
 
         my @deps = CPAN::Audit::Installed->new( db => $self->{db} )->find(@ARGV);
 
@@ -129,15 +127,13 @@ sub command {
         foreach my $distname ( sort keys %dists ) {
             my $version_range = $dists{$distname};
 
-            my @advisories =
-              $query->advisories_for( $distname, $version_range );
+            my @advisories = $query->advisories_for( $distname, $version_range );
 
             $version_range = 'Any'
               if $version_range eq '' || $version_range eq '0';
 
             if (@advisories) {
-                $self->stdout(
-                    '__RED__%s (requires %s) has %d advisories__RESET__',
+                $self->stdout( '__RED__%s (requires %s) has %d advisories__RESET__',
                     $distname, $version_range, scalar(@advisories) );
 
                 foreach my $advisory (@advisories) {
@@ -150,8 +146,7 @@ sub command {
     }
 
     if ($total_advisories) {
-        $self->stdout( '__RED__Total advisories found: %d__RESET__',
-            $total_advisories );
+        $self->stdout( '__RED__Total advisories found: %d__RESET__', $total_advisories );
 
         return $total_advisories;
     }
