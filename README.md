@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/vti/cpan-audit.svg?branch=master)](https://travis-ci.org/vti/cpan-audit) [![Build Status](https://img.shields.io/appveyor/ci/vti/cpan-audit/master.svg)](https://ci.appveyor.com/project/vti/cpan-audit/branch/master)
+[![Build Status](https://travis-ci.org/vti/cpan-audit.svg?branch=master)](https://travis-ci.org/vti/cpan-audit) [![Build Status](https://img.shields.io/appveyor/ci/vti/cpan-audit/master.svg)](https://ci.appveyor.com/project/vti/cpan-audit/branch/master) [![MetaCPAN Release](https://badge.fury.io/pl/CPAN-Audit.svg)](https://metacpan.org/release/CPAN-Audit)
 # NAME
 
 cpan-audit - Audit CPAN modules
