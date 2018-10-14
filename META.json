@@ -43,7 +43,6 @@
       "runtime" : {
          "requires" : {
             "CPAN::DistnameInfo" : "0",
-            "Carton" : "0",
             "Module::CPANfile" : "0",
             "perl" : "5.008001",
             "version" : "0"
