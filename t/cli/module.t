@@ -5,7 +5,7 @@ use Capture::Tiny qw(capture);
 
 subtest 'command: module' => sub {
     my ( $stdout, $stderr, $exit ) = capture {
-        system 'script/cpan-audit', 'module', 'Catalyst';
+        system 'perl', 'script/cpan-audit', 'module', 'Catalyst';
     };
 
     like $stdout, qr/CPANSA-Catalyst-Runtime-2013-01/;
@@ -15,7 +15,7 @@ subtest 'command: module' => sub {
 
 subtest 'command: unknown module' => sub {
     my ( $stdout, $stderr, $exit ) = capture {
-        system 'script/cpan-audit', 'module', 'Unknown';
+        system 'perl', 'script/cpan-audit', 'module', 'Unknown';
     };
 
     like $stdout, qr/Module 'Unknown' is not in database/;
@@ -25,7 +25,7 @@ subtest 'command: unknown module' => sub {
 
 subtest 'command: invalid invocation' => sub {
     my ( $stdout, $stderr, $exit ) = capture {
-        system 'script/cpan-audit', 'module';
+        system 'perl', 'script/cpan-audit', 'module';
     };
 
     is $stdout,   '';

@@ -5,7 +5,7 @@ use Capture::Tiny qw(capture);
 
 subtest 'help is printed' => sub {
     my ( $stdout, $stderr, $exit ) = capture {
-        system 'script/cpan-audit';
+        system 'perl', 'script/cpan-audit';
     };
 
     is $stdout,   '';

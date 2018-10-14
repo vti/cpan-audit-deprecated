@@ -5,7 +5,7 @@ use Capture::Tiny qw(capture);
 
 subtest 'command: release' => sub {
     my ( $stdout, $stderr, $exit ) = capture {
-        system 'script/cpan-audit', 'release', 'Catalyst-Runtime';
+        system 'perl', 'script/cpan-audit', 'release', 'Catalyst-Runtime';
     };
 
     like $stdout, qr/CPANSA-Catalyst-Runtime-2013-01/;
@@ -15,7 +15,7 @@ subtest 'command: release' => sub {
 
 subtest 'command: unknown release' => sub {
     my ( $stdout, $stderr, $exit ) = capture {
-        system 'script/cpan-audit', 'release', 'Unknown';
+        system 'perl', 'script/cpan-audit', 'release', 'Unknown';
     };
 
     like $stdout, qr/Distribution 'Unknown' is not in database/;
@@ -25,7 +25,7 @@ subtest 'command: unknown release' => sub {
 
 subtest 'command: invalid invocation' => sub {
     my ( $stdout, $stderr, $exit ) = capture {
-        system 'script/cpan-audit', 'release';
+        system 'perl', 'script/cpan-audit', 'release';
     };
 
     is $stdout,   '';

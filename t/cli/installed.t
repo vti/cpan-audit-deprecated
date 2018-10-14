@@ -7,7 +7,7 @@ subtest 'command: installed' => sub {
     local @INC = ('.');
 
     my ( $stdout, $stderr, $exit ) = capture {
-        system 'script/cpan-audit', 'installed';
+        system 'perl', 'script/cpan-audit', 'installed';
     };
 
     like $stdout, qr/Collecting all installed modules/;
