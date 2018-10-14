@@ -23,6 +23,8 @@ sub discover {
         if ( $line =~ m/pathname: ([^\s]+)/ ) {
             next unless my $d = CPAN::DistnameInfo->new($1);
 
+            next unless $d->dist && $d->version;
+
             push @deps,
               {
                 dist    => $d->dist,

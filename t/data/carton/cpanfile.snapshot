@@ -19,3 +19,5 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       File::Spec 0.80
       perl 5.006
+  Invalid-1.0
+    pathname: Invalid

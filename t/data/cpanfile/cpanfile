@@ -1,1 +1,2 @@
+requires 'perl',     '5.8';
 requires 'Catalyst', '5';
