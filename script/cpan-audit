@@ -46,11 +46,11 @@ cpan-audit [command] [options...]
 
 Commands:
 
-    module  [version range]    audit module with optional version range (all by default)
-    release [version range]    audit release with optional version range (all by default)
-    deps    [directory]        audit dependencies from the directory (. by default)
-    installed                  audit all installed modules
-    show    [advisory id]      show information about specific advisory
+    module         [version range]    audit module with optional version range (all by default)
+    dist|release   [version range]    audit distribution with optional version range (all by default)
+    deps           [directory]        audit dependencies from the directory (. by default)
+    installed                         audit all installed modules
+    show           [advisory id]      show information about specific advisory
 
 Options:
 
@@ -60,9 +60,9 @@ Options:
 
 Examples:
 
-    cpan-audit release Catalyst-Runtime
-    cpan-audit release Catalyst-Runtime 7.0
-    cpan-audit release Catalyst-Runtime >5.48
+    cpan-audit dist Catalyst-Runtime
+    cpan-audit dist Catalyst-Runtime 7.0
+    cpan-audit dist Catalyst-Runtime >5.48
 
     cpan-audit module Catalyst 7.0
 

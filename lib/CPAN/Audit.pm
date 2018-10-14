@@ -53,9 +53,9 @@ sub command {
 
         $dists{$distname} = $version_range || '';
     }
-    elsif ( $command eq 'release' ) {
+    elsif ( $command eq 'release' || $command eq 'dist' ) {
         my ( $distname, $version_range ) = @args;
-        $self->error("Usage: release <module> [version-range]")
+        $self->error("Usage: dist|release <module> [version-range]")
           unless $distname;
 
         if ( !$self->{db}->{dists}->{$distname} ) {

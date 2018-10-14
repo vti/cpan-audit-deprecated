@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/vti/cpan-audit.svg?branch=master)](https://travis-ci.org/vti/cpan-audit) [![Build Status](https://img.shields.io/appveyor/ci/vti/cpan-audit/master.svg)](https://ci.appveyor.com/project/vti/cpan-audit/branch/master)
 # NAME
 
 cpan-audit - Audit CPAN modules
@@ -8,11 +9,11 @@ cpan-audit \[command\] \[options...\]
 
 Commands:
 
-    module  [version range]    audit module with optional version range (all by default)
-    release [version range]    audit release with optional version range (all by default)
-    deps    [directory]        audit dependencies from the directory (. by default)
-    installed                  audit all installed modules
-    show    [advisory id]      show information about specific advisory
+    module         [version range]    audit module with optional version range (all by default)
+    dist|release   [version range]    audit distribution with optional version range (all by default)
+    deps           [directory]        audit dependencies from the directory (. by default)
+    installed                         audit all installed modules
+    show           [advisory id]      show information about specific advisory
 
 Options:
 
@@ -22,9 +23,9 @@ Options:
 
 Examples:
 
-    cpan-audit release Catalyst-Runtime
-    cpan-audit release Catalyst-Runtime 7.0
-    cpan-audit release Catalyst-Runtime >5.48
+    cpan-audit dist Catalyst-Runtime
+    cpan-audit dist Catalyst-Runtime 7.0
+    cpan-audit dist Catalyst-Runtime >5.48
 
     cpan-audit module Catalyst 7.0
 
