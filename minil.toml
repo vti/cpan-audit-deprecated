@@ -1,5 +1,5 @@
 name = "CPAN-Audit"
-badges = ["travis", "appveyor", "metacpan"]
+badges = ["travis", "appveyor", "metacpan", "kritika", "kritika?type=coverage", "kritika?type=deps"]
 authority="cpan:VTI"
 
 module_maker="ModuleBuildTiny"
