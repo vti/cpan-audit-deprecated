@@ -16,6 +16,8 @@ sub in_range {
     my $self = shift;
     my ( $version, $range ) = @_;
 
+    return unless defined $version && defined $range;
+
     my @ands = split /\s*,\s*/, $range;
 
     return unless defined( $version = eval { version->parse($version) } );

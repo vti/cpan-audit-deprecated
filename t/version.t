@@ -7,6 +7,9 @@ use CPAN::Audit::Version;
 subtest 'in_range' => sub {
     my $checker = _build();
 
+    ok( !$checker->in_range() );
+    ok( !$checker->in_range('1.2') );
+
     ok( !$checker->in_range( 'abc', 'def' ) );
     ok( !$checker->in_range( 'abc', '1.2' ) );
     ok( !$checker->in_range( '1.2', 'def' ) );
