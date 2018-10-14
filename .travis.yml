@@ -1,9 +1,9 @@
 sudo: false
 language: perl
 perl:
-    - "5.8"
-    - "5.16"
     - "5.24"
+    - "5.26"
+    - "5.28"
 before_install:
     - cpanm -n https://github.com/kritikaio/devel-cover-report-kritika-perl/archive/master.tar.gz
 install:
