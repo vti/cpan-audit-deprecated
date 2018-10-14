@@ -33,6 +33,7 @@ Examples:
     cpan-audit deps /path/to/distribution
 
     cpan-audit installed
+    cpan-audit installed local/
 
     cpan-audit show CPANSA-Mojolicious-2018-03
 

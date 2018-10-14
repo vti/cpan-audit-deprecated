@@ -4,10 +4,8 @@ use Test::More;
 use Capture::Tiny qw(capture);
 
 subtest 'command: installed' => sub {
-    local @INC = ('.');
-
     my ( $stdout, $stderr, $exit ) = capture {
-        system 'perl', 'script/cpan-audit', 'installed';
+        system 'perl', 'script/cpan-audit', 'installed', 'lib';
     };
 
     like $stdout, qr/Collecting all installed modules/;

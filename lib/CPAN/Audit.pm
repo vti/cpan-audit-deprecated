@@ -107,7 +107,7 @@ sub command {
         $self->stdout(
             'Collecting all installed modules. This can take a while...');
 
-        my @deps = CPAN::Audit::Installed->new( db => $self->{db} )->find;
+        my @deps = CPAN::Audit::Installed->new( db => $self->{db} )->find(@ARGV);
 
         foreach my $dep (@deps) {
             my $dist = $dep->{dist}

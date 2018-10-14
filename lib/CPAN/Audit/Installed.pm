@@ -17,11 +17,14 @@ sub new {
 
 sub find {
     my $self = shift;
+    my (@inc) = @_;
+
+    @inc = @INC unless @inc;
 
     my %seen;
     my @deps;
 
-    for my $prefix (@INC) {
+    for my $prefix (@inc) {
         next unless -d $prefix;
 
         File::Find::find(
