@@ -10,4 +10,4 @@ install:
     - cpanm -n -q --with-recommends --skip-satisfied --installdeps .
 script:
     - perl Build.PL && ./Build build && ./Build test
-    - cover -test -report kritika || exit 0
+    - perl -v | grep '5.28' && cover -test -report kritika || exit 0
