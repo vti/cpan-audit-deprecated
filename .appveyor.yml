@@ -8,6 +8,7 @@ install:
     cpanm --notest --quiet --installdeps .
 build: off
 cache:
+  - C:\strawberry -> .appveyor.yml
   - C:\ProgramData\chocolatey\bin -> .appveyor.yml
   - C:\ProgramData\chocolatey\lib -> .appveyor.yml
   - C:\Users\appveyor\AppData\Local\Temp\1\chocolatey\ -> .appveyor.yml
