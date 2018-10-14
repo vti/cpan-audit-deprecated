@@ -10,7 +10,7 @@ sub new {
     my $self = {};
     bless $self, $class;
 
-    $self->{db} = $params{db} // {};
+    $self->{db} = $params{db} || {};
 
     return $self;
 }

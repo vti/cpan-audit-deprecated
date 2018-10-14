@@ -99,7 +99,7 @@ sub command {
 
         foreach my $dep (@deps) {
             my $dist = $dep->{dist}
-              // $self->{db}->{module2dist}->{ $dep->{module} };
+              || $self->{db}->{module2dist}->{ $dep->{module} };
             next unless $dist;
 
             $dists{$dist} = $dep->{version};
@@ -113,7 +113,7 @@ sub command {
 
         foreach my $dep (@deps) {
             my $dist = $dep->{dist}
-              // $self->{db}->{module2dist}->{ $dep->{module} };
+              || $self->{db}->{module2dist}->{ $dep->{module} };
             next unless $dist;
 
             $dists{ $dep->{dist} } = $dep->{version};
@@ -216,7 +216,7 @@ sub print_advisory {
 
     if ( $advisory->{references} ) {
         print "\n    References:\n";
-        foreach my $reference ( @{ $advisory->{references} // [] } ) {
+        foreach my $reference ( @{ $advisory->{references} || [] } ) {
             print "    $reference\n";
         }
     }
