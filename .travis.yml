@@ -9,4 +9,5 @@ before_install:
 install:
     - cpanm -n -q --with-recommends --skip-satisfied --installdeps .
 script:
-    - perl Build.PL && ./Build build && cover -test -report kritika
+    - perl Build.PL && ./Build build && ./Build test
+    - cover -test -report kritika
