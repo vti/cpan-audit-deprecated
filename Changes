@@ -2,6 +2,17 @@ Revision history for Perl extension CPAN-Audit
 
 {{$NEXT}}
 
+0.04 2018-10-14T10:56:27Z
+
+    [FEATURES]
+    - install command accepts path to installations
+
+    [IMPROVEMENTS]
+    - get rid of Carton dependency
+    - more test coverage
+    - CI integrations
+    - perl 5.8 compat
+
 0.03 2018-10-13T12:59:36Z
 
     [ADVISORIES]

@@ -67,7 +67,7 @@
          "web" : "https://github.com/vti/cpan-audit"
       }
    },
-   "version" : "0.03",
+   "version" : "0.04",
    "x_authority" : "cpan:VTI",
    "x_contributors" : [
       "Takumi Akiyama <t.akiym@gmail.com>"
