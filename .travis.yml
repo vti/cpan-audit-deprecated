@@ -10,4 +10,4 @@ install:
     - cpanm -n -q --with-recommends --skip-satisfied --installdeps .
 script:
     - perl Build.PL && ./Build build && ./Build test
-    - cover -test -report kritika
+    - cover -test -report kritika || exit 0
