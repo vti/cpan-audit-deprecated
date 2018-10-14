@@ -23,18 +23,15 @@ sub discover {
     my @deps;
     foreach my $phase ( keys %$prereqs ) {
         foreach my $type ( keys %{ $prereqs->{$phase} } ) {
-            foreach my $module ( keys %{ $prereqs->{$phase}->{$type} } )
-            {
+            foreach my $module ( keys %{ $prereqs->{$phase}->{$type} } ) {
                 my $version = $prereqs->{$phase}->{$type}->{$module};
 
                 next if $module eq 'perl';
 
                 push @deps,
                   {
-                    module       => $module,
-                    version      => $version,
-                    phase        => $phase,
-                    relationship => $type,
+                    module  => $module,
+                    version => $version,
                   };
             }
         }
