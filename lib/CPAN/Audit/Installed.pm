@@ -38,6 +38,8 @@ sub find {
                         if ( $distname) {
                             my $dist = $self->{db}->{dists}->{$distname};
                             if ($dist->{main_module} eq $module) {
+                                return if $seen{$module}++;
+
                                 my $version = module_version($File::Find::fullname);
 
                                 if ($version) {
