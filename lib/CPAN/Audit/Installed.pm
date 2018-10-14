@@ -61,7 +61,7 @@ sub find {
 sub module_version {
     my ($parsefile) = @_;
 
-    open my $mod, $parsefile or die $!;
+    open my $mod, '<', $parsefile or die $!;
 
     my $inpod = 0;
     my $result;
