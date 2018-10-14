@@ -11,6 +11,8 @@ subtest 'in_range' => sub {
     ok( !$checker->in_range( 'abc', '1.2' ) );
     ok( !$checker->in_range( '1.2', 'def' ) );
 
+    ok( !$checker->in_range( '1.2', '^1.2' ) );
+
     ok( $checker->in_range( '1.2', '' ) );
     ok( $checker->in_range( '1.2', '0' ) );
 
