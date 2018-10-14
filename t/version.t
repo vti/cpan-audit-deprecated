@@ -25,15 +25,25 @@ subtest 'in_range' => sub {
 
     ok( $checker->in_range( '1.0', '<=1.1' ) );
     ok( $checker->in_range( '1.1', '<=1.1' ) );
+    ok( !$checker->in_range( '1.2', '<=1.1' ) );
+
+    ok( $checker->in_range( '1.0', '<1.1' ) );
+    ok( !$checker->in_range( '1.1', '<1.1' ) );
+    ok( !$checker->in_range( '1.2', '<1.1' ) );
+
+    ok( !$checker->in_range( '1.0', '>=1.1' ) );
+    ok( $checker->in_range( '1.1', '>=1.1' ) );
+    ok( $checker->in_range( '1.2', '>=1.1' ) );
+
+    ok( $checker->in_range( '1.2', '>1.1' ) );
+    ok( !$checker->in_range( '1.1', '>1.1' ) );
+    ok( !$checker->in_range( '1.0', '>1.1' ) );
 
     ok( $checker->in_range( '1.0', '==1.0' ) );
     ok( !$checker->in_range( '1.0', '==1.1' ) );
 
     ok( $checker->in_range( '1.0', '!=1.1' ) );
     ok( !$checker->in_range( '1.0', '!=1.0' ) );
-
-    ok( $checker->in_range( '1.2', '>= 1.1' ) );
-    ok( !$checker->in_range( '5', '< 3' ) );
 
     ok( $checker->in_range( '5', '>= 1.1, < 6' ) );
     ok( !$checker->in_range( '5', '>= 1.1, < 4' ) );
