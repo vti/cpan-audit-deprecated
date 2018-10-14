@@ -1,7 +1,7 @@
 version: '{build}'
 install:
 - cmd: >-
-    choco install -y --allow-empty-checksums strawberryperl -version 5.20.1.1
+    choco install -y --allow-empty-checksums strawberryperl -version 5.28.0.1
 
     SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;%PATH%
 
