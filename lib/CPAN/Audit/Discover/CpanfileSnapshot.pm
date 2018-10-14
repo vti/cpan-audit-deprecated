@@ -1,7 +1,6 @@
 package CPAN::Audit::Discover::CpanfileSnapshot;
 use strict;
 use warnings;
-use Carton::Snapshot;
 use CPAN::DistnameInfo;
 
 sub new {
@@ -17,18 +16,22 @@ sub discover {
     my $self = shift;
     my ($cpanfile_snapshot_path) = @_;
 
-    my $snapshot = Carton::Snapshot->new( path => $cpanfile_snapshot_path );
-    $snapshot->load;
+    open my $fh, '<', $cpanfile_snapshot_path or die $!;
 
     my @deps;
-    foreach my $dist ( $snapshot->distributions ) {
-        next unless my $d = CPAN::DistnameInfo->new( $dist->pathname );
-        push @deps,
-          {
-            dist    => $d->dist,
-            version => $d->version,
-          };
+    while ( defined( my $line = <$fh> ) ) {
+        if ( $line =~ m/pathname: ([^\s]+)/ ) {
+            next unless my $d = CPAN::DistnameInfo->new($1);
+
+            push @deps,
+              {
+                dist    => $d->dist,
+                version => $d->version,
+              };
+        }
     }
+
+    close $fh;
 
     return @deps;
 }
