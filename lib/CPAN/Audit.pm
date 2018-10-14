@@ -44,29 +44,27 @@ sub command {
         my ( $module, $version_range ) = @args;
         $self->error("Usage: module <module> [version-range]") unless $module;
 
-        my $release = $self->{db}->{module2dist}->{$module};
-        my $dist = $release ? $self->{db}->{dists}->{$release} : undef;
+        my $distname = $self->{db}->{module2dist}->{$module};
 
-        if ( !$dist ) {
-            $self->output("__GREEN__Module '$module' is not in database");
-            return;
+        if ( !$distname ) {
+            $self->stdout("__GREEN__Module '$module' is not in database");
+            return 0;
         }
 
-        $dists{$dist} = $version_range;
+        $dists{$distname} = $version_range || '';
     }
     elsif ( $command eq 'release' ) {
-        my ( $release, $version_range ) = @args;
-        $self->error("Usage: release <module> [version-range]") unless $release;
+        my ( $distname, $version_range ) = @args;
+        $self->error("Usage: release <module> [version-range]")
+          unless $distname;
 
-        my $dist = $self->{db}->{dists}->{$release};
-
-        if ( !$dist ) {
-            $self->output(
-                "__GREEN__Distribution '$release' is not in database");
-            return;
+        if ( !$self->{db}->{dists}->{$distname} ) {
+            $self->stdout(
+                "__GREEN__Distribution '$distname' is not in database");
+            return 0;
         }
 
-        $dists{$dist} = $version_range;
+        $dists{$distname} = $version_range || '';
     }
     elsif ( $command eq 'show' ) {
         my ($advisory_id) = @args;
@@ -85,7 +83,7 @@ sub command {
         local $self->{verbose} = 1;
         $self->print_advisory($advisory);
 
-        return;
+        return 0;
     }
     elsif ( $command eq 'dependencies' || $command eq 'deps' ) {
         my ($path) = @args;
@@ -95,7 +93,7 @@ sub command {
 
         my @deps = $self->{discover}->discover($path);
 
-        $self->output( 'Discovered %d dependencies', scalar(@deps) );
+        $self->stdout( 'Discovered %d dependencies', scalar(@deps) );
 
         foreach my $dep (@deps) {
             my $dist = $dep->{dist}
@@ -106,7 +104,7 @@ sub command {
         }
     }
     elsif ( $command eq 'installed' ) {
-        $self->output(
+        $self->stdout(
             'Collecting all installed modules. This can take a while...');
 
         my @deps = CPAN::Audit::Installed->new( db => $self->{db} )->find;
@@ -138,7 +136,7 @@ sub command {
               if $version_range eq '' || $version_range eq '0';
 
             if (@advisories) {
-                $self->output(
+                $self->stdout(
                     '__RED__%s (requires %s) has %d advisories__RESET__',
                     $distname, $version_range, scalar(@advisories) );
 
@@ -152,11 +150,15 @@ sub command {
     }
 
     if ($total_advisories) {
-        $self->output( '__RED__Total advisories found: %d__RESET__',
+        $self->stdout( '__RED__Total advisories found: %d__RESET__',
             $total_advisories );
+
+        return $total_advisories;
     }
     else {
-        $self->output('__GREEN__No advisories found__RESET__');
+        $self->stdout('__GREEN__No advisories found__RESET__');
+
+        return 0;
     }
 }
 
@@ -164,39 +166,27 @@ sub error {
     my $self = shift;
     my ( $msg, @args ) = @_;
 
-    $self->output( "Error: $msg", @args );
+    $self->stderr( "Error: $msg", @args );
     exit 255;
 }
 
-sub output {
+sub stdout {
     my $self = shift;
-    my ( $format, @params ) = @_;
 
-    my $msg = @params ? ( sprintf( $format, @params ) ) : ($format);
+    $self->_print( *STDOUT, @_ );
+}
 
-    if ( $self->{no_color} ) {
-        $msg =~ s{__BOLD__}{}g;
-        $msg =~ s{__GREEN__}{}g;
-        $msg =~ s{__RED__}{}g;
-        $msg =~ s{__RESET__}{}g;
-    }
-    else {
-        $msg =~ s{__BOLD__}{\e[39;1m}g;
-        $msg =~ s{__GREEN__}{\e[32m}g;
-        $msg =~ s{__RED__}{\e[31m}g;
-        $msg =~ s{__RESET__}{\e[0m}g;
+sub stderr {
+    my $self = shift;
 
-        $msg .= "\e[0m";
-    }
-
-    print "$msg\n";
+    $self->_print( *STDERR, @_ );
 }
 
 sub print_advisory {
     my $self = shift;
     my ($advisory) = @_;
 
-    $self->output("  __BOLD__* $advisory->{id}");
+    $self->stdout("  __BOLD__* $advisory->{id}");
 
     print "    $advisory->{description}\n";
 
@@ -222,6 +212,30 @@ sub print_advisory {
     }
 
     print "\n";
+}
+
+sub _print {
+    my $self = shift;
+    my ( $fh, $format, @params ) = @_;
+
+    my $msg = @params ? ( sprintf( $format, @params ) ) : ($format);
+
+    if ( $self->{no_color} ) {
+        $msg =~ s{__BOLD__}{}g;
+        $msg =~ s{__GREEN__}{}g;
+        $msg =~ s{__RED__}{}g;
+        $msg =~ s{__RESET__}{}g;
+    }
+    else {
+        $msg =~ s{__BOLD__}{\e[39;1m}g;
+        $msg =~ s{__GREEN__}{\e[32m}g;
+        $msg =~ s{__RED__}{\e[31m}g;
+        $msg =~ s{__RESET__}{\e[0m}g;
+
+        $msg .= "\e[0m";
+    }
+
+    print $fh "$msg\n";
 }
 
 1;
