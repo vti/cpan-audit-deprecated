@@ -2,6 +2,19 @@ Revision history for Perl extension CPAN-Audit
 
 {{$NEXT}}
 
+0.05 2018-10-15T19:36:39Z
+
+    [ADVISORIES]
+    - CPANSA-MHonArc
+    - CPANSA-Module-Signature
+    - CPANSA-libapreq2
+    - CPANSA-mod_perl
+    - CPANSA-Compress-Raw-Bzip2
+    - CPANSA-Compress-Raw-Zlib
+
+    [IMPROVEMENTS]
+    - kritika.io and metacpan badges
+
 0.04 2018-10-14T10:56:27Z
 
     [FEATURES]
