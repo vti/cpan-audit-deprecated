@@ -30,7 +30,7 @@ sub find {
     File::Find::find(
         {
             wanted => sub {
-                my $path = $File::Find::fullname;
+                my $path = $File::Find::name;
 
                 if ( $path && -f $path && m/\.pm$/ ) {
                     return unless my $module = module_from_file($path);
