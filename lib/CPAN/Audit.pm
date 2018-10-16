@@ -105,7 +105,18 @@ sub command {
     elsif ( $command eq 'installed' ) {
         $self->stdout('Collecting all installed modules. This can take a while...');
 
-        my @deps = CPAN::Audit::Installed->new( db => $self->{db} )->find(@ARGV);
+        my @deps = CPAN::Audit::Installed->new(
+            db => $self->{db},
+            $self->{verbose}
+            ? (
+                cb => sub {
+                    my ($info) = @_;
+
+                    $self->stdout('%s: %s-%s', $info->{path}, $info->{distname}, $info->{version});
+                }
+              )
+            : ()
+        )->find(@ARGV);
 
         foreach my $dep (@deps) {
             my $dist = $dep->{dist}

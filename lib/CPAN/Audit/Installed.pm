@@ -2,6 +2,7 @@ package CPAN::Audit::Installed;
 use strict;
 use warnings;
 use File::Find ();
+use Cwd        ();
 
 sub new {
     my $class = shift;
@@ -11,6 +12,7 @@ sub new {
     bless $self, $class;
 
     $self->{db} = $params{db};
+    $self->{cb} = $params{cb};
 
     return $self;
 }
@@ -20,44 +22,60 @@ sub find {
     my (@inc) = @_;
 
     @inc = @INC unless @inc;
+    @inc = grep { defined && -d $_ } map { Cwd::realpath($_) } @inc;
 
     my %seen;
     my @deps;
 
-    for my $prefix (@inc) {
-        next unless -d $prefix;
+    File::Find::find(
+        {
+            wanted => sub {
+                my $path = $File::Find::fullname;
 
-        File::Find::find(
-            {
-                wanted => sub {
-                    my $module = $File::Find::fullname;
+                if ( $path && -f $path && m/\.pm$/ ) {
+                    my $module;
 
-                    if ( $module && -f $module && m/\.pm$/ ) {
-                        $module =~ s{^$prefix/?}{};
-                        $module =~ s{\.pm$}{};
-                        $module =~ s{/}{::}g;
+                    open my $fh, '<', $path or return;
+                    while ( my $line = <$fh> ) {
+                        if ( $line =~ m/package\s+(.*?)\s*;/ms ) {
+                            $module = $1;
+                            last;
+                        }
+                    }
+                    close $fh;
 
-                        my $distname = $self->{db}->{module2dist}->{$module};
-                        if ($distname) {
-                            my $dist = $self->{db}->{dists}->{$distname};
-                            if ( $dist->{main_module} eq $module ) {
-                                return if $seen{$module}++;
+                    return unless $module;
 
-                                my $version = module_version($File::Find::fullname);
+                    my $distname = $self->{db}->{module2dist}->{$module};
+                    if ($distname) {
+                        my $dist = $self->{db}->{dists}->{$distname};
+                        if ( $dist->{main_module} eq $module ) {
+                            return if $seen{$module}++;
 
-                                if ($version) {
-                                    push @deps, { dist => $distname, version => $version };
+                            my $version = module_version($path);
+
+                            if ($version) {
+                                push @deps, { dist => $distname, version => $version };
+
+                                if ( $self->{cb} ) {
+                                    $self->{cb}->(
+                                        {
+                                            path     => $path,
+                                            distname => $distname,
+                                            version  => $version
+                                        }
+                                    );
                                 }
                             }
                         }
                     }
-                },
-                follow      => 1,
-                follow_skip => 2,
+                }
             },
-            $prefix
-        );
-    }
+            follow      => 1,
+            follow_skip => 2,
+        },
+        @inc
+    );
 
     return @deps;
 }
