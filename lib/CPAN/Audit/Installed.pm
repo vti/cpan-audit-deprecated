@@ -33,40 +33,26 @@ sub find {
                 my $path = $File::Find::fullname;
 
                 if ( $path && -f $path && m/\.pm$/ ) {
-                    my $module;
+                    return unless my $module = module_from_file($path);
 
-                    open my $fh, '<', $path or return;
-                    while ( my $line = <$fh> ) {
-                        if ( $line =~ m/package\s+(.*?)\s*;/ms ) {
-                            $module = $1;
-                            last;
-                        }
-                    }
-                    close $fh;
+                    return unless my $distname = $self->{db}->{module2dist}->{$module};
 
-                    return unless $module;
+                    my $dist = $self->{db}->{dists}->{$distname};
+                    if ( $dist->{main_module} eq $module ) {
+                        return if $seen{$module}++;
 
-                    my $distname = $self->{db}->{module2dist}->{$module};
-                    if ($distname) {
-                        my $dist = $self->{db}->{dists}->{$distname};
-                        if ( $dist->{main_module} eq $module ) {
-                            return if $seen{$module}++;
+                        return unless my $version = module_version($path);
 
-                            my $version = module_version($path);
+                        push @deps, { dist => $distname, version => $version };
 
-                            if ($version) {
-                                push @deps, { dist => $distname, version => $version };
-
-                                if ( $self->{cb} ) {
-                                    $self->{cb}->(
-                                        {
-                                            path     => $path,
-                                            distname => $distname,
-                                            version  => $version
-                                        }
-                                    );
+                        if ( $self->{cb} ) {
+                            $self->{cb}->(
+                                {
+                                    path     => $path,
+                                    distname => $distname,
+                                    version  => $version
                                 }
-                            }
+                            );
                         }
                     }
                 }
@@ -112,6 +98,23 @@ sub module_version {
     }
     close $mod;
     return $result;
+}
+
+sub module_from_file {
+    my ($path) = @_;
+
+    my $module;
+
+    open my $fh, '<', $path or return;
+    while ( my $line = <$fh> ) {
+        if ( $line =~ m/package\s+(.*?)\s*;/ms ) {
+            $module = $1;
+            last;
+        }
+    }
+    close $fh;
+
+    return unless $module;
 }
 
 1;
