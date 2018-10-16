@@ -1,12 +1,10 @@
 use strict;
 use warnings;
 use Test::More;
-use Capture::Tiny qw(capture);
+use TestCommand;
 
 subtest 'help is printed' => sub {
-    my ( $stdout, $stderr, $exit ) = capture {
-        system 'perl', 'script/cpan-audit';
-    };
+    my ( $stdout, $stderr, $exit ) = TestCommand->command();
 
     is $stdout,   '';
     like $stderr, qr/Usage:.*cpan-audit/ms;

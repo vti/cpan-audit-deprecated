@@ -1,12 +1,10 @@
 use strict;
 use warnings;
 use Test::More;
-use Capture::Tiny qw(capture);
+use TestCommand;
 
 subtest 'command: show' => sub {
-    my ( $stdout, $stderr, $exit ) = capture {
-        system 'perl', 'script/cpan-audit', 'show', 'CPANSA-Catalyst-Runtime-2013-01';
-    };
+    my ( $stdout, $stderr, $exit ) = TestCommand->command( 'show', 'CPANSA-Catalyst-Runtime-2013-01' );
 
     like $stdout, qr/CPANSA-Catalyst-Runtime-2013-01/;
     is $stderr,   '';
@@ -14,9 +12,7 @@ subtest 'command: show' => sub {
 };
 
 subtest 'command: show unknown advisory' => sub {
-    my ( $stdout, $stderr, $exit ) = capture {
-        system 'perl', 'script/cpan-audit', 'show', 'CPANSA-UNKNOWN';
-    };
+    my ( $stdout, $stderr, $exit ) = TestCommand->command( 'show', 'CPANSA-UNKNOWN' );
 
     is $stdout,   '';
     like $stderr, qr/Invalid advisory id/;
@@ -24,9 +20,7 @@ subtest 'command: show unknown advisory' => sub {
 };
 
 subtest 'command: show invalid invocation' => sub {
-    my ( $stdout, $stderr, $exit ) = capture {
-        system 'perl', 'script/cpan-audit', 'show';
-    };
+    my ( $stdout, $stderr, $exit ) = TestCommand->command('show');
 
     is $stdout,   '';
     like $stderr, qr/Error: Usage:/;

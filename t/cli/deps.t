@@ -1,12 +1,10 @@
 use strict;
 use warnings;
 use Test::More;
-use Capture::Tiny qw(capture);
+use TestCommand;
 
 subtest 'command: deps' => sub {
-    my ( $stdout, $stderr, $exit ) = capture {
-        system 'perl', 'script/cpan-audit', 'deps';
-    };
+    my ( $stdout, $stderr, $exit ) = TestCommand->command('deps');
 
     like $stdout, qr/Discovered \d+ dependencies/;
     is $stderr,   '';

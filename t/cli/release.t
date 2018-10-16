@@ -1,12 +1,10 @@
 use strict;
 use warnings;
 use Test::More;
-use Capture::Tiny qw(capture);
+use TestCommand;
 
 subtest 'command: release' => sub {
-    my ( $stdout, $stderr, $exit ) = capture {
-        system 'perl', 'script/cpan-audit', 'release', 'Catalyst-Runtime';
-    };
+    my ( $stdout, $stderr, $exit ) = TestCommand->command( 'release', 'Catalyst-Runtime' );
 
     like $stdout, qr/CPANSA-Catalyst-Runtime-2013-01/;
     is $stderr,   '';
@@ -14,9 +12,7 @@ subtest 'command: release' => sub {
 };
 
 subtest 'command: unknown release' => sub {
-    my ( $stdout, $stderr, $exit ) = capture {
-        system 'perl', 'script/cpan-audit', 'release', 'Unknown';
-    };
+    my ( $stdout, $stderr, $exit ) = TestCommand->command( 'release', 'Unknown' );
 
     like $stdout, qr/Distribution 'Unknown' is not in database/;
     is $stderr,   '';
@@ -24,9 +20,7 @@ subtest 'command: unknown release' => sub {
 };
 
 subtest 'command: invalid invocation' => sub {
-    my ( $stdout, $stderr, $exit ) = capture {
-        system 'perl', 'script/cpan-audit', 'release';
-    };
+    my ( $stdout, $stderr, $exit ) = TestCommand->command( 'release' );
 
     is $stdout,   '';
     like $stderr, qr/Error: Usage: /;
