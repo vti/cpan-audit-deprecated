@@ -8,4 +8,4 @@ Catalyst
 
 package      Catalyst  ;
 
-our $VERSION = '5.0';
+our $VERSION = '5.0'; # No BumpVersion
