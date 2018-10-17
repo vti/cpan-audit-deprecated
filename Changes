@@ -2,6 +2,17 @@ Revision history for Perl extension CPAN-Audit
 
 {{$NEXT}}
 
+0.08 2018-10-17T18:10:41Z
+
+    [ADVISORIES]
+    - CPANSA-Net-DNS
+    - CPANSA-PAR
+    - CPANSA-PAR-Packer
+    - CPANSA-RT-Authen-ExternalAuth
+    - CPANSA-Tk
+    - CPANSA-UI-Dialog (updated)
+    - CPANSA-XML-LibXML
+
 0.07 2018-10-16T21:37:20Z
 
     - test fixes
