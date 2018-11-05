@@ -1,5 +1,4 @@
-package # hide from PAUSE
-    CPAN::Audit::DB;
+package CPAN::Audit::DB;
 
 use strict;
 use warnings;
