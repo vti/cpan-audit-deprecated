@@ -2,6 +2,10 @@ Revision history for Perl extension CPAN-Audit
 
 {{$NEXT}}
 
+0.09 2018-11-05T21:17:35Z
+
+    - do not hide db from pause (#7)
+
 0.08 2018-10-17T18:10:41Z
 
     [ADVISORIES]
