@@ -9,11 +9,13 @@ use CPAN::Audit;
 my $opt_no_color;
 my $opt_ascii;
 my $opt_verbose;
+my $opt_quiet;
 my $opt_help;
 GetOptions(
     'no-color'  => \$opt_no_color,
     'ascii'     => \$opt_ascii,
     'verbose|v' => \$opt_verbose,
+    'quiet|q'   => \$opt_quiet,
     'help|h'    => \$opt_help,
 ) or die("Error in command line arguments\n");
 
@@ -29,6 +31,7 @@ my $audit = CPAN::Audit->new(
     no_color    => $opt_no_color,
     ascii       => $opt_ascii,
     verbose     => $opt_verbose,
+    quiet       => $opt_quiet,
     interactive => ( -t STDIN && -t STDOUT ),
 );
 
@@ -56,6 +59,8 @@ Options:
 
     --no-color     switch off colors
     --ascii        use ascii output
+    --quiet        be quiet
+    --verbose      be verbose
     --help|h       help message
 
 Examples:

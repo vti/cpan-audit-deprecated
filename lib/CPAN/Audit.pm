@@ -19,6 +19,7 @@ sub new {
 
     $self->{ascii}       = $params{ascii};
     $self->{verbose}     = $params{verbose};
+    $self->{quiet}       = $params{quiet};
     $self->{no_color}    = $params{no_color};
     $self->{interactive} = $params{interactive};
 
@@ -103,7 +104,9 @@ sub command {
         }
     }
     elsif ( $command eq 'installed' ) {
-        $self->stdout('Collecting all installed modules. This can take a while...');
+        if (!$self->{quiet}) {
+            $self->stdout('Collecting all installed modules. This can take a while...');
+        }
 
         my @deps = CPAN::Audit::Installed->new(
             db => $self->{db},
@@ -112,7 +115,7 @@ sub command {
                 cb => sub {
                     my ($info) = @_;
 
-                    $self->stdout('%s: %s-%s', $info->{path}, $info->{distname}, $info->{version});
+                    $self->stdout( '%s: %s-%s', $info->{path}, $info->{distname}, $info->{version} );
                 }
               )
             : ()
@@ -162,7 +165,9 @@ sub command {
         return $total_advisories;
     }
     else {
-        $self->stdout('__GREEN__No advisories found__RESET__');
+        if (!$self->{quiet}) {
+            $self->stdout('__GREEN__No advisories found__RESET__');
+        }
 
         return 0;
     }
