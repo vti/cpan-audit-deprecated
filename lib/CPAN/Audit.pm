@@ -43,12 +43,12 @@ sub command {
 
     if ( $command eq 'module' ) {
         my ( $module, $version_range ) = @args;
-        $self->error("Usage: module <module> [version-range]") unless $module;
+        $self->fatal("Usage: module <module> [version-range]") unless $module;
 
         my $distname = $self->{db}->{module2dist}->{$module};
 
         if ( !$distname ) {
-            $self->stdout("__GREEN__Module '$module' is not in database");
+            $self->message("__GREEN__Module '$module' is not in database");
             return 0;
         }
 
@@ -56,11 +56,11 @@ sub command {
     }
     elsif ( $command eq 'release' || $command eq 'dist' ) {
         my ( $distname, $version_range ) = @args;
-        $self->error("Usage: dist|release <module> [version-range]")
+        $self->fatal("Usage: dist|release <module> [version-range]")
           unless $distname;
 
         if ( !$self->{db}->{dists}->{$distname} ) {
-            $self->stdout("__GREEN__Distribution '$distname' is not in database");
+            $self->message("__GREEN__Distribution '$distname' is not in database");
             return 0;
         }
 
@@ -68,19 +68,18 @@ sub command {
     }
     elsif ( $command eq 'show' ) {
         my ($advisory_id) = @args;
-        $self->error("Usage: show <advisory-id>") unless $advisory_id;
+        $self->fatal("Usage: show <advisory-id>") unless $advisory_id;
 
         my ($release) = $advisory_id =~ m/^CPANSA-(.*?)-(\d+)-(\d+)$/;
-        $self->error("Invalid advisory id") unless $release;
+        $self->fatal("Invalid advisory id") unless $release;
 
         my $dist = $self->{db}->{dists}->{$release};
-        $self->error("Unknown advisory id") unless $dist;
+        $self->fatal("Unknown advisory id") unless $dist;
 
         my ($advisory) =
           grep { $_->{id} eq $advisory_id } @{ $dist->{advisories} };
-        $self->error("Unknown advisory id") unless $advisory;
+        $self->fatal("Unknown advisory id") unless $advisory;
 
-        local $self->{verbose} = 1;
         $self->print_advisory($advisory);
 
         return 0;
@@ -89,11 +88,11 @@ sub command {
         my ($path) = @args;
         $path = '.' unless defined $path;
 
-        $self->error("Usage: deps <path>") unless -d $path;
+        $self->fatal("Usage: deps <path>") unless -d $path;
 
         my @deps = $self->{discover}->discover($path);
 
-        $self->stdout( 'Discovered %d dependencies', scalar(@deps) );
+        $self->message( 'Discovered %d dependencies', scalar(@deps) );
 
         foreach my $dep (@deps) {
             my $dist = $dep->{dist}
@@ -104,9 +103,7 @@ sub command {
         }
     }
     elsif ( $command eq 'installed' ) {
-        if (!$self->{quiet}) {
-            $self->stdout('Collecting all installed modules. This can take a while...');
-        }
+        $self->message_info('Collecting all installed modules. This can take a while...');
 
         my @deps = CPAN::Audit::Installed->new(
             db => $self->{db},
@@ -115,7 +112,7 @@ sub command {
                 cb => sub {
                     my ($info) = @_;
 
-                    $self->stdout( '%s: %s-%s', $info->{path}, $info->{distname}, $info->{version} );
+                    $self->message( '%s: %s-%s', $info->{path}, $info->{distname}, $info->{version} );
                 }
               )
             : ()
@@ -130,7 +127,7 @@ sub command {
         }
     }
     else {
-        $self->error("Error: unknown command: $command. See -h");
+        $self->fatal("Error: unknown command: $command. See -h");
     }
 
     my $total_advisories = 0;
@@ -147,7 +144,7 @@ sub command {
               if $version_range eq '' || $version_range eq '0';
 
             if (@advisories) {
-                $self->stdout( '__RED__%s (requires %s) has %d advisories__RESET__',
+                $self->message( '__RED__%s (requires %s) has %d advisories__RESET__',
                     $distname, $version_range, scalar(@advisories) );
 
                 foreach my $advisory (@advisories) {
@@ -160,44 +157,44 @@ sub command {
     }
 
     if ($total_advisories) {
-        $self->stdout( '__RED__Total advisories found: %d__RESET__', $total_advisories );
+        $self->message( '__RED__Total advisories found: %d__RESET__', $total_advisories );
 
         return $total_advisories;
     }
     else {
-        if (!$self->{quiet}) {
-            $self->stdout('__GREEN__No advisories found__RESET__');
-        }
+        $self->message_info('__GREEN__No advisories found__RESET__');
 
         return 0;
     }
 }
 
-sub error {
+sub message_info {
     my $self = shift;
-    my ( $msg, @args ) = @_;
 
-    $self->stderr( "Error: $msg", @args );
-    exit 255;
+    return if $self->{quiet};
+
+    $self->message(@_);
 }
 
-sub stdout {
+sub message {
     my $self = shift;
 
     $self->_print( *STDOUT, @_ );
 }
 
-sub stderr {
+sub fatal {
     my $self = shift;
+    my ( $msg, @args ) = @_;
 
-    $self->_print( *STDERR, @_ );
+    $self->_print( *STDERR, "Error: $msg", @args );
+    exit 255;
 }
 
 sub print_advisory {
     my $self = shift;
     my ($advisory) = @_;
 
-    $self->stdout("  __BOLD__* $advisory->{id}");
+    $self->message("  __BOLD__* $advisory->{id}");
 
     print "    $advisory->{description}\n";
 
