@@ -2,6 +2,12 @@ Revision history for Perl extension CPAN-Audit
 
 {{$NEXT}}
 
+0.10 2018-11-07T20:17:30Z
+
+    - --quiet option
+    - small refactoring
+    - require the latest version of Pod::Usage
+
 0.09 2018-11-05T21:17:35Z
 
     - do not hide db from pause (#7)

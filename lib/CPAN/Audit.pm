@@ -8,7 +8,7 @@ use CPAN::Audit::Version;
 use CPAN::Audit::Query;
 use CPAN::Audit::DB;
 
-our $VERSION = "0.09";
+our $VERSION = "0.10";
 
 sub new {
     my $class = shift;

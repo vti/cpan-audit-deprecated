@@ -19,6 +19,8 @@ Options:
 
     --no-color     switch off colors
     --ascii        use ascii output
+    --quiet        be quiet
+    --verbose      be verbose
     --help|h       help message
 
 Examples:
