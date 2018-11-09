@@ -2,11 +2,13 @@ package CPAN::Audit;
 use 5.008001;
 use strict;
 use warnings;
+use version;
 use CPAN::Audit::Installed;
 use CPAN::Audit::Discover;
 use CPAN::Audit::Version;
 use CPAN::Audit::Query;
 use CPAN::Audit::DB;
+use Module::CoreList;
 
 our $VERSION = "0.10";
 
@@ -40,6 +42,18 @@ sub command {
     my ( $command, @args ) = @_;
 
     my %dists;
+
+    # Find core modules for this perl version first.
+    # This way explictly installed versions will overwrite.
+    if ( $command eq 'dependencies' || $command eq 'deps' || $command eq 'installed' ) {
+        if ( my $core = $Module::CoreList::version{$]} ) {
+            while ( my ( $mod, $ver ) = each %$core ) {
+                my $dist = $self->{db}{module2dist}{$mod} or next;
+
+                $dists{$dist} = $ver if version->parse($ver) > $dists{$dist};
+            }
+        }
+    }
 
     if ( $command eq 'module' ) {
         my ( $module, $version_range ) = @args;

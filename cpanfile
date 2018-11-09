@@ -4,6 +4,7 @@ requires 'version';
 requires 'CPAN::DistnameInfo';
 requires 'Module::CPANfile';
 requires 'Pod::Usage', '1.69';
+requires 'Module::CoreList';
 
 on 'test' => sub {
     requires 'Test::More', '0.98';
