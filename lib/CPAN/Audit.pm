@@ -10,7 +10,7 @@ use CPAN::Audit::Query;
 use CPAN::Audit::DB;
 use Module::CoreList;
 
-our $VERSION = "0.10";
+our $VERSION = "0.11";
 
 sub new {
     my $class = shift;
@@ -292,5 +292,7 @@ Viacheslav Tykhanovskyi E<lt>viacheslav.t@gmail.comE<gt>
 =head1 CREDITS
 
 Takumi Akiyama (github.com/akiym)
+
+James Raspass (github.com/JRaspass)
 
 =cut

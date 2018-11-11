@@ -44,6 +44,7 @@
          "requires" : {
             "CPAN::DistnameInfo" : "0",
             "Module::CPANfile" : "0",
+            "Module::CoreList" : "0",
             "Pod::Usage" : "1.69",
             "perl" : "5.008001",
             "version" : "0"
@@ -68,9 +69,10 @@
          "web" : "https://github.com/vti/cpan-audit"
       }
    },
-   "version" : "0.10",
+   "version" : "0.11",
    "x_authority" : "cpan:VTI",
    "x_contributors" : [
+      "James Raspass <jraspass@gmail.com>",
       "Takumi Akiyama <t.akiym@gmail.com>"
    ],
    "x_serialization_backend" : "JSON::PP version 2.97001",
