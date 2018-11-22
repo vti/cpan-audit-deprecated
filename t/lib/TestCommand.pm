@@ -8,7 +8,7 @@ sub command {
     my @args = @_;
 
     my ( $stdout, $stderr, $exit ) = capture {
-        system $^X, 'script/cpan-audit', @args;
+        system $^X, 'script/cpan-audit', '--no-corelist', @args;
     };
 
     return ( $stdout, $stderr, $exit );
