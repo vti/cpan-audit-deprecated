@@ -23,6 +23,7 @@ sub new {
     $self->{verbose}     = $params{verbose};
     $self->{quiet}       = $params{quiet};
     $self->{no_color}    = $params{no_color};
+    $self->{no_corelist} = $params{no_corelist};
     $self->{interactive} = $params{interactive};
 
     if ( !$self->{interactive} ) {
@@ -43,9 +44,14 @@ sub command {
 
     my %dists;
 
-    # Find core modules for this perl version first.
-    # This way explictly installed versions will overwrite.
-    if ( $command eq 'dependencies' || $command eq 'deps' || $command eq 'installed' ) {
+    if (!$self->{no_corelist}
+        && (   $command eq 'dependencies'
+            || $command eq 'deps'
+            || $command eq 'installed' )
+        )
+    {
+        # Find core modules for this perl version first.
+        # This way explictly installed versions will overwrite.
         if ( my $core = $Module::CoreList::version{$]} ) {
             while ( my ( $mod, $ver ) = each %$core ) {
                 my $dist = $self->{db}{module2dist}{$mod} or next;
