@@ -69,10 +69,11 @@
          "web" : "https://github.com/vti/cpan-audit"
       }
    },
-   "version" : "0.12",
+   "version" : "0.13",
    "x_authority" : "cpan:VTI",
    "x_contributors" : [
       "James Raspass <jraspass@gmail.com>",
+      "Mark Raymond <m.raymond@cv-library.co.uk>",
       "Takumi Akiyama <t.akiym@gmail.com>"
    ],
    "x_serialization_backend" : "JSON::PP version 2.97001",
