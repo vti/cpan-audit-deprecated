@@ -69,7 +69,7 @@
          "web" : "https://github.com/vti/cpan-audit"
       }
    },
-   "version" : "0.13",
+   "version" : "0.14",
    "x_authority" : "cpan:VTI",
    "x_contributors" : [
       "James Raspass <jraspass@gmail.com>",

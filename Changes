@@ -2,6 +2,13 @@ Revision history for Perl extension CPAN-Audit
 
 {{$NEXT}}
 
+0.14 2019-01-26T10:23:21Z
+
+    [ADVISORIES]
+    CPANSA-Dancer2
+    CPANSA-HTTP-Session2
+    CPANSA-Plack-Middleware-Session-Cookie
+
 0.13 2018-11-22T20:38:09Z
 
     - --no-corelist option by MCRayRay
