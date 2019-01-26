@@ -38,8 +38,7 @@ $dump =~ s{^\$VAR1\s*=\s*}{};
 $dump =~ s{}{};
 
 print <<"EOF";
-package # hide from PAUSE
-    CPAN::Audit::DB;
+package CPAN::Audit::DB;
 
 use strict;
 use warnings;
