@@ -22812,7 +22812,7 @@ sub db {
                                                            }
                                                          ]
                                          },
-                       'Plack-Middleware-Session-Cookie' => {
+                       'Plack-Middleware-Session' => {
                                                               'advisories' => [
                                                                                 {
                                                                                   'affected_versions' => '<=0.21',
