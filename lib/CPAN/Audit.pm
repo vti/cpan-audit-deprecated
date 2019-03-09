@@ -10,7 +10,7 @@ use CPAN::Audit::Query;
 use CPAN::Audit::DB;
 use Module::CoreList;
 
-our $VERSION = "0.14";
+our $VERSION = "0.15";
 
 sub new {
     my $class = shift;
