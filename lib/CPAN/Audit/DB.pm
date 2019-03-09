@@ -3713,6 +3713,22 @@ sub db {
                                                    {
                                                      'date' => '2018-12-23T09:11:29',
                                                      'version' => '2.22'
+                                                   },
+                                                   {
+                                                     'date' => '2019-02-10T20:28:53',
+                                                     'version' => '2.23-TRIAL'
+                                                   },
+                                                   {
+                                                     'date' => '2019-02-14T21:21:03',
+                                                     'version' => '2.24-TRIAL'
+                                                   },
+                                                   {
+                                                     'date' => '2019-02-16T05:56:23',
+                                                     'version' => '2.25-TRIAL'
+                                                   },
+                                                   {
+                                                     'date' => '2019-03-03T06:27:10',
+                                                     'version' => '2.25'
                                                    }
                                                  ]
                                  },
@@ -6909,6 +6925,10 @@ sub db {
                                                              {
                                                                'date' => '2018-11-28T14:26:40',
                                                                'version' => '4.08'
+                                                             },
+                                                             {
+                                                               'date' => '2019-02-15T10:09:53',
+                                                               'version' => '4.09'
                                                              }
                                                            ]
                                            },
@@ -7267,6 +7287,14 @@ sub db {
                                                           {
                                                             'date' => '2019-01-02T15:38:57',
                                                             'version' => '1.11'
+                                                          },
+                                                          {
+                                                            'date' => '2019-02-22T16:31:33',
+                                                            'version' => '1.20'
+                                                          },
+                                                          {
+                                                            'date' => '2019-02-27T11:08:40',
+                                                            'version' => '1.21'
                                                           }
                                                         ]
                                         },
@@ -11943,6 +11971,14 @@ sub db {
                                                      {
                                                        'date' => '2019-01-21T03:28:35',
                                                        'version' => '2.99'
+                                                     },
+                                                     {
+                                                       'date' => '2019-01-31T04:42:29',
+                                                       'version' => '2.100'
+                                                     },
+                                                     {
+                                                       'date' => '2019-01-31T05:05:06',
+                                                       'version' => '3.00'
                                                      }
                                                    ]
                                    },
@@ -13406,6 +13442,14 @@ sub db {
                                                                  {
                                                                    'date' => '2018-12-06T10:56:33',
                                                                    'version' => '7.35_08'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2019-02-18T10:27:00',
+                                                                   'version' => '7.35_09'
+                                                                 },
+                                                                 {
+                                                                   'date' => '2019-02-20T10:06:48',
+                                                                   'version' => '7.35_10'
                                                                  }
                                                                ]
                                                },
@@ -16146,6 +16190,14 @@ sub db {
                                                      {
                                                        'date' => '2019-01-11T09:10:13',
                                                        'version' => '1.009'
+                                                     },
+                                                     {
+                                                       'date' => '2019-02-13T08:14:07',
+                                                       'version' => '1.010'
+                                                     },
+                                                     {
+                                                       'date' => '2019-03-07T03:20:03',
+                                                       'version' => '1.011'
                                                      }
                                                    ]
                                    },
@@ -16653,6 +16705,10 @@ sub db {
                                                                   {
                                                                     'date' => '2018-11-30T10:49:52',
                                                                     'version' => 'v2.0.0'
+                                                                  },
+                                                                  {
+                                                                    'date' => '2019-02-12T17:13:39',
+                                                                    'version' => 'v2.0.2'
                                                                   }
                                                                 ]
                                                 },
@@ -20123,6 +20179,10 @@ sub db {
                                                           {
                                                             'date' => '2019-01-02T18:04:35',
                                                             'version' => '8.11'
+                                                          },
+                                                          {
+                                                            'date' => '2019-02-01T16:34:38',
+                                                            'version' => '8.12'
                                                           }
                                                         ]
                                         },
@@ -21269,6 +21329,10 @@ sub db {
                                                       {
                                                         'date' => '2018-12-31T12:23:28',
                                                         'version' => '1.19_01'
+                                                      },
+                                                      {
+                                                        'date' => '2019-01-28T09:48:25',
+                                                        'version' => '1.19_02'
                                                       }
                                                     ]
                                     },
@@ -22412,6 +22476,18 @@ sub db {
                                                          {
                                                            'date' => '2018-08-19T09:17:57',
                                                            'version' => '1.047'
+                                                         },
+                                                         {
+                                                           'date' => '2019-03-04T09:42:35',
+                                                           'version' => '1.047_001'
+                                                         },
+                                                         {
+                                                           'date' => '2019-03-04T15:33:14',
+                                                           'version' => '1.047_002'
+                                                         },
+                                                         {
+                                                           'date' => '2019-03-06T17:39:18',
+                                                           'version' => '1.047_003'
                                                          }
                                                        ]
                                        },
@@ -22812,26 +22888,139 @@ sub db {
                                                            }
                                                          ]
                                          },
-                       'Plack-Middleware-Session-Cookie' => {
-                                                              'advisories' => [
-                                                                                {
-                                                                                  'affected_versions' => '<=0.21',
-                                                                                  'description' => 'Plack::Middleware::Session::Cookie 0.21 has a security vulnerability where it allows an attacker to execute arbitrary code on the server, when the middleware is enabled without a secret.
+                       'Plack-Middleware-Session' => {
+                                                       'advisories' => [
+                                                                         {
+                                                                           'affected_versions' => '<=0.21',
+                                                                           'description' => 'Plack::Middleware::Session::Cookie 0.21 has a security vulnerability where it allows an attacker to execute arbitrary code on the server, when the middleware is enabled without a secret.
 ',
-                                                                                  'distribution' => 'Plack-Middleware-Session-Cookie',
-                                                                                  'fixed_versions' => '>0.21',
-                                                                                  'id' => 'CPANSA-Plack-Middleware-Session-Cookie-2014-01',
-                                                                                  'references' => [
-                                                                                                    'https://gist.github.com/miyagawa/2b8764af908a0dacd43d',
-                                                                                                    'https://metacpan.org/changes/distribution/Plack-Middleware-Session'
-                                                                                                  ],
-                                                                                  'reported' => '2014-08-11',
-                                                                                  'severity' => 'critical'
-                                                                                }
-                                                                              ],
-                                                              'main_module' => undef,
-                                                              'versions' => []
-                                                            },
+                                                                           'distribution' => 'Plack-Middleware-Session',
+                                                                           'fixed_versions' => '>0.21',
+                                                                           'id' => 'CPANSA-Plack-Middleware-Session-2014-01',
+                                                                           'references' => [
+                                                                                             'https://gist.github.com/miyagawa/2b8764af908a0dacd43d',
+                                                                                             'https://metacpan.org/changes/distribution/Plack-Middleware-Session'
+                                                                                           ],
+                                                                           'reported' => '2014-08-11',
+                                                                           'severity' => 'critical'
+                                                                         }
+                                                                       ],
+                                                       'main_module' => 'Plack::Middleware::Session',
+                                                       'versions' => [
+                                                                       {
+                                                                         'date' => '2009-12-15T18:59:13',
+                                                                         'version' => '0.01'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2009-12-19T19:27:38',
+                                                                         'version' => '0.02'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2010-01-07T22:12:43',
+                                                                         'version' => '0.03'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2010-01-30T21:46:53',
+                                                                         'version' => '0.09_01'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2010-01-31T07:17:07',
+                                                                         'version' => '0.09_02'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2010-02-03T04:46:20',
+                                                                         'version' => '0.09_03'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2010-02-23T03:16:31',
+                                                                         'version' => '0.10'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2010-02-27T10:47:17',
+                                                                         'version' => '0.11'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2010-07-07T22:55:18',
+                                                                         'version' => '0.12'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2010-12-22T17:00:14',
+                                                                         'version' => '0.13'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2011-03-29T20:50:06',
+                                                                         'version' => '0.14'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2012-09-04T21:16:35',
+                                                                         'version' => '0.15'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2013-02-10T19:43:11',
+                                                                         'version' => '0.16'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2013-02-11T23:45:49',
+                                                                         'version' => '0.17'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2013-02-12T10:57:14',
+                                                                         'version' => '0.17'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2013-06-24T23:09:39',
+                                                                         'version' => '0.20'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2013-10-12T18:42:26',
+                                                                         'version' => '0.21'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2014-08-11T17:18:03',
+                                                                         'version' => '0.22'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2014-08-11T17:23:40',
+                                                                         'version' => '0.23'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2014-09-05T11:48:57',
+                                                                         'version' => '0.24'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2014-09-29T03:07:54',
+                                                                         'version' => '0.25'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2015-02-03T08:17:55',
+                                                                         'version' => '0.26'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2015-02-14T00:52:35',
+                                                                         'version' => '0.27'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2015-02-16T16:30:31',
+                                                                         'version' => '0.28'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2015-02-17T23:57:32',
+                                                                         'version' => '0.29'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2015-03-02T18:25:56',
+                                                                         'version' => '0.30'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2019-02-26T19:01:59',
+                                                                         'version' => '0.31'
+                                                                       },
+                                                                       {
+                                                                         'date' => '2019-02-26T21:36:43',
+                                                                         'version' => '0.32'
+                                                                       }
+                                                                     ]
+                                                     },
                        'RT-Authen-ExternalAuth' => {
                                                      'advisories' => [
                                                                        {
@@ -24360,6 +24549,10 @@ sub db {
                                                        {
                                                          'date' => '2018-09-05T15:12:26',
                                                          'version' => '3.11_01'
+                                                       },
+                                                       {
+                                                         'date' => '2019-03-06T12:42:01',
+                                                         'version' => '3.12_03'
                                                        }
                                                      ]
                                      },
@@ -25391,6 +25584,14 @@ sub db {
                                                          {
                                                            'date' => '2017-10-28T17:58:34',
                                                            'version' => '2.0132'
+                                                         },
+                                                         {
+                                                           'date' => '2019-02-02T11:11:30',
+                                                           'version' => '2.0133'
+                                                         },
+                                                         {
+                                                           'date' => '2019-02-10T15:02:55',
+                                                           'version' => '2.0134'
                                                          }
                                                        ]
                                        },
@@ -26121,6 +26322,10 @@ sub db {
                                                           {
                                                             'date' => '2018-10-10T02:21:49',
                                                             'version' => '6.36'
+                                                          },
+                                                          {
+                                                            'date' => '2019-03-06T20:51:05',
+                                                            'version' => '6.37'
                                                           }
                                                         ]
                                         },
@@ -27605,6 +27810,7 @@ sub db {
                              'Lemonldap::NG::Portal' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::2F::Engines::Default' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::2F::Ext2F' => 'Lemonldap-NG-Portal',
+                             'Lemonldap::NG::Portal::2F::Mail2F' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::2F::REST' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::2F::Register::TOTP' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::2F::Register::U2F' => 'Lemonldap-NG-Portal',
@@ -27622,6 +27828,7 @@ sub db {
                              'Lemonldap::NG::Portal::Auth::DBI' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::Auth::Demo' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::Auth::Facebook' => 'Lemonldap-NG-Portal',
+                             'Lemonldap::NG::Portal::Auth::GPG' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::Auth::Kerberos' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::Auth::LDAP' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::Auth::LinkedIn' => 'Lemonldap-NG-Portal',
@@ -27741,6 +27948,7 @@ sub db {
                              'Lemonldap::NG::Portal::Plugins::ForceAuthn' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::Plugins::GrantSession' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::Plugins::History' => 'Lemonldap-NG-Portal',
+                             'Lemonldap::NG::Portal::Plugins::MailPasswordReset' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::Plugins::MailReset' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::Plugins::Notifications' => 'Lemonldap-NG-Portal',
                              'Lemonldap::NG::Portal::Plugins::PublicPages' => 'Lemonldap-NG-Portal',
@@ -28302,6 +28510,17 @@ sub db {
                              'PAR::SetupTemp' => 'PAR',
                              'PAR::StrippedPARL::Base' => 'PAR-Packer',
                              'Perl::Version' => 'Perl-Version',
+                             'Plack::Middleware::Session' => 'Plack-Middleware-Session',
+                             'Plack::Middleware::Session::Cookie' => 'Plack-Middleware-Session',
+                             'Plack::Session' => 'Plack-Middleware-Session',
+                             'Plack::Session::Cleanup' => 'Plack-Middleware-Session',
+                             'Plack::Session::State' => 'Plack-Middleware-Session',
+                             'Plack::Session::State::Cookie' => 'Plack-Middleware-Session',
+                             'Plack::Session::Store' => 'Plack-Middleware-Session',
+                             'Plack::Session::Store::Cache' => 'Plack-Middleware-Session',
+                             'Plack::Session::Store::DBI' => 'Plack-Middleware-Session',
+                             'Plack::Session::Store::File' => 'Plack-Middleware-Session',
+                             'Plack::Session::Store::Null' => 'Plack-Middleware-Session',
                              'RT::Authen::ExternalAuth' => 'RT-Authen-ExternalAuth',
                              'RT::Authen::ExternalAuth::DBI' => 'RT-Authen-ExternalAuth',
                              'RT::Authen::ExternalAuth::DBI::Cookie' => 'RT-Authen-ExternalAuth',
